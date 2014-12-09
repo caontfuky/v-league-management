@@ -1,0 +1,15 @@
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.csprojResolveAssemblyReference.cache
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.frmConnectionSQL.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.Properties.Resources.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.csproj.GenerateResource.Cache
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.exe.licenses
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\PresentationLayer.exe
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\PresentationLayer.pdb
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\BusinnessLogicLayer.dll
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\DataTransferObject.dll
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\BusinnessLogicLayer.pdb
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\DataTransferObject.pdb
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.exe
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.pdb
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\Database\v-league-management.sql
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\PresentationLayer.exe.config

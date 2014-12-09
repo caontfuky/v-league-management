@@ -1,0 +1,7 @@
+D:\HK7\PMHuongDT\QLGVDBD\obj\Debug\v-league-management.csprojResolveAssemblyReference.cache
+D:\HK7\PMHuongDT\QLGVDBD\obj\Debug\v_league_management.frmConnectionSQL.resources
+D:\HK7\PMHuongDT\QLGVDBD\obj\Debug\v_league_management.Properties.Resources.resources
+D:\HK7\PMHuongDT\QLGVDBD\obj\Debug\v-league-management.csproj.GenerateResource.Cache
+D:\HK7\PMHuongDT\QLGVDBD\obj\Debug\v-league-management.exe.licenses
+D:\HK7\PMHuongDT\QLGVDBD\obj\Debug\PresentationLayer.Config.frmConnectionSQL.resources
+D:\HK7\PMHuongDT\QLGVDBD\obj\Debug\PresentationLayer.frmConnectionSQL.resources
