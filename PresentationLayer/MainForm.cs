@@ -22,5 +22,12 @@ namespace PresentationLayer
         {
 
         }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            UserControl1 ucDieuLe = new UserControl1();
+            this.Controls.Add(ucDieuLe);
+            ucDieuLe.Show();
+        }
     }
 }
