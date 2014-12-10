@@ -13,3 +13,4 @@ D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.exe
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.pdb
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\Database\v-league-management.sql
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\PresentationLayer.exe.config
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.MainForm.resources
