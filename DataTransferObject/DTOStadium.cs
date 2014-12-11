@@ -8,10 +8,10 @@ namespace DataTransferObject
 {
     public class DTOStadium
     {
-        private string stadiumID;
-        private string stadiumName;
-        private string address;
-        private int tankage;
+        public string stadiumID;
+        public string stadiumName;
+        public string address;
+        public int tankage;
 
         public DTOStadium() { }
 
@@ -22,31 +22,6 @@ namespace DataTransferObject
             this.address = _address;
             this.tankage = _tankage;
         }
-
-        public string StadiumID
-        {
-            get { return stadiumID; }
-            set { stadiumID = value; }
-        }
-
-        public string StadiumName
-        {
-            get { return stadiumName; }
-            set { stadiumName = value; }
-        }
-
-        public string Address
-        {
-            get { return address; }
-            set { address = value; }
-        }
-
-        public int Tankage
-        {
-            get { return tankage; }
-            set { tankage = value; }
-        }
-
 
     }
 }

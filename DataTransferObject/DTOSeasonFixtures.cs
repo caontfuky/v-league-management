@@ -8,9 +8,9 @@ namespace DataTransferObject
 {
     public class DTOSeasonFixtures
     {
-        private string fixtureID;
-        private string seasonID;
-        private int roundCount;
+        public string fixtureID;
+        public string seasonID;
+        public int roundCount;
 
         public DTOSeasonFixtures() { }
 
@@ -20,25 +20,6 @@ namespace DataTransferObject
             this.seasonID = _seasonID;
             this.roundCount = _roundCount;
         }
-
-        public string FixtureID
-        {
-            get { return fixtureID; }
-            set { fixtureID = value; }
-        }
-
-        public string SeasonID
-        {
-            get { return seasonID; }
-            set { seasonID = value; }
-        }
-
-        public int RoundCount
-        {
-            get { return roundCount; }
-            set { roundCount = value; }
-        }
-
 
     }
 }

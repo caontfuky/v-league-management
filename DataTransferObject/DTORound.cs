@@ -9,9 +9,9 @@ namespace DataTransferObject
 {
     public class DTORound
     {
-        private string roundID;
-        private string fixtureID;
-        private int matchCount;
+        public string roundID;
+        public string fixtureID;
+        public int matchCount;
 
         public DTORound() { }
 
@@ -21,24 +21,5 @@ namespace DataTransferObject
             this.fixtureID = _fixtureID;
             this.matchCount = _matchCount;
         }
-
-        public string RoundID
-        {
-            get { return roundID; }
-            set { roundID = value; }
-        }
-
-        public string FixtureID
-        {
-            get { return fixtureID; }
-            set { fixtureID = value; }
-        }
-
-        public int MatchCount
-        {
-            get { return matchCount; }
-            set { matchCount = value; }
-        }
-
     }
 }

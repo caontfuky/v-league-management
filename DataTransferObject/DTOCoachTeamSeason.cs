@@ -8,9 +8,9 @@ namespace DataTransferObject
 {
     public class DTOCoachTeamSeason
     {
-        private string coachID;
-        private string teamID;
-        private string seasonID;
+        public string coachID;
+        public string teamID;
+        public string seasonID;
 
         public DTOCoachTeamSeason() { }
 
@@ -20,25 +20,6 @@ namespace DataTransferObject
             this.teamID = _teamID;
             this.seasonID = _seasonID;
         }
-
-        public string CoachID
-        {
-            get { return coachID; }
-            set { coachID = value; }
-        }
-
-        public string TeamID
-        {
-            get { return teamID; }
-            set { teamID = value; }
-        }
-
-        public string SeasonID
-        {
-            get { return seasonID; }
-            set { seasonID = value; }
-        }
-
 
     }
 }

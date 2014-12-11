@@ -8,8 +8,8 @@ namespace DataTransferObject
 {
     public class DTOSupport
     {
-        private string name;
-        private int value;
+        public string name;
+        public int value;
 
         public DTOSupport() { }
 
@@ -19,18 +19,6 @@ namespace DataTransferObject
             this.value = _value;
         }
 
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public int Value
-        {
-            get { return this.value; }
-            set { this.value = value; }
-        }
-
-
+       
     }
 }

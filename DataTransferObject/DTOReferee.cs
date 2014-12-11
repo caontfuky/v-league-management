@@ -8,8 +8,8 @@ namespace DataTransferObject
 {
     public class DTOReferee
     {
-        private string refereeID;
-        private string refereeName;
+        public string refereeID;
+        public string refereeName;
 
         public DTOReferee() { }
 
@@ -19,18 +19,6 @@ namespace DataTransferObject
             this.refereeName = _refereeName;
         }
 
-        public string RefereeID
-        {
-            get { return refereeID; }
-            set { refereeID = value; }
-        }
-
-        public string RefereeName
-        {
-            get { return refereeName; }
-            set { refereeName = value; }
-        }
-
-
+      
     }
 }

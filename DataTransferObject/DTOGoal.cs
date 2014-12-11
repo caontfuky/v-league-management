@@ -9,10 +9,10 @@ namespace DataTransferObject
 {
     public class DTOGoal
     {
-        private string goalID;
-        private string playerID;
-        private string matchID;
-        private int time;
+        public string goalID;
+        public string playerID;
+        public string matchID;
+        public int time;
 
         public DTOGoal() { }
 
@@ -23,31 +23,6 @@ namespace DataTransferObject
             this.matchID = _matchID;
             this.time = _time;
         }
-
-        public string GoalID
-        {
-            get { return goalID; }
-            set { goalID = value; }
-        }
-
-        public string PlayerID
-        {
-            get { return playerID; }
-            set { playerID = value; }
-        }
-
-        public string MatchID
-        {
-            get { return matchID; }
-            set { matchID = value; }
-        }
-
-        public int Time
-        {
-            get { return time; }
-            set { time = value; }
-        }
-
 
     }
 }

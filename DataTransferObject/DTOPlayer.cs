@@ -8,14 +8,14 @@ namespace DataTransferObject
 {
     public class DTOPlayer
     {
-        private string playerID;
-        private string fullName;
-        private string birthday;
-        private int positionID;
-        private int nationalID;
-        private string numberOfCloth;
-        private int height;
-        private int weight;
+        public string playerID;
+        public string fullName;
+        public string birthday;
+        public int positionID;
+        public int nationalID;
+        public string numberOfCloth;
+        public int height;
+        public int weight;
 
         public DTOPlayer()
         {
@@ -34,52 +34,5 @@ namespace DataTransferObject
             this.weight = _weight;
         }
 
-        public string PlayerID
-        {
-            get { return playerID; }
-            set { playerID = value; }
-        }
-
-        public string FullName
-        {
-            get { return fullName; }
-            set { fullName = value; }
-        }
-
-        public string Birthday
-        {
-            get { return birthday; }
-            set { birthday = value; }
-        }
-
-        public int PositionID
-        {
-            get { return positionID; }
-            set { positionID = value; }
-        }
-
-        public int NationalID
-        {
-            get { return nationalID; }
-            set { nationalID = value; }
-        }
-
-        public string NumberOfCloth
-        {
-            get { return numberOfCloth; }
-            set { numberOfCloth = value; }
-        }
-
-        public int Height
-        {
-            get { return height; }
-            set { height = value; }
-        }
-
-        public int Weight
-        {
-            get { return weight; }
-            set { weight = value; }
-        }
     }
 }

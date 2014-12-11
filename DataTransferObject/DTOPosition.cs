@@ -8,8 +8,8 @@ namespace DataTransferObject
 {
     public class DTOPosition
     {
-        private string positionID;
-        private string positionName;
+        public string positionID;
+        public string positionName;
 
         public DTOPosition()
         {
@@ -22,16 +22,6 @@ namespace DataTransferObject
             this.positionName = _name;
         }
 
-        public string PositionID
-        {
-            get { return positionID; }
-            set { positionID = value; }
-        }
-        public string PositionName
-        {
-            get { return positionName; }
-            set { positionName = value; }
-        }
-
+       
     }
 }

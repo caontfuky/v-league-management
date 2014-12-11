@@ -8,8 +8,8 @@ namespace DataTransferObject
 {
     public class DTONational
     {
-        private string nationalID;
-        private string nationalName;
+        public string nationalID;
+        public string nationalName;
 
         public DTONational() { }
 
@@ -18,19 +18,6 @@ namespace DataTransferObject
             this.nationalID = _nationalID;
             this.nationalName = _name;
         }
-
-        public string NationalID
-        {
-            get { return nationalID; }
-            set { nationalID = value; }
-        }
-
-        public string NationalName
-        {
-            get { return nationalName; }
-            set { nationalName = value; }
-        }
-
 
     }
 }

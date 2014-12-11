@@ -8,12 +8,12 @@ namespace DataTransferObject
 {
     public class DTOSeason
     {
-        private string seasonID;
-        private string seasonName;
-        private string startDate;
-        private string endDate;
-        private string sponsor;
-        private int expenditure;
+        public string seasonID;
+        public string seasonName;
+        public string startDate;
+        public string endDate;
+        public string sponsor;
+        public int expenditure;
 
         public DTOSeason() { }
 
@@ -27,42 +27,6 @@ namespace DataTransferObject
             this.expenditure = _expenditure;
         }
 
-        public string SeasonID
-        {
-            get { return seasonID; }
-            set { seasonID = value; }
-        }
-
-        public string SeasonName
-        {
-            get { return seasonName; }
-            set { seasonName = value; }
-        }
-
-        public string StartDate
-        {
-            get { return startDate; }
-            set { startDate = value; }
-        }
-
-        public string EndDate
-        {
-            get { return endDate; }
-            set { endDate = value; }
-        }
-
-        public string Sponsor
-        {
-            get { return sponsor; }
-            set { sponsor = value; }
-        }
-
-        public int Expenditure
-        {
-            get { return expenditure; }
-            set { expenditure = value; }
-        }
-
-
+       
     }
 }

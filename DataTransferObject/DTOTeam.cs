@@ -8,16 +8,16 @@ namespace DataTransferObject
 {
     public class DTOTeam
     {
-        private string teamID;
-        private string name;
-        private string chairman;
-        private string stadiumID;
-        private string email;
-        private string establishedYear;
-        private string cEO;
-        private string address;
-        private string phoneNumber;
-        private string fax;
+        public string teamID;
+        public string name;
+        public string chairman;
+        public string stadiumID;
+        public string email;
+        public string establishedYear;
+        public string cEO;
+        public string address;
+        public string phoneNumber;
+        public string fax;
 
         public DTOTeam() { }
 
@@ -34,68 +34,5 @@ namespace DataTransferObject
             this.phoneNumber = _phoneNumber;
             this.fax = _fax;
         }
-
-        public string TeamID
-        {
-            get { return teamID; }
-            set { teamID = value; }
-        }
-
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-
-        public string Chairman
-        {
-            get { return chairman; }
-            set { chairman = value; }
-        }
-
-        public string StadiumID
-        {
-            get { return stadiumID; }
-            set { stadiumID = value; }
-        }
-
-        public string Email
-        {
-            get { return email; }
-            set { email = value; }
-        }
-
-        public string EstablishedYear
-        {
-            get { return establishedYear; }
-            set { establishedYear = value; }
-        }
-
-        public string CEO
-        {
-            get { return cEO; }
-            set { cEO = value; }
-        }
-
-        public string Address
-        {
-            get { return address; }
-            set { address = value; }
-        }
-
-        public string PhoneNumber
-        {
-            get { return phoneNumber; }
-            set { phoneNumber = value; }
-        }
-
-        public string Fax
-        {
-            get { return fax; }
-            set { fax = value; }
-        }
-
-
-
     }
 }

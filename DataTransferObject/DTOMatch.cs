@@ -8,13 +8,13 @@ namespace DataTransferObject
 {
     public class DTOMatch
     {
-        private string matchID;
-        private string homeTeam;
-        private string visitingTeam;
-        private string stadiumID;
-        private string startDate;
-        private string refereeID;
-        private string roundID;
+        public string matchID;
+        public string homeTeam;
+        public string visitingTeam;
+        public string stadiumID;
+        public string startDate;
+        public string refereeID;
+        public string roundID;
 
         public DTOMatch() { }
 
@@ -26,51 +26,8 @@ namespace DataTransferObject
             this.stadiumID = _stadiumID;
             this.startDate = _startDate;
             this.refereeID = _refereeID;
-            this.refereeID = _roundID;
+            this.roundID = _roundID;
         }
-
-        public string MatchID
-        {
-            get { return matchID; }
-            set { matchID = value; }
-        }
-
-        public string HomeTeam
-        {
-            get { return homeTeam; }
-            set { homeTeam = value; }
-        }
-
-        public string VisitingTeam
-        {
-            get { return visitingTeam; }
-            set { visitingTeam = value; }
-        }
-
-        public string StadiumID
-        {
-            get { return stadiumID; }
-            set { stadiumID = value; }
-        }
-
-        public string StartDate
-        {
-            get { return startDate; }
-            set { startDate = value; }
-        }
-
-        public string RefereeID
-        {
-            get { return refereeID; }
-            set { refereeID = value; }
-        }
-
-        public string RoundID
-        {
-            get { return roundID; }
-            set { roundID = value; }
-        }
-
 
     }
 }
