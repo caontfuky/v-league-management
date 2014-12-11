@@ -19,7 +19,7 @@ namespace PresentationLayer
             //int count = cardtype.updateData(new DataTransferObject.DTOCardType("C0001", "The xanh"));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new frmLogin());
         }
     }
 }

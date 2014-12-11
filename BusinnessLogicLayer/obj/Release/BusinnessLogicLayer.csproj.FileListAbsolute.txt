@@ -1,0 +1,9 @@
+D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\bin\Release\BusinnessLogicLayer.dll
+D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\bin\Release\BusinnessLogicLayer.pdb
+D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\bin\Release\DataAcessLayer.dll
+D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\bin\Release\DataTransferObject.dll
+D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\bin\Release\DataAcessLayer.pdb
+D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\bin\Release\DataTransferObject.pdb
+D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\obj\Release\BusinnessLogicLayer.csprojResolveAssemblyReference.cache
+D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\obj\Release\BusinnessLogicLayer.dll
+D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\obj\Release\BusinnessLogicLayer.pdb

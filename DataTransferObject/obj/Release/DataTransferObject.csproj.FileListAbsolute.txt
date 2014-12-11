@@ -1,0 +1,5 @@
+D:\HK7\PMHuongDT\QLGVDBD\DataTransferObject\bin\Release\DataTransferObject.dll
+D:\HK7\PMHuongDT\QLGVDBD\DataTransferObject\bin\Release\DataTransferObject.pdb
+D:\HK7\PMHuongDT\QLGVDBD\DataTransferObject\obj\Release\DataTransferObject.csprojResolveAssemblyReference.cache
+D:\HK7\PMHuongDT\QLGVDBD\DataTransferObject\obj\Release\DataTransferObject.dll
+D:\HK7\PMHuongDT\QLGVDBD\DataTransferObject\obj\Release\DataTransferObject.pdb

@@ -1,0 +1,7 @@
+D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\bin\Release\DataAcessLayer.dll
+D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\bin\Release\DataAcessLayer.pdb
+D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\bin\Release\DataTransferObject.dll
+D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\bin\Release\DataTransferObject.pdb
+D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\obj\Release\DataAcessLayer.csprojResolveAssemblyReference.cache
+D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\obj\Release\DataAcessLayer.dll
+D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\obj\Release\DataAcessLayer.pdb

@@ -40,16 +40,14 @@
             this.btnCancel = new DevExpress.XtraEditors.SimpleButton();
             this.labData = new DevExpress.XtraEditors.LabelControl();
             this.cmbAuthorities = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.picClose = new DevExpress.XtraEditors.PictureEdit();
-            this.picminimize = new DevExpress.XtraEditors.PictureEdit();
             this.txtData = new DevExpress.XtraEditors.TextEdit();
+            this.picClose = new DevExpress.XtraEditors.PictureEdit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbServerName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAuthorities.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picminimize.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtData.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labServerName
@@ -152,38 +150,6 @@
             this.cmbAuthorities.TabIndex = 1;
             this.cmbAuthorities.SelectedIndexChanged += new System.EventHandler(this.cmbAuthorities_SelectedIndexChanged);
             // 
-            // picClose
-            // 
-            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picClose.Location = new System.Drawing.Point(376, 6);
-            this.picClose.Name = "picClose";
-            this.picClose.Properties.Appearance.BackColor = System.Drawing.Color.Lavender;
-            this.picClose.Properties.Appearance.Options.UseBackColor = true;
-            this.picClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.picClose.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.picClose.Size = new System.Drawing.Size(28, 26);
-            this.picClose.TabIndex = 5;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
-            // picminimize
-            // 
-            this.picminimize.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picminimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picminimize.Location = new System.Drawing.Point(347, 6);
-            this.picminimize.Name = "picminimize";
-            this.picminimize.Properties.Appearance.BackColor = System.Drawing.Color.Lavender;
-            this.picminimize.Properties.Appearance.Options.UseBackColor = true;
-            this.picminimize.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.picminimize.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.picminimize.Size = new System.Drawing.Size(29, 26);
-            this.picminimize.TabIndex = 4;
-            this.picminimize.Click += new System.EventHandler(this.picminimize_Click);
-            // 
             // txtData
             // 
             this.txtData.Enabled = false;
@@ -194,15 +160,31 @@
             this.txtData.Size = new System.Drawing.Size(192, 20);
             this.txtData.TabIndex = 2;
             // 
+            // picClose
+            // 
+            this.picClose.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.picClose.EditValue = ((object)(resources.GetObject("picClose.EditValue")));
+            this.picClose.Location = new System.Drawing.Point(376, 6);
+            this.picClose.Name = "picClose";
+            this.picClose.Properties.Appearance.BackColor = System.Drawing.Color.White;
+            this.picClose.Properties.Appearance.Options.UseBackColor = true;
+            this.picClose.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.picClose.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.picClose.Size = new System.Drawing.Size(28, 26);
+            this.picClose.TabIndex = 5;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
             // frmConnectionSQL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(408, 267);
             this.Controls.Add(this.picClose);
-            this.Controls.Add(this.picminimize);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtUserName);
@@ -223,9 +205,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtPass.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmbAuthorities.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picminimize.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtData.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -244,8 +225,7 @@
         private DevExpress.XtraEditors.SimpleButton btnCancel;
         private DevExpress.XtraEditors.LabelControl labData;
         private DevExpress.XtraEditors.ComboBoxEdit cmbAuthorities;
-        private DevExpress.XtraEditors.PictureEdit picClose;
-        private DevExpress.XtraEditors.PictureEdit picminimize;
         private DevExpress.XtraEditors.TextEdit txtData;
+        private DevExpress.XtraEditors.PictureEdit picClose;
     }
 }
