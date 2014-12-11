@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class National_DTO
+    public class DTONational
     {
         private string nationalID;
         private string nationalName;
 
-        public National_DTO() { }
+        public DTONational() { }
 
-        public National_DTO(string _nationalID, string _name)
+        public DTONational(string _nationalID, string _name)
         {
             this.nationalID = _nationalID;
             this.nationalName = _name;

@@ -11,7 +11,7 @@ Thong so co ban:
 -->
 <config>
   <authorities>true</authorities>
-  <servname>CONAN\CONAN</servname>
+  <servname>TONEY_LEE\SQLEXPRESS</servname>
   <username />
   <password />
   <database>sangld</database>

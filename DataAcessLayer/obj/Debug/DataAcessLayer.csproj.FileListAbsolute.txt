@@ -5,3 +5,10 @@ D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\bin\Debug\DataTransferObject.pdb
 D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\obj\Debug\DataAcessLayer.csprojResolveAssemblyReference.cache
 D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\obj\Debug\DataAcessLayer.dll
 D:\HK7\PMHuongDT\QLGVDBD\DataAcessLayer\obj\Debug\DataAcessLayer.pdb
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataAcessLayer\bin\Debug\DataAcessLayer.dll
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataAcessLayer\bin\Debug\DataAcessLayer.pdb
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataAcessLayer\bin\Debug\DataTransferObject.dll
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataAcessLayer\bin\Debug\DataTransferObject.pdb
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataAcessLayer\obj\Debug\DataAcessLayer.csprojResolveAssemblyReference.cache
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataAcessLayer\obj\Debug\DataAcessLayer.dll
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataAcessLayer\obj\Debug\DataAcessLayer.pdb

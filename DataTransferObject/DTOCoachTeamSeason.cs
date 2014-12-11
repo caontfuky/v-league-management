@@ -6,25 +6,25 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class PlayerTeamSeason_DTO
+    public class DTOCoachTeamSeason
     {
-        private string playerID;
+        private string coachID;
         private string teamID;
         private string seasonID;
 
-        public PlayerTeamSeason_DTO() { }
+        public DTOCoachTeamSeason() { }
 
-        public PlayerTeamSeason_DTO(string _playerID, string _teamID, string _seasonID)
+        public DTOCoachTeamSeason(string _coachID, string _teamID, string _seasonID)
         {
-            this.playerID = _playerID;
+            this.coachID = _coachID;
             this.teamID = _teamID;
             this.seasonID = _seasonID;
         }
 
-        public string PlayerID
+        public string CoachID
         {
-            get { return playerID; }
-            set { playerID = value; }
+            get { return coachID; }
+            set { coachID = value; }
         }
 
         public string TeamID

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Standing_DTO
+    public class DTOStanding
     {
         private string seasonID;
         private string teamID;
@@ -19,9 +19,9 @@ namespace DataTransferObject
         private int goalsDisfference;
         private int point;
 
-        public Standing_DTO() { }
+        public DTOStanding() { }
 
-        public Standing_DTO(string _seasonID, string _teamID, int _totalMatch, int _totalMatchWon, int _totalMatchLost, int _totalMatchDrawn, int _goalsFor, int _goalsAgainst, int _goalsDifference, int _point)
+        public DTOStanding(string _seasonID, string _teamID, int _totalMatch, int _totalMatchWon, int _totalMatchLost, int _totalMatchDrawn, int _goalsFor, int _goalsAgainst, int _goalsDifference, int _point)
         {
             this.seasonID = _seasonID;
             this.teamID = _teamID;

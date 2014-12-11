@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Season_DTO
+    public class DTOSeason
     {
         private string seasonID;
         private string seasonName;
@@ -15,9 +15,9 @@ namespace DataTransferObject
         private string sponsor;
         private int expenditure;
 
-        public Season_DTO() { }
+        public DTOSeason() { }
 
-        public Season_DTO(string _seasonID, string _seasonName, string _startDate, string _endDate, string _sponsor, int _expenditure)
+        public DTOSeason(string _seasonID, string _seasonName, string _startDate, string _endDate, string _sponsor, int _expenditure)
         {
             this.seasonID = _seasonID;
             this.seasonName = _seasonName;

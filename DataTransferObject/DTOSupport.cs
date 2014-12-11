@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Support_DTO
+    public class DTOSupport
     {
         private string name;
         private int value;
 
-        public Support_DTO() { }
+        public DTOSupport() { }
 
-        public Support_DTO(string _name, int _value)
+        public DTOSupport(string _name, int _value)
         {
             this.name = _name;
             this.value = _value;

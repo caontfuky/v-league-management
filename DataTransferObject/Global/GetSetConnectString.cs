@@ -3,25 +3,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DevExpress.XtraEditors;
 using System.Xml;
 
-namespace PresentationLayer.Config
+namespace DataTransferObject.Global
 {
-    public class GetSetConnectString
+    public class GetSetConnectString : Singleton<GetSetConnectString>
     {
         
         #region "variable"
-        private static XmlDocument m_xmlR;
-        private static XmlTextWriter m_xmlW;
+        public  XmlDocument m_xmlR;//Dung de doc file
+        public  XmlTextWriter m_xmlW; //Dung de ghi file
         #endregion 
         #region "method"
+
         public GetSetConnectString()
         {
             m_xmlR = new XmlDocument();
             //m_xmlW = new XmlTextWriter();
         }
-        public static XmlDocument getConnectString(String _fileName)
+
+        /// <summary>
+        /// Phuong thuc nay dung de doc chuoi ket noi tu file xml
+        /// </summary>
+        /// <param name="_fileName">Ten file truyen vao</param>
+        /// <returns>XmlDocument</returns>
+        public bool getConnectString(String _fileName)
         {
             try
             {
@@ -29,17 +35,27 @@ namespace PresentationLayer.Config
                 if (System.IO.File.Exists(_fileName))
                 {
                     m_xmlR.Load(_fileName);
+                    return true;
                 }
+                return false;
             }
             catch (XmlException)
             {
                 //XtraMessageBox.Show("Can't read file");
+                return false;
             }
-            return m_xmlR;
         }
-        public static void setConnectString(String _fileName, String _server, String _database, String _authorities)
+
+        /// <summary>
+        /// Ham nay dung de cai dat chuoi ket noi, ghi chuoi ket noi vao file html
+        /// </summary>
+        /// <param name="_fileName">Duong dan luu file xuong local</param>
+        /// <param name="_server">Ten server sql</param>
+        /// <param name="_database">Ten database</param>
+        /// <param name="_authorities">Quyen truy cap vao database</param>
+        public void setConnectString(String _fileName, String _server, String _database, String _authorities)
         {
-            m_xmlW = new XmlTextWriter(_fileName, null);
+            m_xmlW = new XmlTextWriter(_fileName, null); // Khoi tao 
             m_xmlW.Formatting = Formatting.Indented;
 
             m_xmlW.WriteStartDocument();
@@ -74,7 +90,17 @@ namespace PresentationLayer.Config
 
             m_xmlW.Close();
         }
-        public static void setConnectString(String _fileName, String _server, String _database, String _username, String _passwork, String _authorities)
+
+        /// <summary>
+        /// Ham nay dung de cai dat chuoi ket noi, luu chuoi ket noi xuong local
+        /// </summary>
+        /// <param name="_fileName">Duong dan luu file</param>
+        /// <param name="_server">Ten server</param>
+        /// <param name="_database">Ten database</param>
+        /// <param name="_username">User name</param>
+        /// <param name="_passwork">Pass word</param>
+        /// <param name="_authorities">Quyen truy cap vao sql</param>
+        public void setConnectString(String _fileName, String _server, String _database, String _username, String _passwork, String _authorities)
         {
             m_xmlW = new XmlTextWriter(_fileName, null);
             m_xmlW.Formatting = Formatting.Indented;

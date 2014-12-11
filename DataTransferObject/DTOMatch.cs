@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Match_DTO
+    public class DTOMatch
     {
         private string matchID;
         private string homeTeam;
@@ -16,9 +16,9 @@ namespace DataTransferObject
         private string refereeID;
         private string roundID;
 
-        public Match_DTO() { }
+        public DTOMatch() { }
 
-        public Match_DTO(string _matchID, string _homeTeam, string _visitingTeam, string _stadiumID, string _startDate, string _refereeID, string _roundID)
+        public DTOMatch(string _matchID, string _homeTeam, string _visitingTeam, string _stadiumID, string _startDate, string _refereeID, string _roundID)
         {
             this.matchID = _matchID;
             this.homeTeam = _homeTeam;

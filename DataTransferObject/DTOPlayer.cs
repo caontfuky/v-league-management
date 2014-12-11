@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Player_DTO
+    public class DTOPlayer
     {
         private string playerID;
         private string fullName;
@@ -17,12 +17,12 @@ namespace DataTransferObject
         private int height;
         private int weight;
 
-        public Player_DTO()
+        public DTOPlayer()
         {
 
         }
 
-        public Player_DTO(string _playerID, string _fullName, string _birthday, int _position, int _nationalID, string _numberOfCloth, int _height, int _weight)
+        public DTOPlayer(string _playerID, string _fullName, string _birthday, int _position, int _nationalID, string _numberOfCloth, int _height, int _weight)
         {
             this.playerID = _playerID;
             this.fullName = _fullName;

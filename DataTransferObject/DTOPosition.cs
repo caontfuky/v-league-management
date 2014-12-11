@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Position_DTO
+    public class DTOPosition
     {
         private string positionID;
         private string positionName;
 
-        public Position_DTO()
+        public DTOPosition()
         {
 
         }
 
-        public Position_DTO(string _positionID, string _name)
+        public DTOPosition(string _positionID, string _name)
         {
             this.positionID = _positionID;
             this.positionName = _name;

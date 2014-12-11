@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Goal_DTO
+    public class DTOGoal
     {
         private string goalID;
         private string playerID;
         private string matchID;
         private int time;
 
-        public Goal_DTO() { }
+        public DTOGoal() { }
 
-        public Goal_DTO(string _goalID, string _playerID, string _matchID, int _time)
+        public DTOGoal(string _goalID, string _playerID, string _matchID, int _time)
         {
             this.goalID = _goalID;
             this.playerID = _playerID;

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class SeasonFixtures_DTO
+    public class DTOSeasonFixtures
     {
         private string fixtureID;
         private string seasonID;
         private int roundCount;
 
-        public SeasonFixtures_DTO() { }
+        public DTOSeasonFixtures() { }
 
-        public SeasonFixtures_DTO(string _fixtureID, string _seasonID, int _roundCount)
+        public DTOSeasonFixtures(string _fixtureID, string _seasonID, int _roundCount)
         {
             this.fixtureID = _fixtureID;
             this.seasonID = _seasonID;

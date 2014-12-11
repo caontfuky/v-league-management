@@ -15,7 +15,8 @@ using Microsoft.SqlServer.Management.Smo.Wmi;
 using Microsoft.Win32;
 using System.IO;
 using DevExpress.XtraEditors;
-using PresentationLayer.Config;
+using DataTransferObject.Global;
+using BusinnessLogicLayer;
 
 namespace PresentationLayer
 {
@@ -118,6 +119,7 @@ namespace PresentationLayer
         }
         public void setConnectionString()
         {
+            //
             if (cmbAuthorities.SelectedIndex == 0)
             {
                 m_conn = new SqlConnection("Data Source=" + cmbServerName.Text + ";Initial Catalog=master;Integrated Security=True;");
@@ -188,7 +190,7 @@ namespace PresentationLayer
                     
                 Server server = new Server(new ServerConnection(m_conn));
                 if(alowCreatNewDataBase)
-                    server.ConnectionContext.ExecuteNonQuery("Create Database " + dataBaseNameToPrepend);
+                    server.ConnectionContext.ExecuteNonQuery("Create Database " + dataBaseNameToPrepend + ";");
                 server.ConnectionContext.ExecuteNonQuery("Use [" + dataBaseNameToPrepend + "]");
                 server.ConnectionContext.ExecuteNonQuery(sql);
                 server.ConnectionContext.Disconnect();
@@ -206,12 +208,12 @@ namespace PresentationLayer
             if (createNewDatabase(txtData.Text))
             {
                 if (cmbAuthorities.SelectedIndex == 0)
-                    GetSetConnectString.setConnectString("Connection.xml", 
+                    GetSetConnectString.Instance.setConnectString("Connection.xml", 
                                                         cmbServerName.Text, 
                                                         txtData.Text, 
                                                         "true");
                 else
-                    GetSetConnectString.setConnectString("Connection.xml",
+                    GetSetConnectString.Instance.setConnectString("Connection.xml",
                                                         cmbServerName.Text,
                                                         txtData.Text,
                                                         txtUserName.Text,

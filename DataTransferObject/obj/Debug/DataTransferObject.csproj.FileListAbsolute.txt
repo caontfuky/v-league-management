@@ -3,3 +3,7 @@ D:\HK7\PMHuongDT\QLGVDBD\DataTransferObject\bin\Debug\DataTransferObject.pdb
 D:\HK7\PMHuongDT\QLGVDBD\DataTransferObject\obj\Debug\DataTransferObject.csprojResolveAssemblyReference.cache
 D:\HK7\PMHuongDT\QLGVDBD\DataTransferObject\obj\Debug\DataTransferObject.dll
 D:\HK7\PMHuongDT\QLGVDBD\DataTransferObject\obj\Debug\DataTransferObject.pdb
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataTransferObject\bin\Debug\DataTransferObject.dll
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataTransferObject\bin\Debug\DataTransferObject.pdb
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataTransferObject\obj\Debug\DataTransferObject.dll
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\DataTransferObject\obj\Debug\DataTransferObject.pdb

@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Stadium_DTO
+    public class DTOStadium
     {
         private string stadiumID;
         private string stadiumName;
         private string address;
         private int tankage;
 
-        public Stadium_DTO() { }
+        public DTOStadium() { }
 
-        public Stadium_DTO(string _stadiumID, string _stadiumName, string _address, int _tankage)
+        public DTOStadium(string _stadiumID, string _stadiumName, string _address, int _tankage)
         {
             this.stadiumID = _stadiumID;
             this.stadiumName = _stadiumName;

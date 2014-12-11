@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Round_DTO
+    public class DTORound
     {
         private string roundID;
         private string fixtureID;
         private int matchCount;
 
-        public Round_DTO() { }
+        public DTORound() { }
 
-        public Round_DTO(string _roundID, string _fixtureID, int _matchCount)
+        public DTORound(string _roundID, string _fixtureID, int _matchCount)
         {
             this.roundID = _roundID;
             this.fixtureID = _fixtureID;

@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace DataTransferObject
 {
-    public class Referee_DTO
+    public class DTOReferee
     {
         private string refereeID;
         private string refereeName;
 
-        public Referee_DTO() { }
+        public DTOReferee() { }
 
-        public Referee_DTO(string _refereeID, string _refereeName)
+        public DTOReferee(string _refereeID, string _refereeName)
         {
             this.refereeID = _refereeID;
             this.refereeName = _refereeName;

@@ -7,3 +7,12 @@ D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\bin\Debug\DataTransferObject.pdb
 D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\obj\Debug\BusinnessLogicLayer.csprojResolveAssemblyReference.cache
 D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\obj\Debug\BusinnessLogicLayer.dll
 D:\HK7\PMHuongDT\QLGVDBD\BusinnessLogicLayer\obj\Debug\BusinnessLogicLayer.pdb
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\BusinnessLogicLayer\bin\Debug\BusinnessLogicLayer.dll
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\BusinnessLogicLayer\bin\Debug\BusinnessLogicLayer.pdb
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\BusinnessLogicLayer\bin\Debug\DataAcessLayer.dll
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\BusinnessLogicLayer\bin\Debug\DataTransferObject.dll
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\BusinnessLogicLayer\bin\Debug\DataAcessLayer.pdb
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\BusinnessLogicLayer\bin\Debug\DataTransferObject.pdb
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\BusinnessLogicLayer\obj\Debug\BusinnessLogicLayer.csprojResolveAssemblyReference.cache
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\BusinnessLogicLayer\obj\Debug\BusinnessLogicLayer.dll
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\BusinnessLogicLayer\obj\Debug\BusinnessLogicLayer.pdb
