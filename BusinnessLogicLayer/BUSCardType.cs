@@ -16,6 +16,16 @@ namespace BusinnessLogicLayer
             this.m_dalCardType = new DALCardType();
         }
 
+        public DataTable getCardTypeName()
+        {
+            return m_dalCardType.getCardTypeName();
+        }
+
+        public DataTable getCardTypeIdByName(string cardTypeName)
+        {
+            return m_dalCardType.getCardTypeIdByName(cardTypeName);
+        }
+
         public DataTable getAllData()
         {
             return m_dalCardType.getAllData();

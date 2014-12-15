@@ -18,10 +18,11 @@ namespace DataTransferObject
         public string address;
         public string phoneNumber;
         public string fax;
+        public byte[] logo;
 
         public DTOTeam() { }
 
-        public DTOTeam(string _teamID, string _name, string _chairman, string _stadiumID, string _email, string _establishedYear, string _ceo, string _address, string _phoneNumber, string _fax)
+        public DTOTeam(string _teamID, string _name, string _chairman, string _stadiumID, string _email, string _establishedYear, string _ceo, string _address, string _phoneNumber, string _fax, byte[] _logo)
         {
             this.teamID = _teamID;
             this.name = _name;
@@ -33,6 +34,7 @@ namespace DataTransferObject
             this.address = _address;
             this.phoneNumber = _phoneNumber;
             this.fax = _fax;
+            this.logo = _logo;
         }
     }
 }

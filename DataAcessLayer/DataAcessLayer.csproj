@@ -42,6 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DALCardType.cs" />
+    <Compile Include="DALReferee.cs" />
+    <Compile Include="DALSeason.cs" />
+    <Compile Include="DALTeam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

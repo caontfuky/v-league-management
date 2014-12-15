@@ -28,70 +28,70 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.bntLogin = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(160, 123);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Properties.Appearance.BackColor = System.Drawing.SystemColors.Window;
-            this.txtPassword.Properties.Appearance.Options.UseBackColor = true;
-            this.txtPassword.Properties.UseSystemPasswordChar = true;
-            this.txtPassword.Size = new System.Drawing.Size(207, 20);
-            this.txtPassword.TabIndex = 6;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(56, 126);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(51, 13);
-            this.labelControl2.TabIndex = 8;
-            this.labelControl2.Text = "Mật khẩu :";
             // 
             // bntLogin
             // 
-            this.bntLogin.Location = new System.Drawing.Point(205, 192);
+            this.bntLogin.Location = new System.Drawing.Point(197, 165);
             this.bntLogin.Name = "bntLogin";
-            this.bntLogin.Size = new System.Drawing.Size(75, 23);
-            this.bntLogin.TabIndex = 7;
+            this.bntLogin.Size = new System.Drawing.Size(153, 35);
+            this.bntLogin.TabIndex = 3;
             this.bntLogin.Text = "Đăng Nhập";
             this.bntLogin.Click += new System.EventHandler(this.bntLogin_Click);
             // 
+            // labelControl3
+            // 
+            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl3.Location = new System.Drawing.Point(47, 55);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(118, 19);
+            this.labelControl3.TabIndex = 14;
+            this.labelControl3.Text = "Tên đăng nhập :";
+            // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(160, 80);
+            this.txtName.Location = new System.Drawing.Point(180, 57);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(207, 20);
-            this.txtName.TabIndex = 5;
+            this.txtName.Size = new System.Drawing.Size(261, 20);
+            this.txtName.TabIndex = 1;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(180, 105);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(261, 20);
+            this.txtPassword.TabIndex = 2;
             // 
             // labelControl1
             // 
-            this.labelControl1.Location = new System.Drawing.Point(56, 83);
+            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.labelControl1.Location = new System.Drawing.Point(47, 103);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(79, 13);
-            this.labelControl1.TabIndex = 4;
-            this.labelControl1.Text = "Tên đăng nhập :";
+            this.labelControl1.Size = new System.Drawing.Size(75, 19);
+            this.labelControl1.TabIndex = 2;
+            this.labelControl1.Text = "Mật khẩu :";
             // 
-            // frmDangNhap
+            // frmLogin1
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(443, 261);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(501, 245);
             this.Controls.Add(this.txtPassword);
-            this.Controls.Add(this.labelControl2);
-            this.Controls.Add(this.bntLogin);
-            this.Controls.Add(this.txtName);
             this.Controls.Add(this.labelControl1);
-            this.Name = "frmDangNhap";
-            this.Text = "DangNhap";
-            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.labelControl3);
+            this.Controls.Add(this.bntLogin);
+            this.Name = "frmLogin1";
+            this.Text = "frmLogin1";
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,10 +99,10 @@
 
         #endregion
 
-        private DevExpress.XtraEditors.TextEdit txtPassword;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.SimpleButton bntLogin;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txtName;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

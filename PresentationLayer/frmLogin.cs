@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Linq;
 using System.Windows.Forms;
+using DevExpress.XtraEditors;
 
 namespace PresentationLayer
 {
-    public partial class frmLogin : Form
+    public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
         private string user = "hung";
         private string password = "hung";
@@ -24,11 +24,11 @@ namespace PresentationLayer
         {
             //if (user.Equals(txtName.Text.Trim()) && password.Equals(txtPassword.Text.Trim()))
             //{
-                this.Hide();
-                frmMain mainForm = new frmMain();
-                //mainForm.FormBorderStyle = FormBorderStyle.None;
-               // mainForm.WindowState = FormWindowState.Maximized;
-                mainForm.Show();
+            this.Hide();
+            frmMain mainForm = new frmMain();
+            //mainForm.FormBorderStyle = FormBorderStyle.None;
+            // mainForm.WindowState = FormWindowState.Maximized;
+            mainForm.Show();
 
             //}
             //else

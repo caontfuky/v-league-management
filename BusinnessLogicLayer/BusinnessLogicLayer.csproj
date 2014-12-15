@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUSCardType.cs" />
-    <Compile Include="Class1.cs" />
+    <Compile Include="BUSRefereee.cs" />
+    <Compile Include="BUSSeason.cs" />
+    <Compile Include="BUSTeam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

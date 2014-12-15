@@ -23,7 +23,7 @@ namespace DataTransferObject.Global
         }
 
         /// <summary>
-        /// Phuong thuc nay dung de kiem tra ket noi voi database. 
+        /// Phuong thuc nay dung de kiem tra ket noi voi database. oh
         /// Tra ve true neu ket noi thanh cong, nguoc lai tra ve false.
         /// </summary>
         /// <returns></returns>

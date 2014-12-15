@@ -100,20 +100,26 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmConnectionSQL.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmConnectionSQL.Designer.cs">
       <DependentUpon>frmConnectionSQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeamDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTeamDetail.Designer.cs">
+      <DependentUpon>frmTeamDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -125,26 +131,58 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="ucListTeam.cs">
+    <Compile Include="sangldDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>sangldDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ucFixtures.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucListTeam.Designer.cs">
-      <DependentUpon>ucListTeam.cs</DependentUpon>
+    <Compile Include="ucFixtures.Designer.cs">
+      <DependentUpon>ucFixtures.cs</DependentUpon>
     </Compile>
-    <Compile Include="ucRule.cs">
+    <Compile Include="ucListReferee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ucRule.Designer.cs">
-      <DependentUpon>ucRule.cs</DependentUpon>
+    <Compile Include="ucListReferee.Designer.cs">
+      <DependentUpon>ucListReferee.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="ucListTeamDemo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucListTeamDemo.Designer.cs">
+      <DependentUpon>ucListTeamDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucResult.Designer.cs">
+      <DependentUpon>ucResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucRule_Season.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRule_Season.Designer.cs">
+      <DependentUpon>ucRule_Season.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmConnectionSQL.resx">
       <DependentUpon>frmConnectionSQL.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTeamDetail.resx">
+      <DependentUpon>frmTeamDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -152,11 +190,23 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucListTeam.resx">
-      <DependentUpon>ucListTeam.cs</DependentUpon>
+    <EmbeddedResource Include="ucFixtures.resx">
+      <DependentUpon>ucFixtures.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucRule.resx">
-      <DependentUpon>ucRule.cs</DependentUpon>
+    <EmbeddedResource Include="ucListReferee.resx">
+      <DependentUpon>ucListReferee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucListTeamDemo.resx">
+      <DependentUpon>ucListTeamDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucResult.resx">
+      <DependentUpon>ucResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRule_Season.resx">
+      <DependentUpon>ucRule_Season.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>
@@ -170,6 +220,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="sangldDataSet.xsc">
+      <DependentUpon>sangldDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="sangldDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>sangldDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="sangldDataSet.xss">
+      <DependentUpon>sangldDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\v-league-management.sql">
