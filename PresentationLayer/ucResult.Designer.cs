@@ -28,49 +28,65 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode1 = new DevExpress.XtraGrid.GridLevelNode();
+            DevExpress.XtraGrid.GridLevelNode gridLevelNode2 = new DevExpress.XtraGrid.GridLevelNode();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.cbxReferee = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.cbxStadium = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbxVisitingTeam = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbxHomeTeam = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtDate = new DevExpress.XtraEditors.DateEdit();
-            this.txtHour = new DevExpress.XtraEditors.TimeEdit();
-            this.bntDel = new DevExpress.XtraEditors.SimpleButton();
-            this.bntUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
+            this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
+            this.cARDGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.colCardID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPlayerID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCardTypeID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.groupControl5 = new DevExpress.XtraEditors.GroupControl();
+            this.gOALGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colGoalID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPlayerID1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMatchID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTime1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.mATCHGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView3 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colMatchID1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHomeTeam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitingTeam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStadiumID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRefereeID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRoundID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.labelTitle = new DevExpress.XtraEditors.LabelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelSeason = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.cbxRound = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbxSeason = new DevExpress.XtraEditors.ComboBoxEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.bntDel = new DevExpress.XtraEditors.SimpleButton();
+            this.bntUpdate = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxReferee.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxReferee.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxStadium.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxVisitingTeam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxHomeTeam.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHour.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
+            this.groupControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cARDGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).BeginInit();
+            this.groupControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gOALGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mATCHGridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
@@ -83,199 +99,273 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.cbxReferee);
-            this.groupControl1.Controls.Add(this.labelControl8);
-            this.groupControl1.Controls.Add(this.labelControl7);
-            this.groupControl1.Controls.Add(this.labelControl6);
-            this.groupControl1.Controls.Add(this.cbxStadium);
-            this.groupControl1.Controls.Add(this.cbxVisitingTeam);
-            this.groupControl1.Controls.Add(this.cbxHomeTeam);
-            this.groupControl1.Controls.Add(this.labelControl5);
-            this.groupControl1.Controls.Add(this.labelControl4);
-            this.groupControl1.Controls.Add(this.labelControl1);
-            this.groupControl1.Controls.Add(this.txtDate);
-            this.groupControl1.Controls.Add(this.txtHour);
+            this.groupControl1.Controls.Add(this.panelControl4);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(2, 2);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(941, 209);
+            this.groupControl1.Size = new System.Drawing.Size(938, 229);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "THÔNG TIN CHI TIẾT TRẬN ĐẤU";
             // 
-            // cbxReferee
+            // panelControl4
             // 
-            this.cbxReferee.EditValue = null;
-            this.cbxReferee.Location = new System.Drawing.Point(526, 36);
-            this.cbxReferee.Name = "cbxReferee";
-            this.cbxReferee.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxReferee.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxReferee.Properties.Mask.EditMask = "";
-            this.cbxReferee.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.cbxReferee.Size = new System.Drawing.Size(88, 20);
-            this.cbxReferee.TabIndex = 15;
+            this.panelControl4.Controls.Add(this.groupControl4);
+            this.panelControl4.Controls.Add(this.groupControl5);
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl4.Location = new System.Drawing.Point(2, 21);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(934, 206);
+            this.panelControl4.TabIndex = 0;
             // 
-            // labelControl8
+            // groupControl4
             // 
-            this.labelControl8.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.labelControl8.Location = new System.Drawing.Point(412, 139);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(25, 14);
-            this.labelControl8.TabIndex = 13;
-            this.labelControl8.Text = "Giờ :";
+            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl4.Controls.Add(this.cARDGridControl);
+            this.groupControl4.Location = new System.Drawing.Point(469, 0);
+            this.groupControl4.Name = "groupControl4";
+            this.groupControl4.Size = new System.Drawing.Size(464, 205);
+            this.groupControl4.TabIndex = 0;
+            this.groupControl4.Text = "Thẻ";
             // 
-            // labelControl7
+            // cARDGridControl
             // 
-            this.labelControl7.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.labelControl7.Location = new System.Drawing.Point(412, 84);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(35, 14);
-            this.labelControl7.TabIndex = 12;
-            this.labelControl7.Text = "Ngày :";
+            this.cARDGridControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cARDGridControl.DataMember = "CARD";
+            this.cARDGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            gridLevelNode1.RelationName = "Level1";
+            gridLevelNode2.RelationName = "Level2";
+            this.cARDGridControl.LevelTree.Nodes.AddRange(new DevExpress.XtraGrid.GridLevelNode[] {
+            gridLevelNode1,
+            gridLevelNode2});
+            this.cARDGridControl.Location = new System.Drawing.Point(2, 21);
+            this.cARDGridControl.MainView = this.gridView1;
+            this.cARDGridControl.Name = "cARDGridControl";
+            this.cARDGridControl.Size = new System.Drawing.Size(460, 182);
+            this.cARDGridControl.TabIndex = 0;
+            this.cARDGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
             // 
-            // labelControl6
+            // gridView1
             // 
-            this.labelControl6.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.labelControl6.Location = new System.Drawing.Point(412, 38);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(61, 14);
-            this.labelControl6.TabIndex = 11;
-            this.labelControl6.Text = "Trọng Tài :";
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colCardID,
+            this.colPlayerID,
+            this.gridColumn1,
+            this.colCardTypeID,
+            this.colTime});
+            this.gridView1.GridControl = this.cARDGridControl;
+            this.gridView1.Name = "gridView1";
             // 
-            // cbxStadium
+            // colCardID
             // 
-            this.cbxStadium.Location = new System.Drawing.Point(149, 132);
-            this.cbxStadium.Name = "cbxStadium";
-            this.cbxStadium.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxStadium.Size = new System.Drawing.Size(203, 20);
-            this.cbxStadium.TabIndex = 10;
+            this.colCardID.Caption = "ID Thẻ";
+            this.colCardID.FieldName = "CardID";
+            this.colCardID.Name = "colCardID";
+            this.colCardID.Visible = true;
+            this.colCardID.VisibleIndex = 0;
+            this.colCardID.Width = 41;
             // 
-            // cbxVisitingTeam
+            // colPlayerID
             // 
-            this.cbxVisitingTeam.Location = new System.Drawing.Point(149, 82);
-            this.cbxVisitingTeam.Name = "cbxVisitingTeam";
-            this.cbxVisitingTeam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxVisitingTeam.Size = new System.Drawing.Size(203, 20);
-            this.cbxVisitingTeam.TabIndex = 9;
+            this.colPlayerID.Caption = "Cầu Thủ";
+            this.colPlayerID.FieldName = "PlayerName";
+            this.colPlayerID.Name = "colPlayerID";
+            this.colPlayerID.Visible = true;
+            this.colPlayerID.VisibleIndex = 1;
+            this.colPlayerID.Width = 98;
             // 
-            // cbxHomeTeam
+            // gridColumn1
             // 
-            this.cbxHomeTeam.Location = new System.Drawing.Point(149, 36);
-            this.cbxHomeTeam.Name = "cbxHomeTeam";
-            this.cbxHomeTeam.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxHomeTeam.Size = new System.Drawing.Size(203, 20);
-            this.cbxHomeTeam.TabIndex = 5;
+            this.gridColumn1.Caption = "Đội Bóng";
+            this.gridColumn1.FieldName = "TeamName";
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 2;
+            this.gridColumn1.Width = 98;
             // 
-            // labelControl5
+            // colCardTypeID
             // 
-            this.labelControl5.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.labelControl5.Location = new System.Drawing.Point(24, 134);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(86, 14);
-            this.labelControl5.TabIndex = 8;
-            this.labelControl5.Text = "Sân Vận Động :";
+            this.colCardTypeID.Caption = "Thẻ";
+            this.colCardTypeID.FieldName = "CardTypeName";
+            this.colCardTypeID.Name = "colCardTypeID";
+            this.colCardTypeID.Visible = true;
+            this.colCardTypeID.VisibleIndex = 3;
+            this.colCardTypeID.Width = 98;
             // 
-            // labelControl4
+            // colTime
             // 
-            this.labelControl4.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.labelControl4.Location = new System.Drawing.Point(24, 84);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(62, 14);
-            this.labelControl4.TabIndex = 7;
-            this.labelControl4.Text = "Đội Khách :";
+            this.colTime.Caption = "Thời Gian";
+            this.colTime.FieldName = "Time";
+            this.colTime.Name = "colTime";
+            this.colTime.Visible = true;
+            this.colTime.VisibleIndex = 4;
+            this.colTime.Width = 107;
             // 
-            // labelControl1
+            // groupControl5
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 9F);
-            this.labelControl1.Location = new System.Drawing.Point(24, 38);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(50, 14);
-            this.labelControl1.TabIndex = 4;
-            this.labelControl1.Text = "Đội Nhà :";
+            this.groupControl5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.groupControl5.Controls.Add(this.gOALGridControl);
+            this.groupControl5.Location = new System.Drawing.Point(0, 0);
+            this.groupControl5.Name = "groupControl5";
+            this.groupControl5.Size = new System.Drawing.Size(463, 205);
+            this.groupControl5.TabIndex = 1;
+            this.groupControl5.Text = "Bàn Thắng";
             // 
-            // txtDate
+            // gOALGridControl
             // 
-            this.txtDate.EditValue = null;
-            this.txtDate.Location = new System.Drawing.Point(526, 83);
-            this.txtDate.Name = "txtDate";
-            this.txtDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtDate.Properties.Mask.EditMask = "";
-            this.txtDate.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtDate.Size = new System.Drawing.Size(88, 20);
-            this.txtDate.TabIndex = 5;
+            this.gOALGridControl.Cursor = System.Windows.Forms.Cursors.Default;
+            this.gOALGridControl.DataMember = "GOAL";
+            this.gOALGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gOALGridControl.Location = new System.Drawing.Point(2, 21);
+            this.gOALGridControl.MainView = this.gridView2;
+            this.gOALGridControl.Name = "gOALGridControl";
+            this.gOALGridControl.Size = new System.Drawing.Size(459, 182);
+            this.gOALGridControl.TabIndex = 0;
+            this.gOALGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
-            // txtHour
+            // gridView2
             // 
-            this.txtHour.EditValue = null;
-            this.txtHour.Location = new System.Drawing.Point(526, 131);
-            this.txtHour.Name = "txtHour";
-            this.txtHour.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtHour.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
-            this.txtHour.Properties.Mask.EditMask = "";
-            this.txtHour.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.None;
-            this.txtHour.Size = new System.Drawing.Size(88, 20);
-            this.txtHour.TabIndex = 14;
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colGoalID,
+            this.colPlayerID1,
+            this.colMatchID,
+            this.colTime1});
+            this.gridView2.GridControl = this.gOALGridControl;
+            this.gridView2.Name = "gridView2";
             // 
-            // bntDel
+            // colGoalID
             // 
-            this.bntDel.Location = new System.Drawing.Point(51, 142);
-            this.bntDel.Name = "bntDel";
-            this.bntDel.Size = new System.Drawing.Size(131, 39);
-            this.bntDel.TabIndex = 16;
-            this.bntDel.Text = "Xóa Kết Quả";
+            this.colGoalID.Caption = "ID Bàn Thắng";
+            this.colGoalID.FieldName = "GoalID";
+            this.colGoalID.Name = "colGoalID";
+            this.colGoalID.Visible = true;
+            this.colGoalID.VisibleIndex = 0;
+            this.colGoalID.Width = 72;
             // 
-            // bntUpdate
+            // colPlayerID1
             // 
-            this.bntUpdate.Location = new System.Drawing.Point(51, 60);
-            this.bntUpdate.Name = "bntUpdate";
-            this.bntUpdate.Size = new System.Drawing.Size(131, 40);
-            this.bntUpdate.TabIndex = 6;
-            this.bntUpdate.Text = "Cập Nhật Kết Quả";
+            this.colPlayerID1.Caption = "Cầu Thủ";
+            this.colPlayerID1.FieldName = "PlayerName";
+            this.colPlayerID1.Name = "colPlayerID1";
+            this.colPlayerID1.Visible = true;
+            this.colPlayerID1.VisibleIndex = 1;
+            this.colPlayerID1.Width = 281;
+            // 
+            // colMatchID
+            // 
+            this.colMatchID.Caption = "Đội Bóng";
+            this.colMatchID.FieldName = "TeamName";
+            this.colMatchID.Name = "colMatchID";
+            this.colMatchID.Visible = true;
+            this.colMatchID.VisibleIndex = 2;
+            this.colMatchID.Width = 432;
+            // 
+            // colTime1
+            // 
+            this.colTime1.Caption = "Thời Gian";
+            this.colTime1.FieldName = "Time";
+            this.colTime1.Name = "colTime1";
+            this.colTime1.Visible = true;
+            this.colTime1.VisibleIndex = 3;
+            this.colTime1.Width = 133;
             // 
             // panelControl3
             // 
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl3.Controls.Add(this.groupControl1);
-            this.panelControl3.Location = new System.Drawing.Point(0, 425);
+            this.panelControl3.Location = new System.Drawing.Point(5, 410);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(945, 213);
+            this.panelControl3.Size = new System.Drawing.Size(942, 233);
             this.panelControl3.TabIndex = 5;
-            // 
-            // gridView1
-            // 
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            // 
-            // gridControl1
-            // 
-            this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 21);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(934, 347);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.gridControl1);
+            this.groupControl2.Controls.Add(this.mATCHGridControl);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(2, 2);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(938, 370);
+            this.groupControl2.Size = new System.Drawing.Size(938, 355);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "DANH SÁCH TRẬN ĐẤU";
+            // 
+            // mATCHGridControl
+            // 
+            this.mATCHGridControl.DataMember = "MATCH";
+            this.mATCHGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mATCHGridControl.Location = new System.Drawing.Point(2, 21);
+            this.mATCHGridControl.MainView = this.gridView3;
+            this.mATCHGridControl.Name = "mATCHGridControl";
+            this.mATCHGridControl.Size = new System.Drawing.Size(934, 332);
+            this.mATCHGridControl.TabIndex = 0;
+            this.mATCHGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView3});
+            // 
+            // gridView3
+            // 
+            this.gridView3.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMatchID1,
+            this.colHomeTeam,
+            this.colVisitingTeam,
+            this.colStadiumID,
+            this.colStartDate,
+            this.colRefereeID,
+            this.colRoundID});
+            this.gridView3.GridControl = this.mATCHGridControl;
+            this.gridView3.Name = "gridView3";
+            // 
+            // colMatchID1
+            // 
+            this.colMatchID1.FieldName = "ID Trận Đấu";
+            this.colMatchID1.Name = "colMatchID1";
+            this.colMatchID1.Visible = true;
+            this.colMatchID1.VisibleIndex = 0;
+            // 
+            // colHomeTeam
+            // 
+            this.colHomeTeam.FieldName = "HomeTeam";
+            this.colHomeTeam.Name = "colHomeTeam";
+            this.colHomeTeam.Visible = true;
+            this.colHomeTeam.VisibleIndex = 1;
+            // 
+            // colVisitingTeam
+            // 
+            this.colVisitingTeam.FieldName = "VisitingTeam";
+            this.colVisitingTeam.Name = "colVisitingTeam";
+            this.colVisitingTeam.Visible = true;
+            this.colVisitingTeam.VisibleIndex = 2;
+            // 
+            // colStadiumID
+            // 
+            this.colStadiumID.FieldName = "StadiumID";
+            this.colStadiumID.Name = "colStadiumID";
+            this.colStadiumID.Visible = true;
+            this.colStadiumID.VisibleIndex = 3;
+            // 
+            // colStartDate
+            // 
+            this.colStartDate.FieldName = "StartDate";
+            this.colStartDate.Name = "colStartDate";
+            this.colStartDate.Visible = true;
+            this.colStartDate.VisibleIndex = 4;
+            // 
+            // colRefereeID
+            // 
+            this.colRefereeID.FieldName = "RefereeID";
+            this.colRefereeID.Name = "colRefereeID";
+            this.colRefereeID.Visible = true;
+            this.colRefereeID.VisibleIndex = 5;
+            // 
+            // colRoundID
+            // 
+            this.colRoundID.FieldName = "RoundID";
+            this.colRoundID.Name = "colRoundID";
+            this.colRoundID.Visible = true;
+            this.colRoundID.VisibleIndex = 6;
             // 
             // labelTitle
             // 
@@ -294,13 +384,14 @@
             this.panelControl2.Controls.Add(this.groupControl2);
             this.panelControl2.Location = new System.Drawing.Point(3, 47);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(942, 374);
+            this.panelControl2.Size = new System.Drawing.Size(942, 359);
             this.panelControl2.TabIndex = 4;
             // 
             // panelControl1
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.labelSeason);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
             this.panelControl1.Controls.Add(this.cbxRound);
@@ -310,6 +401,15 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1197, 46);
             this.panelControl1.TabIndex = 3;
+            // 
+            // labelSeason
+            // 
+            this.labelSeason.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelSeason.Location = new System.Drawing.Point(236, 14);
+            this.labelSeason.Name = "labelSeason";
+            this.labelSeason.Size = new System.Drawing.Size(25, 16);
+            this.labelSeason.TabIndex = 5;
+            this.labelSeason.Text = "Text";
             // 
             // labelControl3
             // 
@@ -343,6 +443,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxRound.Size = new System.Drawing.Size(100, 20);
             this.cbxRound.TabIndex = 2;
+            this.cbxRound.SelectedIndexChanged += new System.EventHandler(this.cbxRound_SelectedIndexChanged);
             // 
             // cbxSeason
             // 
@@ -354,18 +455,35 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxSeason.Size = new System.Drawing.Size(100, 20);
             this.cbxSeason.TabIndex = 1;
+            this.cbxSeason.SelectedIndexChanged += new System.EventHandler(this.cbxSeason_SelectedIndexChanged);
             // 
             // groupControl3
             // 
             this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl3.Controls.Add(this.bntUpdate);
             this.groupControl3.Controls.Add(this.bntDel);
-            this.groupControl3.Location = new System.Drawing.Point(951, 47);
+            this.groupControl3.Controls.Add(this.bntUpdate);
+            this.groupControl3.Location = new System.Drawing.Point(946, 49);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(246, 589);
+            this.groupControl3.Size = new System.Drawing.Size(254, 591);
             this.groupControl3.TabIndex = 6;
             this.groupControl3.Text = "TÁC VỤ";
+            // 
+            // bntDel
+            // 
+            this.bntDel.Location = new System.Drawing.Point(72, 149);
+            this.bntDel.Name = "bntDel";
+            this.bntDel.Size = new System.Drawing.Size(133, 45);
+            this.bntDel.TabIndex = 1;
+            this.bntDel.Text = "Xóa Kết Quả";
+            // 
+            // bntUpdate
+            // 
+            this.bntUpdate.Location = new System.Drawing.Point(72, 64);
+            this.bntUpdate.Name = "bntUpdate";
+            this.bntUpdate.Size = new System.Drawing.Size(133, 45);
+            this.bntUpdate.TabIndex = 0;
+            this.bntUpdate.Text = "Cập Nhật Kết Quả";
             // 
             // ucResult
             // 
@@ -379,21 +497,22 @@
             this.Size = new System.Drawing.Size(1200, 643);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxReferee.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxReferee.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxStadium.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxVisitingTeam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxHomeTeam.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtHour.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
+            this.groupControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cARDGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl5)).EndInit();
+            this.groupControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gOALGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mATCHGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
@@ -410,23 +529,7 @@
         #endregion
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
-        private DevExpress.XtraEditors.SimpleButton bntDel;
-        private DevExpress.XtraEditors.DateEdit cbxReferee;
-        private DevExpress.XtraEditors.LabelControl labelControl8;
-        private DevExpress.XtraEditors.LabelControl labelControl7;
-        private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxStadium;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxVisitingTeam;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxHomeTeam;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
-        private DevExpress.XtraEditors.SimpleButton bntUpdate;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.DateEdit txtDate;
-        private DevExpress.XtraEditors.TimeEdit txtHour;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private DevExpress.XtraEditors.LabelControl labelTitle;
         private DevExpress.XtraEditors.PanelControl panelControl2;
@@ -435,6 +538,34 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.ComboBoxEdit cbxRound;
         private DevExpress.XtraEditors.ComboBoxEdit cbxSeason;
+        private DevExpress.XtraEditors.GroupControl groupControl5;
+        private DevExpress.XtraEditors.GroupControl groupControl4;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraEditors.LabelControl labelSeason;
+        private DevExpress.XtraGrid.GridControl cARDGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCardID;
+        private DevExpress.XtraGrid.Columns.GridColumn colPlayerID;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
+        private DevExpress.XtraGrid.Columns.GridColumn colCardTypeID;
+        private DevExpress.XtraGrid.Columns.GridColumn colTime;
+        private DevExpress.XtraGrid.GridControl gOALGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Columns.GridColumn colGoalID;
+        private DevExpress.XtraGrid.Columns.GridColumn colPlayerID1;
+        private DevExpress.XtraGrid.Columns.GridColumn colMatchID;
+        private DevExpress.XtraGrid.Columns.GridColumn colTime1;
+        private DevExpress.XtraGrid.GridControl mATCHGridControl;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView3;
+        private DevExpress.XtraGrid.Columns.GridColumn colMatchID1;
+        private DevExpress.XtraGrid.Columns.GridColumn colHomeTeam;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitingTeam;
+        private DevExpress.XtraGrid.Columns.GridColumn colStadiumID;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colRefereeID;
+        private DevExpress.XtraGrid.Columns.GridColumn colRoundID;
         private DevExpress.XtraEditors.GroupControl groupControl3;
+        private DevExpress.XtraEditors.SimpleButton bntUpdate;
+        private DevExpress.XtraEditors.SimpleButton bntDel;
     }
 }

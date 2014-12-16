@@ -15,6 +15,8 @@ namespace PresentationLayer
 {
     public partial class UserControl1 : UserControl
     {
+        public bool iscomplete;
+
         public UserControl1()
         {
             InitializeComponent();

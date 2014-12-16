@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelSeason = new DevExpress.XtraEditors.LabelControl();
             this.labelTitle = new DevExpress.XtraEditors.LabelControl();
             this.cbxSeason = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label1 = new System.Windows.Forms.Label();
@@ -52,6 +53,7 @@
             // 
             // panelControl1
             // 
+            this.panelControl1.Controls.Add(this.labelSeason);
             this.panelControl1.Controls.Add(this.labelTitle);
             this.panelControl1.Controls.Add(this.cbxSeason);
             this.panelControl1.Controls.Add(this.label1);
@@ -60,6 +62,18 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1181, 46);
             this.panelControl1.TabIndex = 0;
+            // 
+            // labelSeason
+            // 
+            this.labelSeason.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSeason.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelSeason.Location = new System.Drawing.Point(576, 12);
+            this.labelSeason.Name = "labelSeason";
+            this.labelSeason.Size = new System.Drawing.Size(25, 16);
+            this.labelSeason.TabIndex = 6;
+            this.labelSeason.Text = "Text";
             // 
             // labelTitle
             // 
@@ -83,6 +97,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxSeason.Size = new System.Drawing.Size(127, 20);
             this.cbxSeason.TabIndex = 4;
+            this.cbxSeason.SelectedIndexChanged += new System.EventHandler(this.cbxSeason_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -112,6 +127,7 @@
             this.tileControl1.DragSize = new System.Drawing.Size(0, 0);
             this.tileControl1.IndentBetweenItems = 30;
             this.tileControl1.Location = new System.Drawing.Point(2, 2);
+            this.tileControl1.MaxId = 1;
             this.tileControl1.Name = "tileControl1";
             this.tileControl1.Size = new System.Drawing.Size(995, 604);
             this.tileControl1.TabIndex = 0;
@@ -154,6 +170,7 @@
             this.bntUpdateTeam.Size = new System.Drawing.Size(98, 52);
             this.bntUpdateTeam.TabIndex = 1;
             this.bntUpdateTeam.Text = "Sửa TT Đội Bóng";
+            this.bntUpdateTeam.Click += new System.EventHandler(this.bntUpdateTeam_Click);
             // 
             // bntAddTeam
             // 
@@ -201,5 +218,6 @@
         private DevExpress.XtraEditors.SimpleButton bntDelTeam;
         private DevExpress.XtraEditors.SimpleButton bntUpdateTeam;
         private DevExpress.XtraEditors.SimpleButton bntAddTeam;
+        private DevExpress.XtraEditors.LabelControl labelSeason;
     }
 }

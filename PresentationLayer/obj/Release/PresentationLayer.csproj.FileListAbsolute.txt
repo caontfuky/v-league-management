@@ -24,3 +24,4 @@ D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucListT
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.frmTeamDetail.resources
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucListReferee.resources
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucResult.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucStanding.resources

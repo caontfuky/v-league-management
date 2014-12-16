@@ -93,5 +93,14 @@ namespace PresentationLayer
             result.Dock = DockStyle.Fill;
             mainPanel.Controls.Add(result);
         }
+
+        private void bntStanding_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            mainPanel.Controls.Clear();
+
+            ucStanding standing = new ucStanding();
+            standing.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(standing);
+        }
     }
 }

@@ -36,7 +36,7 @@
             this.bntPublic = new DevExpress.XtraBars.BarButtonItem();
             this.bntFixture = new DevExpress.XtraBars.BarButtonItem();
             this.bntResult = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
+            this.bntStanding = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem9 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem10 = new DevExpress.XtraBars.BarButtonItem();
@@ -74,7 +74,7 @@
             this.bntPublic,
             this.bntFixture,
             this.bntResult,
-            this.barButtonItem7,
+            this.bntStanding,
             this.barButtonItem8,
             this.barButtonItem9,
             this.barButtonItem10,
@@ -142,13 +142,14 @@
             this.bntResult.Name = "bntResult";
             this.bntResult.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bntResult_ItemClick);
             // 
-            // barButtonItem7
+            // bntStanding
             // 
-            this.barButtonItem7.Caption = "Bảng Xếp Hạng";
-            this.barButtonItem7.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.Glyph")));
-            this.barButtonItem7.Id = 9;
-            this.barButtonItem7.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem7.LargeGlyph")));
-            this.barButtonItem7.Name = "barButtonItem7";
+            this.bntStanding.Caption = "Bảng Xếp Hạng";
+            this.bntStanding.Glyph = ((System.Drawing.Image)(resources.GetObject("bntStanding.Glyph")));
+            this.bntStanding.Id = 9;
+            this.bntStanding.LargeGlyph = ((System.Drawing.Image)(resources.GetObject("bntStanding.LargeGlyph")));
+            this.bntStanding.Name = "bntStanding";
+            this.bntStanding.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bntStanding_ItemClick);
             // 
             // barButtonItem8
             // 
@@ -228,7 +229,7 @@
             // 
             // ribbonPageGroup5
             // 
-            this.ribbonPageGroup5.ItemLinks.Add(this.barButtonItem7);
+            this.ribbonPageGroup5.ItemLinks.Add(this.bntStanding);
             this.ribbonPageGroup5.Name = "ribbonPageGroup5";
             // 
             // ribbonPageGroup1
@@ -320,7 +321,7 @@
         private DevExpress.XtraBars.BarButtonItem bntPublic;
         private DevExpress.XtraBars.BarButtonItem bntFixture;
         private DevExpress.XtraBars.BarButtonItem bntResult;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
+        private DevExpress.XtraBars.BarButtonItem bntStanding;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup3;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;

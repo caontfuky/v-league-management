@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
+            this.labelSeason = new DevExpress.XtraEditors.LabelControl();
+            this.bntAuto = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.cbxRound = new DevExpress.XtraEditors.ComboBoxEdit();
@@ -55,7 +57,11 @@
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtDate = new DevExpress.XtraEditors.DateEdit();
             this.txtHour = new DevExpress.XtraEditors.TimeEdit();
-            this.bntAuto = new DevExpress.XtraEditors.SimpleButton();
+            this.colSTT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHour = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colHomeTeam = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitingTeam = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxRound.Properties)).BeginInit();
@@ -84,6 +90,7 @@
             // 
             this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Controls.Add(this.labelSeason);
             this.panelControl1.Controls.Add(this.bntAuto);
             this.panelControl1.Controls.Add(this.labelControl3);
             this.panelControl1.Controls.Add(this.labelControl2);
@@ -94,6 +101,25 @@
             this.panelControl1.Name = "panelControl1";
             this.panelControl1.Size = new System.Drawing.Size(1115, 46);
             this.panelControl1.TabIndex = 0;
+            // 
+            // labelSeason
+            // 
+            this.labelSeason.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.labelSeason.Location = new System.Drawing.Point(219, 14);
+            this.labelSeason.Name = "labelSeason";
+            this.labelSeason.Size = new System.Drawing.Size(25, 16);
+            this.labelSeason.TabIndex = 19;
+            this.labelSeason.Text = "Text";
+            // 
+            // bntAuto
+            // 
+            this.bntAuto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntAuto.Location = new System.Drawing.Point(968, 10);
+            this.bntAuto.Name = "bntAuto";
+            this.bntAuto.Size = new System.Drawing.Size(131, 24);
+            this.bntAuto.TabIndex = 18;
+            this.bntAuto.Text = "Sắp xếp tự động";
             // 
             // labelControl3
             // 
@@ -127,6 +153,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxRound.Size = new System.Drawing.Size(100, 20);
             this.cbxRound.TabIndex = 2;
+            this.cbxRound.SelectedIndexChanged += new System.EventHandler(this.cbxRound_SelectedIndexChanged);
             // 
             // cbxSeason
             // 
@@ -138,6 +165,7 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbxSeason.Size = new System.Drawing.Size(100, 20);
             this.cbxSeason.TabIndex = 1;
+            this.cbxSeason.SelectedIndexChanged += new System.EventHandler(this.cbxSeason_SelectedIndexChanged);
             // 
             // labelNameSeason
             // 
@@ -183,6 +211,12 @@
             // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colSTT,
+            this.colHour,
+            this.colDate,
+            this.colHomeTeam,
+            this.colVisitingTeam});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
@@ -219,7 +253,6 @@
             this.groupControl1.Size = new System.Drawing.Size(1114, 209);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "TÁC VỤ";
-            this.groupControl1.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl1_Paint);
             // 
             // bntUpdateMatch
             // 
@@ -367,15 +400,50 @@
             this.txtHour.Size = new System.Drawing.Size(88, 20);
             this.txtHour.TabIndex = 14;
             // 
-            // bntAuto
+            // colSTT
             // 
-            this.bntAuto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.bntAuto.Location = new System.Drawing.Point(968, 10);
-            this.bntAuto.Name = "bntAuto";
-            this.bntAuto.Size = new System.Drawing.Size(131, 24);
-            this.bntAuto.TabIndex = 18;
-            this.bntAuto.Text = "Sắp xếp tự động";
+            this.colSTT.Caption = "STT";
+            this.colSTT.FieldName = "STT";
+            this.colSTT.Name = "colSTT";
+            this.colSTT.Visible = true;
+            this.colSTT.VisibleIndex = 0;
+            this.colSTT.Width = 55;
+            // 
+            // colHour
+            // 
+            this.colHour.Caption = "Giờ";
+            this.colHour.FieldName = "Hour";
+            this.colHour.Name = "colHour";
+            this.colHour.Visible = true;
+            this.colHour.VisibleIndex = 1;
+            this.colHour.Width = 141;
+            // 
+            // colDate
+            // 
+            this.colDate.Caption = "Ngày";
+            this.colDate.FieldName = "Date";
+            this.colDate.Name = "colDate";
+            this.colDate.Visible = true;
+            this.colDate.VisibleIndex = 2;
+            this.colDate.Width = 155;
+            // 
+            // colHomeTeam
+            // 
+            this.colHomeTeam.Caption = "Đội Nhà";
+            this.colHomeTeam.FieldName = "HomeTeam";
+            this.colHomeTeam.Name = "colHomeTeam";
+            this.colHomeTeam.Visible = true;
+            this.colHomeTeam.VisibleIndex = 3;
+            this.colHomeTeam.Width = 365;
+            // 
+            // colVisitingTeam
+            // 
+            this.colVisitingTeam.Caption = "Đội Khách";
+            this.colVisitingTeam.FieldName = "VisitingTeam";
+            this.colVisitingTeam.Name = "colVisitingTeam";
+            this.colVisitingTeam.Visible = true;
+            this.colVisitingTeam.VisibleIndex = 4;
+            this.colVisitingTeam.Width = 375;
             // 
             // ucFixtures
             // 
@@ -444,5 +512,11 @@
         private DevExpress.XtraEditors.DateEdit txtDate;
         private DevExpress.XtraEditors.TimeEdit txtHour;
         private DevExpress.XtraEditors.SimpleButton bntAuto;
+        private DevExpress.XtraEditors.LabelControl labelSeason;
+        private DevExpress.XtraGrid.Columns.GridColumn colSTT;
+        private DevExpress.XtraGrid.Columns.GridColumn colHour;
+        private DevExpress.XtraGrid.Columns.GridColumn colDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colHomeTeam;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitingTeam;
     }
 }
