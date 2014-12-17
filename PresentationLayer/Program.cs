@@ -14,12 +14,14 @@ namespace PresentationLayer
         [STAThread]
         static void Main()
         {
-            //sang test
+            //sang test, cho nay la t demo day
             //BUSCardType cardtype = new BUSCardType();
             //int count = cardtype.updateData(new DataTransferObject.DTOCardType("C0001", "The xanh"));
+
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmHome());
         }
     }
 }

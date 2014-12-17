@@ -125,7 +125,7 @@
             // 
             // imageSlider1
             // 
-            this.imageSlider1.BackgroundImage = global::PresentationLayer.Properties.Resources.LogoEximbank;
+            //this.imageSlider1.BackgroundImage = global::PresentationLayer.Properties.Resources.LogoEximbank;
             this.imageSlider1.LayoutMode = DevExpress.Utils.Drawing.ImageLayoutMode.Stretch;
             this.imageSlider1.Location = new System.Drawing.Point(603, 14);
             this.imageSlider1.Name = "imageSlider1";

@@ -106,6 +106,12 @@
     <Compile Include="frmConnectionSQL.Designer.cs">
       <DependentUpon>frmConnectionSQL.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     <EmbeddedResource Include="frmConnectionSQL.resx">
       <DependentUpon>frmConnectionSQL.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,10 +256,11 @@
     <Content Include="Database\v-league-management.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\images.jpg" />
-    <None Include="Resources\closeIcon.png" />
-    <None Include="Resources\LogoEximbank.png" />
-    <None Include="Resources\background1.jpg" />
+    <None Include="Resources\team_32x32.png" />
+    <None Include="Resources\Image_32x32\stadium_32x32.png" />
+    <None Include="Resources\Image_32x32\logout_32x32.png" />
+    <None Include="Resources\Image_32x32\login_32x32.png" />
+    <None Include="Resources\Image_32x32\home_32x32.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
