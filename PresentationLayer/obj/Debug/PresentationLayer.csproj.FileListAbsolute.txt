@@ -15,8 +15,23 @@ D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\Database\v-league-managemen
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\bin\Debug\PresentationLayer.exe.config
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.MainForm.resources
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Debug\PresentationLayer.UserControl1.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\bin\Debug\PresentationLayer.exe.config
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmConnectionSQL.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmHome.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmLogin.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmMain.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmTeamDetail.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.Properties.Resources.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucFixtures.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucListReferee.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucListTeamDemo.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucResult.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucRule_Season.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucStanding.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.UserControl1.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.csproj.GenerateResource.Cache
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.exe.licenses
 E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\bin\Debug\Database\v-league-management.sql
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\bin\Debug\PresentationLayer.exe.config
 E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\bin\Debug\PresentationLayer.exe
 E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\bin\Debug\PresentationLayer.pdb
 E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\bin\Debug\BusinnessLogicLayer.dll
@@ -25,21 +40,6 @@ E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\Presentati
 E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\bin\Debug\BusinnessLogicLayer.pdb
 E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\bin\Debug\DataTransferObject.pdb
 E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\bin\Debug\DataAcessLayer.pdb
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.csprojResolveAssemblyReference.cache
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmConnectionSQL.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.Properties.Resources.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.UserControl1.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.csproj.GenerateResource.Cache
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.exe.licenses
 E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.exe
 E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.pdb
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmLogin.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmMain.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmTeamDetail.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucFixtures.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucListReferee.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucListTeamDemo.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucResult.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucRule_Season.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.ucStanding.resources
-E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.frmHome.resources
+E:\SEMESTER_7\Phat trien phan mem huong doi tuong\v-league-management\PresentationLayer\obj\Debug\PresentationLayer.csprojResolveAssemblyReference.cache

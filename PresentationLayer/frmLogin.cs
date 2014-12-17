@@ -25,7 +25,7 @@ namespace PresentationLayer
             //if (user.Equals(txtName.Text.Trim()) && password.Equals(txtPassword.Text.Trim()))
             //{
             this.Hide();
-            frmMain mainForm = new frmMain();
+            frmHome mainForm = new frmHome();
             //mainForm.FormBorderStyle = FormBorderStyle.None;
             // mainForm.WindowState = FormWindowState.Maximized;
             mainForm.Show();

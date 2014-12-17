@@ -36,8 +36,8 @@
             this.bbtnLogout = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnUserInfo = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnConnectionData = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnRestore = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnBackupData = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             this.bbtAddPlayer = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnNational = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnPosition = new DevExpress.XtraBars.BarButtonItem();
@@ -51,6 +51,9 @@
             this.bbtnSeasonInfo = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnResult = new DevExpress.XtraBars.BarButtonItem();
             this.bbtnReferee = new DevExpress.XtraBars.BarButtonItem();
+            this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            this.bitemFont = new DevExpress.XtraBars.BarEditItem();
+            this.rItemFontEdit = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
             this.ribPSystem = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribPGUserInfo = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribPGDataBase = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -58,10 +61,16 @@
             this.ribPGPlayerManager = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribPGTeamManger = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribPGSeasonManager = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
-            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.rinPReport = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribPTool = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribGInterface = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribPGFont = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
+            this.xtraTabbedMdiManager = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rItemFontEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).BeginInit();
             this.SuspendLayout();
             // 
             // ribbon
@@ -75,8 +84,8 @@
             this.bbtnLogout,
             this.bbtnUserInfo,
             this.bbtnConnectionData,
+            this.bbtnRestore,
             this.bbtnBackupData,
-            this.barButtonItem1,
             this.bbtAddPlayer,
             this.bbtnNational,
             this.bbtnPosition,
@@ -89,14 +98,19 @@
             this.bbtnCoach,
             this.bbtnSeasonInfo,
             this.bbtnResult,
-            this.bbtnReferee});
+            this.bbtnReferee,
+            this.skinRibbonGalleryBarItem,
+            this.bitemFont});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 20;
+            this.ribbon.MaxItemId = 23;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribPSystem,
             this.ribPManager,
-            this.rinPReport});
+            this.rinPReport,
+            this.ribPTool});
+            this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.rItemFontEdit});
             this.ribbon.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.True;
             this.ribbon.Size = new System.Drawing.Size(896, 144);
             this.ribbon.StatusBar = this.ribbonStatusBar;
@@ -138,19 +152,19 @@
             this.bbtnConnectionData.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
+            // bbtnRestore
+            // 
+            this.bbtnRestore.Caption = "Phục hồi CSDL";
+            this.bbtnRestore.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnRestore.Glyph")));
+            this.bbtnRestore.Id = 6;
+            this.bbtnRestore.Name = "bbtnRestore";
+            // 
             // bbtnBackupData
             // 
             this.bbtnBackupData.Caption = "Sao lưu CSDL";
             this.bbtnBackupData.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnBackupData.Glyph")));
             this.bbtnBackupData.Id = 5;
             this.bbtnBackupData.Name = "bbtnBackupData";
-            // 
-            // barButtonItem1
-            // 
-            this.barButtonItem1.Caption = "Phục hồi CSDL";
-            this.barButtonItem1.Glyph = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.Glyph")));
-            this.barButtonItem1.Id = 6;
-            this.barButtonItem1.Name = "barButtonItem1";
             // 
             // bbtAddPlayer
             // 
@@ -258,6 +272,27 @@
             this.bbtnReferee.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
                         | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
             // 
+            // skinRibbonGalleryBarItem
+            // 
+            this.skinRibbonGalleryBarItem.Caption = "skinRibbonGalleryBarItem1";
+            this.skinRibbonGalleryBarItem.Id = 20;
+            this.skinRibbonGalleryBarItem.Name = "skinRibbonGalleryBarItem";
+            // 
+            // bitemFont
+            // 
+            this.bitemFont.Caption = "Font";
+            this.bitemFont.Edit = this.rItemFontEdit;
+            this.bitemFont.Id = 21;
+            this.bitemFont.Name = "bitemFont";
+            this.bitemFont.HiddenEditor += new DevExpress.XtraBars.ItemClickEventHandler(this.changeFont);
+            // 
+            // rItemFontEdit
+            // 
+            this.rItemFontEdit.AutoHeight = false;
+            this.rItemFontEdit.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rItemFontEdit.Name = "rItemFontEdit";
+            // 
             // ribPSystem
             // 
             this.ribPSystem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -278,7 +313,7 @@
             // 
             this.ribPGDataBase.ItemLinks.Add(this.bbtnConnectionData);
             this.ribPGDataBase.ItemLinks.Add(this.bbtnBackupData);
-            this.ribPGDataBase.ItemLinks.Add(this.barButtonItem1);
+            this.ribPGDataBase.ItemLinks.Add(this.bbtnRestore);
             this.ribPGDataBase.Name = "ribPGDataBase";
             this.ribPGDataBase.Text = "Kết nối CSDL";
             // 
@@ -318,6 +353,31 @@
             this.ribPGSeasonManager.Name = "ribPGSeasonManager";
             this.ribPGSeasonManager.Text = "Quản lý mùa giải";
             // 
+            // rinPReport
+            // 
+            this.rinPReport.Name = "rinPReport";
+            this.rinPReport.Text = "Thống kê";
+            // 
+            // ribPTool
+            // 
+            this.ribPTool.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribGInterface,
+            this.ribPGFont});
+            this.ribPTool.Name = "ribPTool";
+            this.ribPTool.Text = "Tùy chọn";
+            // 
+            // ribGInterface
+            // 
+            this.ribGInterface.ItemLinks.Add(this.skinRibbonGalleryBarItem);
+            this.ribGInterface.Name = "ribGInterface";
+            this.ribGInterface.Text = "Giao diện";
+            // 
+            // ribPGFont
+            // 
+            this.ribPGFont.ItemLinks.Add(this.bitemFont);
+            this.ribPGFont.Name = "ribPGFont";
+            this.ribPGFont.Text = "Font";
+            // 
             // ribbonStatusBar
             // 
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 418);
@@ -325,10 +385,9 @@
             this.ribbonStatusBar.Ribbon = this.ribbon;
             this.ribbonStatusBar.Size = new System.Drawing.Size(896, 31);
             // 
-            // rinPReport
+            // xtraTabbedMdiManager
             // 
-            this.rinPReport.Name = "rinPReport";
-            this.rinPReport.Text = "Thống kê";
+            this.xtraTabbedMdiManager.MdiParent = this;
             // 
             // frmHome
             // 
@@ -337,13 +396,21 @@
             this.ClientSize = new System.Drawing.Size(896, 449);
             this.Controls.Add(this.ribbonStatusBar);
             this.Controls.Add(this.ribbon);
+            this.DoubleBuffered = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.IsMdiContainer = true;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmHome";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "Quản lý giải vô địch bóng đá";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.applicationMenu1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rItemFontEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -361,7 +428,7 @@
         private DevExpress.XtraBars.BarButtonItem bbtnUserInfo;
         private DevExpress.XtraBars.BarButtonItem bbtnConnectionData;
         private DevExpress.XtraBars.BarButtonItem bbtnBackupData;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem1;
+        private DevExpress.XtraBars.BarButtonItem bbtnRestore;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribPManager;
         private DevExpress.XtraBars.BarButtonItem bbtAddPlayer;
         private DevExpress.XtraBars.BarButtonItem bbtnNational;
@@ -381,5 +448,12 @@
         private DevExpress.XtraBars.BarButtonItem bbtnResult;
         private DevExpress.XtraBars.BarButtonItem bbtnReferee;
         private DevExpress.XtraBars.Ribbon.RibbonPage rinPReport;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager;
+        private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribPTool;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribGInterface;
+        private DevExpress.XtraBars.BarEditItem bitemFont;
+        private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit rItemFontEdit;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribPGFont;
     }
 }

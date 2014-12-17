@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using BusinnessLogicLayer;
+using System.Drawing;
 
 namespace PresentationLayer
 {
@@ -18,10 +19,14 @@ namespace PresentationLayer
             //BUSCardType cardtype = new BUSCardType();
             //int count = cardtype.updateData(new DataTransferObject.DTOCardType("C0001", "The xanh"));
 
-
+            DevExpress.UserSkins.BonusSkins.Register();
+            //DevExpress.Skins.SkinManager.Default.RegisterAssembly(typeof(DevExpress.UserSkins.OfficeSkins).Assembly);
+            DevExpress.Skins.SkinManager.EnableFormSkins();
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Blue";
+            //DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Lucida Calligraphy", 10);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHome());
+            Application.Run(new frmLogin());
         }
     }
 }

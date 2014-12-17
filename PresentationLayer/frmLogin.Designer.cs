@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             this.bntLogin = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
@@ -39,57 +40,66 @@
             // 
             // bntLogin
             // 
-            this.bntLogin.Location = new System.Drawing.Point(197, 165);
+            this.bntLogin.Location = new System.Drawing.Point(294, 127);
             this.bntLogin.Name = "bntLogin";
-            this.bntLogin.Size = new System.Drawing.Size(153, 35);
+            this.bntLogin.Size = new System.Drawing.Size(61, 20);
             this.bntLogin.TabIndex = 3;
-            this.bntLogin.Text = "Đăng Nhập";
+            this.bntLogin.Text = "Login";
             this.bntLogin.Click += new System.EventHandler(this.bntLogin_Click);
             // 
             // labelControl3
             // 
-            this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl3.Location = new System.Drawing.Point(47, 55);
+            this.labelControl3.Location = new System.Drawing.Point(232, 65);
             this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(118, 19);
+            this.labelControl3.Size = new System.Drawing.Size(55, 13);
             this.labelControl3.TabIndex = 14;
-            this.labelControl3.Text = "Tên đăng nhập :";
+            this.labelControl3.Text = "User name:";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(180, 57);
+            this.txtName.Location = new System.Drawing.Point(294, 95);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(261, 20);
+            this.txtName.Size = new System.Drawing.Size(113, 20);
             this.txtName.TabIndex = 1;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(180, 105);
+            this.txtPassword.Location = new System.Drawing.Point(294, 62);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(261, 20);
+            this.txtPassword.Size = new System.Drawing.Size(113, 20);
             this.txtPassword.TabIndex = 2;
             // 
             // labelControl1
             // 
-            this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.labelControl1.Location = new System.Drawing.Point(47, 103);
+            this.labelControl1.Location = new System.Drawing.Point(237, 98);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(75, 19);
+            this.labelControl1.Size = new System.Drawing.Size(50, 13);
             this.labelControl1.TabIndex = 2;
-            this.labelControl1.Text = "Mật khẩu :";
+            this.labelControl1.Text = "Password:";
             // 
-            // frmLogin1
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(501, 245);
+            this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
+            this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
+            this.ClientSize = new System.Drawing.Size(597, 283);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.bntLogin);
-            this.Name = "frmLogin1";
-            this.Text = "frmLogin1";
+            this.FormBorderEffect = DevExpress.XtraEditors.FormBorderEffect.Shadow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(603, 312);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(603, 312);
+            this.Name = "frmLogin";
+            this.ShowIcon = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Đăng nhập";
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             this.ResumeLayout(false);
