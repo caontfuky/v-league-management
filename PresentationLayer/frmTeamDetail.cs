@@ -33,6 +33,9 @@ namespace PresentationLayer
         {
             InitializeComponent();
 
+            //disable button them
+            bntAddInfo.Enabled = false;
+
             //load Team dua vao teamName va seasonName
             dtTeam = _busTeam.getTeamBySeasonNameAndTeamName(seasonName, teamNaem);
 

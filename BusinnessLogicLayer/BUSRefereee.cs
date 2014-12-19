@@ -17,6 +17,11 @@ namespace BusinnessLogicLayer
             this.m_referee = new DALReferee();
         }
 
+        public DataTable getAllData()
+        {
+            return m_referee.getAllData();
+        }
+
         public DataTable getDataBySeason(string seasonName)
         {
             return m_referee.getDataBySeason(seasonName);

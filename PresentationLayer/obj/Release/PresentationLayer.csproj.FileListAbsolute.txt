@@ -19,9 +19,16 @@ D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.pdb
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.exe.licenses
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucRule_Season.resources
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucFixtures.resources
-D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.UserControl1.resources
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucListTeamDemo.resources
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.frmTeamDetail.resources
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucListReferee.resources
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucResult.resources
 D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucStanding.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.frmHome.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucNational.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucPosition.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucPlayer.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucStadium.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucCoach.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucSeason.resources
+D:\HK7\PMHuongDT\QLGVDBD\PresentationLayer\obj\Release\PresentationLayer.ucTeamDetail.resources

@@ -41,8 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BUSCardType.cs" />
+    <Compile Include="BUSCoach.cs" />
+    <Compile Include="BUSNational.cs" />
+    <Compile Include="BUSPlayer.cs" />
+    <Compile Include="BUSPlayerTeamSeasoncs.cs" />
+    <Compile Include="BUSPosition.cs" />
     <Compile Include="BUSRefereee.cs" />
     <Compile Include="BUSSeason.cs" />
+    <Compile Include="BUSStadium.cs" />
     <Compile Include="BUSTeam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

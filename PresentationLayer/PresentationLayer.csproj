@@ -143,6 +143,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sangldDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ucCoach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCoach.Designer.cs">
+      <DependentUpon>ucCoach.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucFixtures.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,24 @@
     <Compile Include="ucListTeamDemo.Designer.cs">
       <DependentUpon>ucListTeamDemo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucNational.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucNational.Designer.cs">
+      <DependentUpon>ucNational.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPlayer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPlayer.Designer.cs">
+      <DependentUpon>ucPlayer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPosition.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPosition.Designer.cs">
+      <DependentUpon>ucPosition.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucResult.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,17 +197,29 @@
     <Compile Include="ucRule_Season.Designer.cs">
       <DependentUpon>ucRule_Season.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucSeason.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSeason.Designer.cs">
+      <DependentUpon>ucSeason.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucStadium.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucStadium.Designer.cs">
+      <DependentUpon>ucStadium.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucStanding.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucStanding.Designer.cs">
       <DependentUpon>ucStanding.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="ucTeamDetail.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="ucTeamDetail.Designer.cs">
+      <DependentUpon>ucTeamDetail.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="frmConnectionSQL.resx">
       <DependentUpon>frmConnectionSQL.cs</DependentUpon>
@@ -207,6 +243,9 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucCoach.resx">
+      <DependentUpon>ucCoach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucFixtures.resx">
       <DependentUpon>ucFixtures.cs</DependentUpon>
     </EmbeddedResource>
@@ -216,6 +255,16 @@
     <EmbeddedResource Include="ucListTeamDemo.resx">
       <DependentUpon>ucListTeamDemo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucNational.resx">
+      <DependentUpon>ucNational.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPlayer.resx">
+      <DependentUpon>ucPlayer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPosition.resx">
+      <DependentUpon>ucPosition.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucResult.resx">
       <DependentUpon>ucResult.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -223,11 +272,17 @@
     <EmbeddedResource Include="ucRule_Season.resx">
       <DependentUpon>ucRule_Season.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucSeason.resx">
+      <DependentUpon>ucSeason.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucStadium.resx">
+      <DependentUpon>ucStadium.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucStanding.resx">
       <DependentUpon>ucStanding.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <EmbeddedResource Include="ucTeamDetail.resx">
+      <DependentUpon>ucTeamDetail.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config">
       <SubType>Designer</SubType>

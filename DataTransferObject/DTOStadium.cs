@@ -10,12 +10,12 @@ namespace DataTransferObject
     {
         public string stadiumID;
         public string stadiumName;
-        public string address;
         public int tankage;
+        public string address;
 
         public DTOStadium() { }
 
-        public DTOStadium(string _stadiumID, string _stadiumName, string _address, int _tankage)
+        public DTOStadium(string _stadiumID, string _stadiumName, int _tankage,  string _address)
         {
             this.stadiumID = _stadiumID;
             this.stadiumName = _stadiumName;

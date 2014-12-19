@@ -53,9 +53,36 @@ namespace PresentationLayer
         {
             mainPanel.Controls.Clear();
 
-            UserControl1 ListTeam = new UserControl1();
-            ListTeam.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(ListTeam);
+            //ucTeamDetail uc = new ucTeamDetail();
+            //uc.Dock = DockStyle.Fill;
+            //mainPanel.Controls.Add(uc);
+
+            //ucSeason season = new ucSeason();
+            //season.Dock = DockStyle.Fill;
+            //mainPanel.Controls.Add(season);
+
+            //ucCoach coach = new ucCoach();
+            //coach.Dock = DockStyle.Fill;
+            //mainPanel.Controls.Add(coach);
+
+            ucStadium stadium = new ucStadium();
+            stadium.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(stadium);
+
+            //ucPlayer player = new ucPlayer();
+            //player.Dock = DockStyle.Fill;
+            //mainPanel.Controls.Add(player);
+
+            //ucPosition position = new ucPosition();
+            //position.Dock = DockStyle.Fill;
+            //mainPanel.Controls.Add(position);
+
+            //ucNational national = new ucNational();
+            //national.Dock = DockStyle.Fill;
+            //mainPanel.Controls.Add(national);
+            //UserControl1 ListTeam = new UserControl1();
+            //ListTeam.Dock = DockStyle.Fill;
+            //mainPanel.Controls.Add(ListTeam);
         }
 
         private void bntFixture_ItemClick(object sender, ItemClickEventArgs e)
@@ -87,11 +114,11 @@ namespace PresentationLayer
 
         private void bntPublic_ItemClick(object sender, ItemClickEventArgs e)
         {
-            mainPanel.Controls.Clear();
+            //mainPanel.Controls.Clear();
 
-            UserControl1 result = new UserControl1();
-            result.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(result);
+            //ucTeamDetail result = new ucTeamDetail();
+            //result.Dock = DockStyle.Fill;
+            //mainPanel.Controls.Add(result);
         }
 
         private void bntStanding_ItemClick(object sender, ItemClickEventArgs e)

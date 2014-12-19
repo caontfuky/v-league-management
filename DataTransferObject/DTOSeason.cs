@@ -13,11 +13,11 @@ namespace DataTransferObject
         public string startDate;
         public string endDate;
         public string sponsor;
-        public int expenditure;
+        public Int64 expenditure;
 
         public DTOSeason() { }
 
-        public DTOSeason(string _seasonID, string _seasonName, string _startDate, string _endDate, string _sponsor, int _expenditure)
+        public DTOSeason(string _seasonID, string _seasonName, string _startDate, string _endDate, string _sponsor, Int64 _expenditure)
         {
             this.seasonID = _seasonID;
             this.seasonName = _seasonName;

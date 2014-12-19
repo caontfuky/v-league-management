@@ -11,10 +11,11 @@ namespace DataTransferObject
         public string playerID;
         public string fullName;
         public string birthday;
-        public int positionID;
-        public int nationalID;
-        public string numberOfCloth;
+        public string positionID;
+        public string nationalID;
+        public int numberOfCloth;
         public int height;
+        public byte[] image;
         public int weight;
 
         public DTOPlayer()
@@ -22,7 +23,7 @@ namespace DataTransferObject
 
         }
 
-        public DTOPlayer(string _playerID, string _fullName, string _birthday, int _position, int _nationalID, string _numberOfCloth, int _height, int _weight)
+        public DTOPlayer(string _playerID, string _fullName, string _birthday, string _position, string _nationalID, int _numberOfCloth, int _height, byte[] _image, int _weight)
         {
             this.playerID = _playerID;
             this.fullName = _fullName;
@@ -32,6 +33,7 @@ namespace DataTransferObject
             this.numberOfCloth = _numberOfCloth;
             this.height = _height;
             this.weight = _weight;
+            this.image = _image;
         }
 
     }

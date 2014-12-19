@@ -37,9 +37,6 @@ namespace PresentationLayer
             label6.Text = CountMatchInSeason;
             label7.Text = SeasonStartDate;
             label8.Text = SeasonEndDate;
-
-            UserControl1 uc = new UserControl1();
-            uc.iscomplete = true;
         }
     }
 }

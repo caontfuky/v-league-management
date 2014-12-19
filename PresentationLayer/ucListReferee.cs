@@ -63,15 +63,15 @@ namespace PresentationLayer
             labelSeason.Text = " " + seasonName;
         }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-        {
-            txtName.Text = gridView1.GetRowCellValue(e.RowHandle, "RefereeName").ToString();
-            txtEmail.Text = gridView1.GetRowCellValue(e.RowHandle, "Email").ToString();
-            txtBirthDay.Text = gridView1.GetRowCellValue(e.RowHandle, "BirthDate").ToString();
-            txtTel.Text = gridView1.GetRowCellValue(e.RowHandle, "PhoneNumber").ToString();
-            txtAddresss.Text = gridView1.GetRowCellValue(e.RowHandle, "Address").ToString();
-            txtID.Text = gridView1.GetRowCellValue(e.RowHandle, "RefereeID").ToString();
-        }
+        //private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        //{
+        //    txtName.Text = gridView1.GetRowCellValue(e.RowHandle, "RefereeName").ToString();
+        //    txtEmail.Text = gridView1.GetRowCellValue(e.RowHandle, "Email").ToString();
+        //    txtBirthDay.Text = gridView1.GetRowCellValue(e.RowHandle, "BirthDate").ToString();
+        //    txtTel.Text = gridView1.GetRowCellValue(e.RowHandle, "PhoneNumber").ToString();
+        //    txtAddresss.Text = gridView1.GetRowCellValue(e.RowHandle, "Address").ToString();
+        //    txtID.Text = gridView1.GetRowCellValue(e.RowHandle, "RefereeID").ToString();
+        //}
 
         private void bntAdd_Click(object sender, EventArgs e)
         {

@@ -25,9 +25,22 @@ namespace DataAcessLayer
             return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
         }
 
+        public DataTable getTeamByTeamID(string teamID)
+        {
+            DataExecute.Instance.createSqlCmd("GetTeamByTeamID", new object[1] { teamID });
+            return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
+        }
+
         public DataTable getTeamBySeasonNameAndTeamName(string seasonName, string teamName)
         {
             DataExecute.Instance.createSqlCmd("GetTeamBySeasonNameAndTeamName", new object[2] { seasonName, teamName });
+            return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
+        }
+
+
+        public DataTable getTeamIDByTeamName(string TeamName)
+        {
+            DataExecute.Instance.createSqlCmd("GetTeamIDByTeamName", new object[1] { TeamName });
             return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
         }
 
@@ -36,6 +49,36 @@ namespace DataAcessLayer
             if(_dtoTeam != null)
             {
                 DataExecute.Instance.createSqlCmd("InsertTeamValue", ref _dtoTeam);
+                return DataExecute.Instance.updateData(DataConnection.Instance.m_cmd);
+            }
+            return 0;
+        }
+
+        public int updateData(DTOTeam _dtoTeam)
+        {
+            if (_dtoTeam != null)
+            {
+                DataExecute.Instance.createSqlCmd("UpdateTeamValue", ref _dtoTeam);
+                return DataExecute.Instance.updateData(DataConnection.Instance.m_cmd);
+            }
+            return 0;
+        }
+
+        public int deleteTeamDataFromSeason(string seasonID, string teamID)
+        {
+            if (teamID != null && seasonID != null)
+            {
+                DataExecute.Instance.createSqlCmd("DeleteTeamValue", new object[2] { seasonID, teamID });
+                return DataExecute.Instance.updateData(DataConnection.Instance.m_cmd);
+            }
+            return 0;
+        }
+
+        public int deleteTeamData( string teamID)
+        {
+            if (teamID != null )
+            {
+                DataExecute.Instance.createSqlCmd("DeleteTeamIntoTeamTable", new object[1] { teamID });
                 return DataExecute.Instance.updateData(DataConnection.Instance.m_cmd);
             }
             return 0;

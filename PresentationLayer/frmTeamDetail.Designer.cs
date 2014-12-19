@@ -54,6 +54,8 @@
             this.txtChairman = new DevExpress.XtraEditors.TextEdit();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.txtID = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelEmail = new DevExpress.XtraEditors.LabelControl();
             this.labelFax = new DevExpress.XtraEditors.LabelControl();
             this.labelTel = new DevExpress.XtraEditors.LabelControl();
@@ -89,6 +91,8 @@
             this.cbxPlayerNational = new DevExpress.XtraEditors.ComboBoxEdit();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtStadiumID = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.txtTankage = new DevExpress.XtraEditors.TextEdit();
             this.txtStadiumName = new DevExpress.XtraEditors.TextEdit();
             this.txtStadiumAddress = new DevExpress.XtraEditors.MemoEdit();
@@ -96,10 +100,6 @@
             this.labelStadiumAddress = new DevExpress.XtraEditors.LabelControl();
             this.labelStadiumName = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.txtID = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.txtStadiumID = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             playerIDLabel = new System.Windows.Forms.Label();
             fullNameLabel = new System.Windows.Forms.Label();
             birthDayLabel = new System.Windows.Forms.Label();
@@ -124,6 +124,7 @@
             this.panelControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pLAYERGridControl)).BeginInit();
@@ -146,13 +147,12 @@
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStadiumID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTankage.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStadiumName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStadiumAddress.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStadiumID.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // playerIDLabel
@@ -393,6 +393,21 @@
             this.groupControl1.Size = new System.Drawing.Size(538, 393);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "THÔNG TIN CÂU LẠC BỘ";
+            // 
+            // txtID
+            // 
+            this.txtID.Location = new System.Drawing.Point(372, 170);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(143, 20);
+            this.txtID.TabIndex = 39;
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(316, 173);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(18, 13);
+            this.labelControl1.TabIndex = 38;
+            this.labelControl1.Text = "ID :";
             // 
             // labelEmail
             // 
@@ -690,7 +705,7 @@
             // 
             // bntUpdatePlayerInfo
             // 
-            this.bntUpdatePlayerInfo.Location = new System.Drawing.Point(515, 66);
+            this.bntUpdatePlayerInfo.Location = new System.Drawing.Point(485, 74);
             this.bntUpdatePlayerInfo.Name = "bntUpdatePlayerInfo";
             this.bntUpdatePlayerInfo.Size = new System.Drawing.Size(108, 40);
             this.bntUpdatePlayerInfo.TabIndex = 5;
@@ -698,7 +713,7 @@
             // 
             // bntDelPlayer
             // 
-            this.bntDelPlayer.Location = new System.Drawing.Point(515, 143);
+            this.bntDelPlayer.Location = new System.Drawing.Point(485, 151);
             this.bntDelPlayer.Name = "bntDelPlayer";
             this.bntDelPlayer.Size = new System.Drawing.Size(108, 39);
             this.bntDelPlayer.TabIndex = 4;
@@ -706,7 +721,7 @@
             // 
             // bntAddPlayerInfo
             // 
-            this.bntAddPlayerInfo.Location = new System.Drawing.Point(515, 213);
+            this.bntAddPlayerInfo.Location = new System.Drawing.Point(485, 221);
             this.bntAddPlayerInfo.Name = "bntAddPlayerInfo";
             this.bntAddPlayerInfo.Size = new System.Drawing.Size(108, 41);
             this.bntAddPlayerInfo.TabIndex = 3;
@@ -754,6 +769,21 @@
             this.groupControl2.Size = new System.Drawing.Size(538, 173);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "SÂN VẬN ĐỘNG";
+            // 
+            // txtStadiumID
+            // 
+            this.txtStadiumID.Location = new System.Drawing.Point(364, 144);
+            this.txtStadiumID.Name = "txtStadiumID";
+            this.txtStadiumID.Size = new System.Drawing.Size(118, 20);
+            this.txtStadiumID.TabIndex = 35;
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(316, 147);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(18, 13);
+            this.labelControl2.TabIndex = 34;
+            this.labelControl2.Text = "ID :";
             // 
             // txtTankage
             // 
@@ -809,36 +839,6 @@
             this.panelControl3.Size = new System.Drawing.Size(542, 177);
             this.panelControl3.TabIndex = 6;
             // 
-            // txtID
-            // 
-            this.txtID.Location = new System.Drawing.Point(372, 170);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(143, 20);
-            this.txtID.TabIndex = 39;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(316, 173);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(18, 13);
-            this.labelControl1.TabIndex = 38;
-            this.labelControl1.Text = "ID :";
-            // 
-            // txtStadiumID
-            // 
-            this.txtStadiumID.Location = new System.Drawing.Point(364, 144);
-            this.txtStadiumID.Name = "txtStadiumID";
-            this.txtStadiumID.Size = new System.Drawing.Size(118, 20);
-            this.txtStadiumID.TabIndex = 35;
-            // 
-            // labelControl2
-            // 
-            this.labelControl2.Location = new System.Drawing.Point(316, 147);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(18, 13);
-            this.labelControl2.TabIndex = 34;
-            this.labelControl2.Text = "ID :";
-            // 
             // frmTeamDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -868,6 +868,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.groupControl1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pLAYERGridControl)).EndInit();
@@ -892,13 +893,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtStadiumID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTankage.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStadiumName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStadiumAddress.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtStadiumID.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }

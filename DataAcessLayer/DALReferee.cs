@@ -12,6 +12,13 @@ namespace DataAcessLayer
     {
         public DALReferee() { }
 
+        public DataTable getAllData()
+        {
+            DataExecute.Instance.createSqlCmd("GetAllRefereeValue");
+
+            return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
+        }
+
         public DataTable getDataBySeason(string seasonName)
         {
             DataExecute.Instance.createSqlCmd("GetRefereeBySeason", new object[1] { seasonName });

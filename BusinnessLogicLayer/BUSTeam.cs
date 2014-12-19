@@ -23,6 +23,11 @@ namespace BusinnessLogicLayer
             return m_dalTeam.getAllData();
         }
 
+        public DataTable getTeamByTeamID(string teamID)
+        {
+            return m_dalTeam.getTeamByTeamID(teamID);
+        }
+
         public DataTable getTeamBySeasonName(string seasonName)
         {
             return m_dalTeam.getTeamBySeasonName(seasonName);
@@ -33,9 +38,29 @@ namespace BusinnessLogicLayer
             return m_dalTeam.getTeamBySeasonNameAndTeamName(seasonName, teamName);
         }
 
+        public DataTable getTeamIDByTeamName(string teamName)
+        {
+            return m_dalTeam.getTeamIDByTeamName(teamName);
+        }
+
         public int insertTeam(DTOTeam _dtoTeam)
         {
             return m_dalTeam.insertData(_dtoTeam);
+        }
+
+        public int updateTeam(DTOTeam _dtoTeam)
+        {
+            return m_dalTeam.updateData(_dtoTeam);
+        }
+
+        public int deleteTeamDataFromSeason(string seasonID, string teamID)
+        {
+            return m_dalTeam.deleteTeamDataFromSeason(seasonID, teamID);
+        }
+
+        public int deleteTeamData( string teamID)
+        {
+            return m_dalTeam.deleteTeamData(teamID);
         }
     }
 }
