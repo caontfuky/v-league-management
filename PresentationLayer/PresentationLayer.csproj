@@ -113,6 +113,12 @@
     <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHomePage.Designer.cs">
+      <DependentUpon>frmHomePage.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeasonInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSeasonInfo.Designer.cs">
+      <DependentUpon>frmSeasonInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTeamDetail.cs">
       <SubType>Form</SubType>
@@ -227,11 +239,17 @@
     <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmHomePage.resx">
+      <DependentUpon>frmHomePage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSeasonInfo.resx">
+      <DependentUpon>frmSeasonInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTeamDetail.resx">
       <DependentUpon>frmTeamDetail.cs</DependentUpon>

@@ -936,6 +936,19 @@
         RU5ErkJggg==
 </value>
   </data>
+  <data name="bbtnColorMixer.Glyph" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAABp0RVh0U29mdHdhcmUAUGFpbnQuTkVUIHYzLjUuMTAw9HKhAAABg0lEQVRYR+2U
+        sUoDQRRFbwQrsfEfxNo/0E+w8RfsLf0AOxtrv8DCThAsBRuxsVFsk0qECIJKYhzvLm9nJ7NvZnZ2tdvz
+        OEsw8+4dIgkGBrowB6YGML5PwLEc+R8WwFgr9p0AW7Lyd7B8ppWFvAH2ZbU/WkEbT4BdiegOg1b94Bwl
+        pjt+YK6XAP8bPdBCc5WobtigC2ocD2j1nvWeVkd+6DbtcwGDkZOoO15X/+wKvHxIYgYLfPECeqL1kwra
+        22L9IbXFYK8oj19gQj20Y7S+QGEbuBW/wAoN4B29pcsXKIzBLXf4I9BMjbFDnaPN8sIY3PKHK54J5Ngm
+        bZZXhuCmNlwR+dVKwWOPZUnMEGWdPlyjd2VHjOelopAhbF1ozs2rFPkcUmYrZZohbFFoNigDYvKRNgQj
+        0sOAmHzEvX6QNgWDo7ooNAwJyUfaFIxKD4N83ylfxL06k5YEjIzPGmWga1mQMgfGpoeh/Fo0i3zfZpKa
+        yRynbp0yI+B7qpdaeWZgQAP4BVY/pO14cj0xAAAAAElFTkSuQmCC
+</value>
+  </data>
   <metadata name="xtraTabbedMdiManager.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>167, 17</value>
   </metadata>

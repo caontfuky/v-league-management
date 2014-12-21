@@ -54,6 +54,7 @@
             this.skinRibbonGalleryBarItem = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
             this.bitemFont = new DevExpress.XtraBars.BarEditItem();
             this.rItemFontEdit = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
+            this.bbtnColorMixer = new DevExpress.XtraBars.BarButtonItem();
             this.ribPSystem = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribPGUserInfo = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.ribPGDataBase = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -77,6 +78,7 @@
             // 
             this.ribbon.ApplicationButtonDropDownControl = this.applicationMenu1;
             this.ribbon.ApplicationIcon = ((System.Drawing.Bitmap)(resources.GetObject("ribbon.ApplicationIcon")));
+            this.ribbon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ribbon.ExpandCollapseItem.Id = 0;
             this.ribbon.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.ribbon.ExpandCollapseItem,
@@ -100,9 +102,10 @@
             this.bbtnResult,
             this.bbtnReferee,
             this.skinRibbonGalleryBarItem,
-            this.bitemFont});
+            this.bitemFont,
+            this.bbtnColorMixer});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
-            this.ribbon.MaxItemId = 23;
+            this.ribbon.MaxItemId = 24;
             this.ribbon.Name = "ribbon";
             this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribPSystem,
@@ -293,6 +296,16 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.rItemFontEdit.Name = "rItemFontEdit";
             // 
+            // bbtnColorMixer
+            // 
+            this.bbtnColorMixer.Caption = "Phối màu";
+            this.bbtnColorMixer.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnColorMixer.Glyph")));
+            this.bbtnColorMixer.Id = 23;
+            this.bbtnColorMixer.Name = "bbtnColorMixer";
+            this.bbtnColorMixer.RibbonStyle = ((DevExpress.XtraBars.Ribbon.RibbonItemStyles)(((DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithText)
+                        | DevExpress.XtraBars.Ribbon.RibbonItemStyles.SmallWithoutText)));
+            this.bbtnColorMixer.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnColorMixer_ItemClick);
+            // 
             // ribPSystem
             // 
             this.ribPSystem.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
@@ -369,6 +382,7 @@
             // ribGInterface
             // 
             this.ribGInterface.ItemLinks.Add(this.skinRibbonGalleryBarItem);
+            this.ribGInterface.ItemLinks.Add(this.bbtnColorMixer);
             this.ribGInterface.Name = "ribGInterface";
             this.ribGInterface.Text = "Giao diện";
             // 
@@ -455,5 +469,6 @@
         private DevExpress.XtraBars.BarEditItem bitemFont;
         private DevExpress.XtraEditors.Repository.RepositoryItemFontEdit rItemFontEdit;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribPGFont;
+        private DevExpress.XtraBars.BarButtonItem bbtnColorMixer;
     }
 }

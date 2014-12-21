@@ -22,11 +22,11 @@ namespace PresentationLayer
             DevExpress.UserSkins.BonusSkins.Register();
             //DevExpress.Skins.SkinManager.Default.RegisterAssembly(typeof(DevExpress.UserSkins.OfficeSkins).Assembly);
             DevExpress.Skins.SkinManager.EnableFormSkins();
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Blue";
+            //DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "DarkSide";
             //DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Lucida Calligraphy", 10);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmLogin());
+            Application.Run(new frmHomePage());
         }
     }
 }

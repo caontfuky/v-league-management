@@ -10,6 +10,7 @@ using DevExpress.XtraBars;
 using DevExpress.UserSkins;
 using DevExpress.XtraBars.Localization;
 using DevExpress.XtraBars.Helpers;
+using DevExpress.XtraEditors.ColorWheel;
 
 namespace PresentationLayer
 {
@@ -29,6 +30,14 @@ namespace PresentationLayer
         private void changeFont(object sender, ItemClickEventArgs e)
         {
             DevExpress.Utils.AppearanceObject.DefaultFont = new Font(bitemFont.EditValue.ToString(), 10);
+        }
+
+        private void bbtnColorMixer_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            using (ColorWheelForm showColorMixer = new ColorWheelForm())
+            {
+                showColorMixer.ShowDialog(this);
+            }
         }
 
     }
