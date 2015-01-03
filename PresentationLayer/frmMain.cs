@@ -65,9 +65,9 @@ namespace PresentationLayer
             //coach.Dock = DockStyle.Fill;
             //mainPanel.Controls.Add(coach);
 
-            ucStadium stadium = new ucStadium();
-            stadium.Dock = DockStyle.Fill;
-            mainPanel.Controls.Add(stadium);
+            //ucStadium stadium = new ucStadium();
+            //stadium.Dock = DockStyle.Fill;
+            //mainPanel.Controls.Add(stadium);
 
             //ucPlayer player = new ucPlayer();
             //player.Dock = DockStyle.Fill;
@@ -77,9 +77,9 @@ namespace PresentationLayer
             //position.Dock = DockStyle.Fill;
             //mainPanel.Controls.Add(position);
 
-            //ucNational national = new ucNational();
-            //national.Dock = DockStyle.Fill;
-            //mainPanel.Controls.Add(national);
+            ucNational national = new ucNational();
+            national.Dock = DockStyle.Fill;
+            mainPanel.Controls.Add(national);
             //UserControl1 ListTeam = new UserControl1();
             //ListTeam.Dock = DockStyle.Fill;
             //mainPanel.Controls.Add(ListTeam);

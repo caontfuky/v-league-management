@@ -41,6 +41,9 @@
             this.bntUpdateTeam = new DevExpress.XtraEditors.SimpleButton();
             this.bntAddTeam = new DevExpress.XtraEditors.SimpleButton();
             this.panelMain = new DevExpress.XtraEditors.PanelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.cbxTeamList = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.bntAddIntoSeason = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxSeason.Properties)).BeginInit();
@@ -52,6 +55,7 @@
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).BeginInit();
             this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTeamList.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // panelControl1
@@ -64,7 +68,7 @@
             this.panelControl1.Controls.Add(this.label1);
             this.panelControl1.Location = new System.Drawing.Point(0, 0);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1137, 39);
+            this.panelControl1.Size = new System.Drawing.Size(1171, 39);
             this.panelControl1.TabIndex = 0;
             // 
             // labelSeason
@@ -95,7 +99,7 @@
             // 
             this.cbxSeason.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.cbxSeason.Location = new System.Drawing.Point(991, 13);
+            this.cbxSeason.Location = new System.Drawing.Point(1025, 13);
             this.cbxSeason.Name = "cbxSeason";
             this.cbxSeason.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -108,7 +112,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(904, 16);
+            this.label1.Location = new System.Drawing.Point(938, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 3;
@@ -122,7 +126,7 @@
             this.panelControl2.Controls.Add(this.tileControl1);
             this.panelControl2.Location = new System.Drawing.Point(0, 39);
             this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(856, 619);
+            this.panelControl2.Size = new System.Drawing.Size(893, 619);
             this.panelControl2.TabIndex = 1;
             // 
             // tileControl1
@@ -133,7 +137,7 @@
             this.tileControl1.Location = new System.Drawing.Point(2, 2);
             this.tileControl1.MaxId = 1;
             this.tileControl1.Name = "tileControl1";
-            this.tileControl1.Size = new System.Drawing.Size(852, 615);
+            this.tileControl1.Size = new System.Drawing.Size(889, 615);
             this.tileControl1.TabIndex = 0;
             this.tileControl1.Text = "tileControl1";
             // 
@@ -142,13 +146,16 @@
             this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl3.Controls.Add(this.groupControl1);
-            this.panelControl3.Location = new System.Drawing.Point(860, 39);
+            this.panelControl3.Location = new System.Drawing.Point(897, 39);
             this.panelControl3.Name = "panelControl3";
             this.panelControl3.Size = new System.Drawing.Size(274, 619);
             this.panelControl3.TabIndex = 2;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.bntAddIntoSeason);
+            this.groupControl1.Controls.Add(this.cbxTeamList);
+            this.groupControl1.Controls.Add(this.labelControl1);
             this.groupControl1.Controls.Add(this.bntDelTeam);
             this.groupControl1.Controls.Add(this.bntUpdateTeam);
             this.groupControl1.Controls.Add(this.bntAddTeam);
@@ -161,7 +168,7 @@
             // 
             // bntDelTeam
             // 
-            this.bntDelTeam.Location = new System.Drawing.Point(34, 255);
+            this.bntDelTeam.Location = new System.Drawing.Point(87, 482);
             this.bntDelTeam.Name = "bntDelTeam";
             this.bntDelTeam.Size = new System.Drawing.Size(98, 52);
             this.bntDelTeam.TabIndex = 2;
@@ -170,7 +177,7 @@
             // 
             // bntUpdateTeam
             // 
-            this.bntUpdateTeam.Location = new System.Drawing.Point(34, 164);
+            this.bntUpdateTeam.Location = new System.Drawing.Point(87, 391);
             this.bntUpdateTeam.Name = "bntUpdateTeam";
             this.bntUpdateTeam.Size = new System.Drawing.Size(98, 52);
             this.bntUpdateTeam.TabIndex = 1;
@@ -179,11 +186,11 @@
             // 
             // bntAddTeam
             // 
-            this.bntAddTeam.Location = new System.Drawing.Point(34, 72);
+            this.bntAddTeam.Location = new System.Drawing.Point(87, 299);
             this.bntAddTeam.Name = "bntAddTeam";
             this.bntAddTeam.Size = new System.Drawing.Size(98, 52);
             this.bntAddTeam.TabIndex = 0;
-            this.bntAddTeam.Text = "Thêm TT Đội Bóng";
+            this.bntAddTeam.Text = "Thêm Mới Đội Bóng";
             this.bntAddTeam.Click += new System.EventHandler(this.bntAddTeam_Click);
             // 
             // panelMain
@@ -194,8 +201,36 @@
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelMain.Location = new System.Drawing.Point(0, 0);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(1137, 658);
+            this.panelMain.Size = new System.Drawing.Size(1174, 658);
             this.panelMain.TabIndex = 3;
+            this.panelMain.Paint += new System.Windows.Forms.PaintEventHandler(this.panelMain_Paint);
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(16, 38);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(63, 13);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "DS Đội Bóng:";
+            // 
+            // cbxTeamList
+            // 
+            this.cbxTeamList.Location = new System.Drawing.Point(16, 71);
+            this.cbxTeamList.Name = "cbxTeamList";
+            this.cbxTeamList.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.cbxTeamList.Size = new System.Drawing.Size(237, 20);
+            this.cbxTeamList.TabIndex = 4;
+            this.cbxTeamList.SelectedIndexChanged += new System.EventHandler(this.cbxTeamList_SelectedIndexChanged);
+            // 
+            // bntAddIntoSeason
+            // 
+            this.bntAddIntoSeason.Location = new System.Drawing.Point(16, 124);
+            this.bntAddIntoSeason.Name = "bntAddIntoSeason";
+            this.bntAddIntoSeason.Size = new System.Drawing.Size(98, 52);
+            this.bntAddIntoSeason.TabIndex = 5;
+            this.bntAddIntoSeason.Text = "Thêm Đội Vào Mùa";
+            this.bntAddIntoSeason.Click += new System.EventHandler(this.bntAddIntoSeason_Click);
             // 
             // ucListTeamDemo
             // 
@@ -203,7 +238,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panelMain);
             this.Name = "ucListTeamDemo";
-            this.Size = new System.Drawing.Size(1137, 658);
+            this.Size = new System.Drawing.Size(1174, 658);
             this.Load += new System.EventHandler(this.ucListTeamDemo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
@@ -215,8 +250,10 @@
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
+            this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.panelMain)).EndInit();
             this.panelMain.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cbxTeamList.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -236,5 +273,8 @@
         private DevExpress.XtraEditors.SimpleButton bntAddTeam;
         private DevExpress.XtraEditors.LabelControl labelSeason;
         private DevExpress.XtraEditors.PanelControl panelMain;
+        private DevExpress.XtraEditors.SimpleButton bntAddIntoSeason;
+        private DevExpress.XtraEditors.ComboBoxEdit cbxTeamList;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

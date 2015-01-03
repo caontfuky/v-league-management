@@ -25,8 +25,11 @@ namespace PresentationLayer
         
         string seasonName = "";
         string seasonID = "";
+        string teamFreeID = "";
+
         DataTable dtSeason;
         DataTable dtTeam;
+        DataTable dtTeamFree;
         DataTable dt;
         TileItem Tile_Click;
 
@@ -44,6 +47,7 @@ namespace PresentationLayer
         {
             LoadSeason();
             LoadListTeam(seasonName);
+            LoadCbxTeam(seasonID);
         }
 
         public void LoadSeason()
@@ -78,6 +82,25 @@ namespace PresentationLayer
                 MemoryStream memory = new MemoryStream(logo);
                 AddTtem(Image.FromStream(memory), i);
             }
+        }
+
+        public void LoadCbxTeam(string _seasonID)
+        {
+            ComboBoxItemCollection coll = cbxTeamList.Properties.Items;
+            coll.BeginUpdate();
+            coll.Clear();
+            dtTeamFree = _busTeam.getTeamNotInSeasonID(seasonID);
+            for (int i = 0; i < dtTeamFree.Rows.Count; i++)
+            {
+                coll.Add((dtTeamFree.Rows[i]["Name"]).ToString());
+                if (i == dtTeamFree.Rows.Count - 1)
+                {
+                    teamFreeID = (dtTeamFree.Rows[i]["TeamID"]).ToString();
+                }
+            }
+            coll.EndUpdate();
+
+            cbxTeamList.SelectedIndex = coll.Count - 1;
         }
 
         public void AddTtem(Image i, int index)
@@ -120,8 +143,14 @@ namespace PresentationLayer
         void newTile_ItemDoubleClick(object sender, TileItemEventArgs e)
         {
             TileItem Tile = (TileItem)sender;
-            frmTeamDetail teamDetail = new frmTeamDetail(seasonName, Tile.Name);
-            teamDetail.Show();
+
+            if (Tile_Click != null)
+            {
+                panelMain.Controls.Clear();
+                ucTeamDetail uc = new ucTeamDetail(Tile_Click.Name.Trim(), seasonID.Trim());
+                uc.Dock = DockStyle.Fill;
+                panelMain.Controls.Add(uc);
+            }
         }
 
         void newTile_ItemClick(object sender, TileItemEventArgs e)
@@ -163,6 +192,8 @@ namespace PresentationLayer
 
             //thay doi listTeam o day
             LoadListTeam(seasonName);
+            //Load list team free
+            LoadCbxTeam(seasonID);
         }
 
         private void bntUpdateTeam_Click(object sender, EventArgs e)
@@ -201,6 +232,24 @@ namespace PresentationLayer
             {
                 MessageBox.Show("Xoa Khong Thanh Cong!");
             }
+        }
+
+        private void panelMain_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bntAddIntoSeason_Click(object sender, EventArgs e)
+        {
+            panelMain.Controls.Clear();
+            ucTeamDetail uc = new ucTeamDetail(teamFreeID.Trim(), seasonID.Trim());
+            uc.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(uc);
+        }
+
+        private void cbxTeamList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            teamFreeID = (dtTeamFree.Rows[cbxTeamList.SelectedIndex]["TeamID"]).ToString();
         }
     }
 }

@@ -11,6 +11,7 @@ using DevExpress.XtraEditors;
 using DataTransferObject;
 using System.IO;
 using DevExpress.XtraEditors.Controls;
+using System.Drawing.Imaging;
 
 namespace PresentationLayer
 {
@@ -35,17 +36,16 @@ namespace PresentationLayer
         int rowIndexSelectedRight = -1;
         int rowIndexSelectedLeft = -1;
         bool isTeamInfoComplete = false;
+        string t = "";
 
         public ucTeamDetail(string seasonID)
         {
             InitializeComponent();
             isCreate = true;
-            _dtoPTS.seasonID = seasonID;
-
             //Load san van dong
+            dtStadium = _busStadium.getAllData();
             LoadStadium();
-
-
+            _dtoPTS.seasonID = seasonID;
 
             //Load ds cau thu tu do
             LoadPlayerFree(seasonID);
@@ -58,6 +58,7 @@ namespace PresentationLayer
             _dtoPTS.seasonID = seasonID;
 
             //Load san van dong
+            dtStadium = _busStadium.getAllData();
             LoadStadium();
             //load team dua vao teamID
             dtTeam = _busTeam.getTeamByTeamID(teamID);
@@ -76,6 +77,14 @@ namespace PresentationLayer
             MemoryStream memory = new MemoryStream(logo);
             pictureLogoTeam.Image = Image.FromStream(memory);
 
+            for (int i = 0; i < dtStadium.Rows.Count; i++)
+            {
+                if ((dtStadium.Rows[i]["StadiumID"]).ToString().Trim().Equals((dtTeam.Rows[0]["StadiumID"]).ToString().Trim()))
+                {
+                    cbxStadium.SelectedIndex = i;
+                }
+            }
+            
             //load ds cau thu cua team
             LoadPlayerOfTeam(teamID, seasonID);
             //Load ds cau thu tu do
@@ -87,9 +96,10 @@ namespace PresentationLayer
             dtPlayerFree = _busPlayer.getPlayerFreeBySeasonID(seasonID);
             if (dtPlayerFree.Rows.Count > 0)
             {
-                gridPlayerFree.DataSource = dtPlayerFree;
                 rowIndexSelectedRight = 0;
             }
+            gridPlayerFree.DataSource = dtPlayerFree;
+
         }
 
         public void LoadPlayerOfTeam(string TeamID, string seasonID)
@@ -97,23 +107,25 @@ namespace PresentationLayer
             dtPlayer = _busPlayer.getPlayerBySeasonIDAndTeamID(seasonID, TeamID );
             if (dtPlayer.Rows.Count > 0)
             {
-                gridPlayerOfTeam.DataSource = dtPlayer;
                 rowIndexSelectedLeft = 0;
             }
+            gridPlayerOfTeam.DataSource = dtPlayer;
+
         }
 
         public void LoadStadium()
         {
-            dtStadium = _busStadium.getAllData();
             ComboBoxItemCollection coll = cbxStadium.Properties.Items;
             coll.BeginUpdate();
             for (int i = 0; i < dtStadium.Rows.Count; i++)
             {
                 coll.Add((dtStadium.Rows[i]["StadiumName"]).ToString());
+
                 if (i == dtStadium.Rows.Count - 1)
                 {
                     stadiumID = (dtStadium.Rows[i]["StadiumID"]).ToString();
                 }
+
             }
             coll.EndUpdate();
 
@@ -179,6 +191,17 @@ namespace PresentationLayer
                 _dtoTeam.teamID = txtTeamID.Text.Trim();
                 _dtoTeam.email = txtEmailTeam.Text.Trim();
 
+                MemoryStream stream = new MemoryStream();
+
+                if (pictureLogoTeam.Image != null)
+                {
+                    pictureLogoTeam.Image.Save(stream, ImageFormat.Jpeg);
+                    _dtoTeam.logo = stream.ToArray();
+                }
+                
+                _dtoTeam.stadiumID = stadiumID.Trim();
+                _dtoTeam.establishedYear = txtYear.Text.Trim();
+
                 isTeamInfoComplete = true;
                 //chuyen tab
                 TabControl.SelectedTabPageIndex = 1;
@@ -198,6 +221,12 @@ namespace PresentationLayer
 
         private void bntRightToLeft_Click(object sender, EventArgs e)
         {
+            if (isCreate)
+            {
+                //insert team
+                _busTeam.insertTeam(_dtoTeam);
+            }
+            
             //chuyen cau thu tu free sang cau thu cua team
             //lay ID cau thu dang chon ben phai, ID team, ID season them vao bang PlayerTeamSeason
             _dtoPTS.playerID = (gridViewRight.GetRowCellValue(rowIndexSelectedRight, "PlayerID")).ToString().Trim();
@@ -237,20 +266,20 @@ namespace PresentationLayer
             {
                 if (isCreate)
                 {
-                    if (MessageBox.Show("Ban co muon them doi bong nay?", "Co", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
-                        if (isTeamInfoComplete)
-                        {
-                            if (_busTeam.insertTeam(_dtoTeam) != 0)
-                            {
-                                MessageBox.Show("Them doi bong thanh cong!");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Co loi xay ra!");
-                            }
-                        }
-                    }
+                    //if (MessageBox.Show("Ban co muon them doi bong nay?", "Co", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    //{
+                    //    if (isTeamInfoComplete)
+                    //    {
+                    //        if (_busTeam.insertTeam(_dtoTeam) != 0)
+                    //        {
+                    //            MessageBox.Show("Them doi bong thanh cong!");
+                    //        }
+                    //        else
+                    //        {
+                    //            MessageBox.Show("Co loi xay ra!");
+                    //        }
+                    //    }
+                    //}
                 }
                 else
                 {
@@ -290,6 +319,35 @@ namespace PresentationLayer
         private void gridViewLeft_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             rowIndexSelectedLeft = e.RowHandle;
+        }
+
+        private void pictureLogoTeam_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            string url = openFileDialog1.FileName;
+            if (string.IsNullOrEmpty(url))
+                return;
+            Image ima;
+            try
+            {
+                ima = Image.FromFile(openFileDialog1.FileName);
+
+            }
+            catch (Exception)
+            {
+                return;
+            }
+            MemoryStream stream = new MemoryStream();
+            if (ima != null)
+            {
+                pictureLogoTeam.Image = ima;
+            }
+        }
+
+        private void ucTeamDetail_Load(object sender, EventArgs e)
+        {
+            //Load san van dong
+            //LoadStadium();
         }
 
     }

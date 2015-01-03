@@ -36,6 +36,9 @@
             System.Windows.Forms.Label heightLabel;
             System.Windows.Forms.Label weightLabel;
             System.Windows.Forms.Label label2;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPlayer));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
             this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
             this.labelTitle = new DevExpress.XtraEditors.LabelControl();
@@ -46,15 +49,22 @@
             this.colPlayerID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPositionID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBirthDay = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPositionName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
-            this.colNationalID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colNationalName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox2 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
             this.colHeight = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWeight = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colImage = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.Player_Image = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.colBntInsert_Update = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bnt_InsertUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colBntDel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.bnt_Del = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
             this.txtNumber = new DevExpress.XtraEditors.SpinEdit();
             this.bntUpdatePlayerInfo = new DevExpress.XtraEditors.SimpleButton();
             this.bntDelPlayer = new DevExpress.XtraEditors.SimpleButton();
@@ -86,6 +96,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player_Image)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnt_InsertUpdate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnt_Del)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -212,7 +225,7 @@
             this.panelControl3.Controls.Add(this.pLAYERGridControl);
             this.panelControl3.Location = new System.Drawing.Point(3, 47);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(804, 616);
+            this.panelControl3.Size = new System.Drawing.Size(1163, 397);
             this.panelControl3.TabIndex = 3;
             // 
             // pLAYERGridControl
@@ -225,12 +238,14 @@
             this.pLAYERGridControl.Name = "pLAYERGridControl";
             this.pLAYERGridControl.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
-            this.repositoryItemComboBox2});
-            this.pLAYERGridControl.Size = new System.Drawing.Size(800, 612);
+            this.repositoryItemComboBox2,
+            this.Player_Image,
+            this.bnt_InsertUpdate,
+            this.bnt_Del});
+            this.pLAYERGridControl.Size = new System.Drawing.Size(1159, 393);
             this.pLAYERGridControl.TabIndex = 1;
             this.pLAYERGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            this.pLAYERGridControl.Click += new System.EventHandler(this.pLAYERGridControl_Click);
             // 
             // gridView1
             // 
@@ -239,14 +254,18 @@
             this.colPlayerID,
             this.colNumber,
             this.colFullName,
-            this.colPositionID,
-            this.colNationalID,
+            this.colBirthDay,
+            this.colPositionName,
+            this.colNationalName,
             this.colHeight,
             this.colWeight,
-            this.colImage});
+            this.colImage,
+            this.colBntInsert_Update,
+            this.colBntDel});
             this.gridView1.GridControl = this.pLAYERGridControl;
             this.gridView1.Name = "gridView1";
-            this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
+            this.gridView1.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridView1_FocusedRowChanged);
+            this.gridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gridView1_KeyDown);
             // 
             // colSTT
             // 
@@ -255,7 +274,7 @@
             this.colSTT.Name = "colSTT";
             this.colSTT.Visible = true;
             this.colSTT.VisibleIndex = 0;
-            this.colSTT.Width = 35;
+            this.colSTT.Width = 31;
             // 
             // colPlayerID
             // 
@@ -264,7 +283,7 @@
             this.colPlayerID.Name = "colPlayerID";
             this.colPlayerID.Visible = true;
             this.colPlayerID.VisibleIndex = 1;
-            this.colPlayerID.Width = 82;
+            this.colPlayerID.Width = 51;
             // 
             // colNumber
             // 
@@ -273,7 +292,7 @@
             this.colNumber.Name = "colNumber";
             this.colNumber.Visible = true;
             this.colNumber.VisibleIndex = 2;
-            this.colNumber.Width = 49;
+            this.colNumber.Width = 45;
             // 
             // colFullName
             // 
@@ -282,17 +301,26 @@
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
             this.colFullName.VisibleIndex = 3;
-            this.colFullName.Width = 182;
+            this.colFullName.Width = 171;
             // 
-            // colPositionID
+            // colBirthDay
             // 
-            this.colPositionID.Caption = "Vị Trí";
-            this.colPositionID.ColumnEdit = this.repositoryItemComboBox1;
-            this.colPositionID.FieldName = "PositionName";
-            this.colPositionID.Name = "colPositionID";
-            this.colPositionID.Visible = true;
-            this.colPositionID.VisibleIndex = 6;
-            this.colPositionID.Width = 141;
+            this.colBirthDay.Caption = "Ngày Sinh";
+            this.colBirthDay.FieldName = "BirthDay";
+            this.colBirthDay.Name = "colBirthDay";
+            this.colBirthDay.Visible = true;
+            this.colBirthDay.VisibleIndex = 4;
+            this.colBirthDay.Width = 70;
+            // 
+            // colPositionName
+            // 
+            this.colPositionName.Caption = "Vị Trí";
+            this.colPositionName.ColumnEdit = this.repositoryItemComboBox1;
+            this.colPositionName.FieldName = "PositionName";
+            this.colPositionName.Name = "colPositionName";
+            this.colPositionName.Visible = true;
+            this.colPositionName.VisibleIndex = 7;
+            this.colPositionName.Width = 132;
             // 
             // repositoryItemComboBox1
             // 
@@ -301,15 +329,15 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
             // 
-            // colNationalID
+            // colNationalName
             // 
-            this.colNationalID.Caption = "Quốc Gia";
-            this.colNationalID.ColumnEdit = this.repositoryItemComboBox2;
-            this.colNationalID.FieldName = "NationalName";
-            this.colNationalID.Name = "colNationalID";
-            this.colNationalID.Visible = true;
-            this.colNationalID.VisibleIndex = 7;
-            this.colNationalID.Width = 130;
+            this.colNationalName.Caption = "Quốc Gia";
+            this.colNationalName.ColumnEdit = this.repositoryItemComboBox2;
+            this.colNationalName.FieldName = "NationalName";
+            this.colNationalName.Name = "colNationalName";
+            this.colNationalName.Visible = true;
+            this.colNationalName.VisibleIndex = 8;
+            this.colNationalName.Width = 130;
             // 
             // repositoryItemComboBox2
             // 
@@ -324,8 +352,8 @@
             this.colHeight.FieldName = "Height";
             this.colHeight.Name = "colHeight";
             this.colHeight.Visible = true;
-            this.colHeight.VisibleIndex = 4;
-            this.colHeight.Width = 84;
+            this.colHeight.VisibleIndex = 5;
+            this.colHeight.Width = 78;
             // 
             // colWeight
             // 
@@ -333,27 +361,71 @@
             this.colWeight.FieldName = "Weight";
             this.colWeight.Name = "colWeight";
             this.colWeight.Visible = true;
-            this.colWeight.VisibleIndex = 5;
-            this.colWeight.Width = 79;
+            this.colWeight.VisibleIndex = 6;
+            this.colWeight.Width = 74;
             // 
             // colImage
             // 
-            this.colImage.Caption = "Image";
+            this.colImage.Caption = "Ảnh";
+            this.colImage.ColumnEdit = this.Player_Image;
             this.colImage.FieldName = "Image";
             this.colImage.Name = "colImage";
+            this.colImage.Visible = true;
+            this.colImage.VisibleIndex = 9;
+            // 
+            // Player_Image
+            // 
+            this.Player_Image.AutoHeight = false;
+            this.Player_Image.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.Player_Image.Name = "Player_Image";
+            this.Player_Image.DoubleClick += new System.EventHandler(this.Player_Image_DoubleClick);
+            // 
+            // colBntInsert_Update
+            // 
+            this.colBntInsert_Update.ColumnEdit = this.bnt_InsertUpdate;
+            this.colBntInsert_Update.Name = "colBntInsert_Update";
+            this.colBntInsert_Update.Visible = true;
+            this.colBntInsert_Update.VisibleIndex = 10;
+            // 
+            // bnt_InsertUpdate
+            // 
+            this.bnt_InsertUpdate.AutoHeight = false;
+            this.bnt_InsertUpdate.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnt_InsertUpdate.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, "", null, null, true)});
+            this.bnt_InsertUpdate.Name = "bnt_InsertUpdate";
+            this.bnt_InsertUpdate.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.bnt_InsertUpdate.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bnt_InsertUpdate_ButtonClick);
+            // 
+            // colBntDel
+            // 
+            this.colBntDel.ColumnEdit = this.bnt_Del;
+            this.colBntDel.Name = "colBntDel";
+            this.colBntDel.Visible = true;
+            this.colBntDel.VisibleIndex = 11;
+            // 
+            // bnt_Del
+            // 
+            this.bnt_Del.AutoHeight = false;
+            this.bnt_Del.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, DevExpress.XtraEditors.ImageLocation.MiddleCenter, ((System.Drawing.Image)(resources.GetObject("bnt_Del.Buttons"))), new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject2, "", null, null, true)});
+            this.bnt_Del.Name = "bnt_Del";
+            this.bnt_Del.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.bnt_Del.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bnt_Del_ButtonClick);
             // 
             // panelControl4
             // 
             this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl4.Controls.Add(this.groupControl1);
-            this.panelControl4.Location = new System.Drawing.Point(811, 47);
+            this.panelControl4.Location = new System.Drawing.Point(41, 500);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(355, 616);
+            this.panelControl4.Size = new System.Drawing.Size(1089, 103);
             this.panelControl4.TabIndex = 4;
             // 
             // groupControl1
             // 
+            this.groupControl1.Controls.Add(this.btnSave);
             this.groupControl1.Controls.Add(label2);
             this.groupControl1.Controls.Add(this.txtNumber);
             this.groupControl1.Controls.Add(this.bntUpdatePlayerInfo);
@@ -375,12 +447,20 @@
             this.groupControl1.Controls.Add(this.txtPlayerWeight);
             this.groupControl1.Controls.Add(this.cbxPlayerLocate);
             this.groupControl1.Controls.Add(this.cbxPlayerNational);
-            this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl1.Location = new System.Drawing.Point(2, 2);
+            this.groupControl1.Location = new System.Drawing.Point(28, 17);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(351, 612);
+            this.groupControl1.Size = new System.Drawing.Size(307, 71);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "TÁC VỤ";
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(240, 328);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(108, 41);
+            this.btnSave.TabIndex = 63;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // txtNumber
             // 
@@ -420,7 +500,7 @@
             this.bntAddPlayerInfo.Name = "bntAddPlayerInfo";
             this.bntAddPlayerInfo.Size = new System.Drawing.Size(108, 41);
             this.bntAddPlayerInfo.TabIndex = 58;
-            this.bntAddPlayerInfo.Text = "Thêm TT Cầu Thủ";
+            this.bntAddPlayerInfo.Text = "Thêm Hàng";
             this.bntAddPlayerInfo.Click += new System.EventHandler(this.bntAddPlayerInfo_Click);
             // 
             // picturePlayer
@@ -537,6 +617,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Player_Image)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnt_InsertUpdate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bnt_Del)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
@@ -568,9 +651,9 @@
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colPlayerID;
         private DevExpress.XtraGrid.Columns.GridColumn colFullName;
-        private DevExpress.XtraGrid.Columns.GridColumn colPositionID;
+        private DevExpress.XtraGrid.Columns.GridColumn colPositionName;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
-        private DevExpress.XtraGrid.Columns.GridColumn colNationalID;
+        private DevExpress.XtraGrid.Columns.GridColumn colNationalName;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox2;
         private DevExpress.XtraGrid.Columns.GridColumn colHeight;
         private DevExpress.XtraGrid.Columns.GridColumn colWeight;
@@ -591,5 +674,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn colImage;
         private DevExpress.XtraGrid.Columns.GridColumn colNumber;
         private DevExpress.XtraEditors.SpinEdit txtNumber;
+        private DevExpress.XtraEditors.SimpleButton btnSave;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirthDay;
+        private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit Player_Image;
+        private DevExpress.XtraGrid.Columns.GridColumn colBntInsert_Update;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit bnt_InsertUpdate;
+        private DevExpress.XtraGrid.Columns.GridColumn colBntDel;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit bnt_Del;
     }
 }
