@@ -79,6 +79,7 @@
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
             this.gridPlayerOfTeam = new DevExpress.XtraGrid.GridControl();
             this.gridViewLeft = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colSTT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPlayerID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFullName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colPositionID = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -88,7 +89,6 @@
             this.colNumberOfCloth = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHeight = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colWeight = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSTT = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.TabControl)).BeginInit();
             this.TabControl.SuspendLayout();
             this.TabPageTeamInfo.SuspendLayout();
@@ -144,15 +144,15 @@
             this.TabPageTeamInfo.Controls.Add(this.panelControl4);
             this.TabPageTeamInfo.Controls.Add(this.panelControl1);
             this.TabPageTeamInfo.Name = "TabPageTeamInfo";
-            this.TabPageTeamInfo.Size = new System.Drawing.Size(1182, 654);
+            this.TabPageTeamInfo.Size = new System.Drawing.Size(1184, 658);
             this.TabPageTeamInfo.Text = "Thông Tin CLB";
             this.TabPageTeamInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.TabPageTeamInfo_Paint);
             // 
             // panelControl4
             // 
-            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl4.Controls.Add(this.labelControl1);
             this.panelControl4.Controls.Add(this.txtTeamID);
             this.panelControl4.Controls.Add(this.labelControl2);
@@ -177,7 +177,7 @@
             this.panelControl4.Controls.Add(this.cbxStadium);
             this.panelControl4.Location = new System.Drawing.Point(2, 3);
             this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(923, 651);
+            this.panelControl4.Size = new System.Drawing.Size(929, 663);
             this.panelControl4.TabIndex = 61;
             // 
             // labelControl1
@@ -360,19 +360,19 @@
             // 
             // panelControl1
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.Controls.Add(this.bntDestroyTeam);
             this.panelControl1.Controls.Add(this.bntCompleteTeam);
-            this.panelControl1.Location = new System.Drawing.Point(931, 3);
+            this.panelControl1.Location = new System.Drawing.Point(937, 3);
             this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(256, 653);
+            this.panelControl1.Size = new System.Drawing.Size(256, 665);
             this.panelControl1.TabIndex = 60;
             // 
             // bntDestroyTeam
             // 
-            this.bntDestroyTeam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntDestroyTeam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.bntDestroyTeam.Location = new System.Drawing.Point(75, 156);
             this.bntDestroyTeam.Name = "bntDestroyTeam";
             this.bntDestroyTeam.Size = new System.Drawing.Size(115, 45);
@@ -382,8 +382,8 @@
             // 
             // bntCompleteTeam
             // 
-            this.bntCompleteTeam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bntCompleteTeam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.bntCompleteTeam.Location = new System.Drawing.Point(75, 57);
             this.bntCompleteTeam.Name = "bntCompleteTeam";
             this.bntCompleteTeam.Size = new System.Drawing.Size(115, 45);
@@ -403,8 +403,8 @@
             // 
             // panelControl3
             // 
-            this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl3.Controls.Add(this.bntDestroy);
             this.panelControl3.Controls.Add(this.bntReturn);
             this.panelControl3.Controls.Add(this.bntComplete);
@@ -442,8 +442,8 @@
             // 
             // panelControl2
             // 
-            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl2.Controls.Add(this.bntLeftToRight);
             this.panelControl2.Controls.Add(this.bntRightToLeft);
             this.panelControl2.Location = new System.Drawing.Point(565, 0);
@@ -471,8 +471,8 @@
             // 
             // groupControl1
             // 
-            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl1.Controls.Add(this.gridPlayerFree);
             this.groupControl1.Location = new System.Drawing.Point(634, 0);
             this.groupControl1.Name = "groupControl1";
@@ -591,9 +591,9 @@
             // 
             // groupControl4
             // 
-            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl4.Controls.Add(this.gridPlayerOfTeam);
             this.groupControl4.Location = new System.Drawing.Point(2, 0);
             this.groupControl4.Name = "groupControl4";
@@ -631,6 +631,15 @@
             this.gridViewLeft.GridControl = this.gridPlayerOfTeam;
             this.gridViewLeft.Name = "gridViewLeft";
             this.gridViewLeft.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridViewLeft_RowClick);
+            // 
+            // colSTT
+            // 
+            this.colSTT.Caption = "STT";
+            this.colSTT.FieldName = "STT";
+            this.colSTT.Name = "colSTT";
+            this.colSTT.Visible = true;
+            this.colSTT.VisibleIndex = 0;
+            this.colSTT.Width = 36;
             // 
             // colPlayerID
             // 
@@ -710,15 +719,6 @@
             this.colWeight.Visible = true;
             this.colWeight.VisibleIndex = 5;
             this.colWeight.Width = 54;
-            // 
-            // colSTT
-            // 
-            this.colSTT.Caption = "STT";
-            this.colSTT.FieldName = "STT";
-            this.colSTT.Name = "colSTT";
-            this.colSTT.Visible = true;
-            this.colSTT.VisibleIndex = 0;
-            this.colSTT.Width = 36;
             // 
             // ucTeamDetail
             // 

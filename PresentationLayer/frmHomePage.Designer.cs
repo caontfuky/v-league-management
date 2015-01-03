@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHomePage));
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.pnlHead = new DevExpress.XtraEditors.PanelControl();
+            this.drBtnTool = new DevExpress.XtraEditors.DropDownButton();
             this.drBtnClose = new DevExpress.XtraEditors.DropDownButton();
             this.barManager = new DevExpress.XtraBars.BarManager(this.components);
             this.ppMenu = new DevExpress.XtraBars.PopupMenu(this.components);
@@ -43,9 +44,7 @@
             this.pnlLeft = new DevExpress.XtraEditors.PanelControl();
             this.pnlRight = new DevExpress.XtraEditors.PanelControl();
             this.pnlHome = new DevExpress.XtraEditors.PanelControl();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.pnlDetail = new DevExpress.XtraEditors.PanelControl();
             this.picBG = new DevExpress.XtraEditors.PictureEdit();
             this.pnlBottom = new DevExpress.XtraEditors.PanelControl();
             this.picStanding = new DevExpress.XtraEditors.PictureEdit();
@@ -64,8 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlRight)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHome)).BeginInit();
             this.pnlHome.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
-            this.xtraTabControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pnlDetail)).BeginInit();
+            this.pnlDetail.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBG.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlBottom)).BeginInit();
             this.pnlBottom.SuspendLayout();
@@ -81,19 +80,34 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Glass Oceans";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Coffee";
             // 
             // pnlHead
             // 
             this.pnlHead.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnlHead.Appearance.Options.UseBackColor = true;
             this.pnlHead.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlHead.Controls.Add(this.drBtnTool);
             this.pnlHead.Controls.Add(this.drBtnClose);
             this.pnlHead.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHead.Location = new System.Drawing.Point(0, 0);
             this.pnlHead.Name = "pnlHead";
             this.pnlHead.Size = new System.Drawing.Size(1342, 69);
             this.pnlHead.TabIndex = 0;
+            // 
+            // drBtnTool
+            // 
+            this.drBtnTool.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.drBtnTool.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.drBtnTool.Appearance.Options.UseBackColor = true;
+            this.drBtnTool.ButtonStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.drBtnTool.DropDownArrowStyle = DevExpress.XtraEditors.DropDownArrowStyle.Hide;
+            this.drBtnTool.Image = ((System.Drawing.Image)(resources.GetObject("drBtnTool.Image")));
+            this.drBtnTool.Location = new System.Drawing.Point(1252, 32);
+            this.drBtnTool.Name = "drBtnTool";
+            this.drBtnTool.Size = new System.Drawing.Size(41, 37);
+            this.drBtnTool.TabIndex = 1;
+            this.drBtnTool.ShowDropDownControl += new DevExpress.XtraEditors.ShowDropDownControlEventHandler(this.drBtnClose_ShowDropDownControl);
             // 
             // drBtnClose
             // 
@@ -190,8 +204,7 @@
             this.pnlHome.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.pnlHome.Appearance.Options.UseBackColor = true;
             this.pnlHome.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlHome.Controls.Add(this.xtraTabControl1);
-            this.pnlHome.Controls.Add(this.picBG);
+            this.pnlHome.Controls.Add(this.pnlDetail);
             this.pnlHome.Controls.Add(this.pnlBottom);
             this.pnlHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHome.Location = new System.Drawing.Point(124, 69);
@@ -200,35 +213,21 @@
             this.pnlHome.Size = new System.Drawing.Size(1081, 711);
             this.pnlHome.TabIndex = 1;
             // 
-            // xtraTabControl1
+            // pnlDetail
             // 
-            this.xtraTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(1081, 576);
-            this.xtraTabControl1.TabIndex = 3;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
-            // 
-            // xtraTabPage1
-            // 
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(1075, 550);
-            this.xtraTabPage1.Text = "xtraTabPage1";
-            // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(1075, 550);
-            this.xtraTabPage2.Text = "xtraTabPage2";
+            this.pnlDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlDetail.Controls.Add(this.picBG);
+            this.pnlDetail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlDetail.Location = new System.Drawing.Point(0, 0);
+            this.pnlDetail.Name = "pnlDetail";
+            this.pnlDetail.Size = new System.Drawing.Size(1081, 631);
+            this.pnlDetail.TabIndex = 3;
             // 
             // picBG
             // 
             this.picBG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picBG.EditValue = ((object)(resources.GetObject("picBG.EditValue")));
-            this.picBG.Location = new System.Drawing.Point(9, 82);
+            this.picBG.Location = new System.Drawing.Point(246, 113);
             this.picBG.MenuManager = this.barManager;
             this.picBG.Name = "picBG";
             this.picBG.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -236,7 +235,7 @@
             this.picBG.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.picBG.Properties.PictureAlignment = System.Drawing.ContentAlignment.MiddleRight;
             this.picBG.Properties.ZoomPercent = 150;
-            this.picBG.Size = new System.Drawing.Size(506, 488);
+            this.picBG.Size = new System.Drawing.Size(441, 497);
             this.picBG.TabIndex = 2;
             // 
             // pnlBottom
@@ -250,16 +249,16 @@
             this.pnlBottom.Controls.Add(this.picSeason);
             this.pnlBottom.Controls.Add(this.picFixture);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 576);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 631);
             this.pnlBottom.Name = "pnlBottom";
-            this.pnlBottom.Size = new System.Drawing.Size(1081, 135);
+            this.pnlBottom.Size = new System.Drawing.Size(1081, 80);
             this.pnlBottom.TabIndex = 1;
             // 
             // picStanding
             // 
             this.picStanding.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picStanding.EditValue = ((object)(resources.GetObject("picStanding.EditValue")));
-            this.picStanding.Location = new System.Drawing.Point(876, 23);
+            this.picStanding.Location = new System.Drawing.Point(876, -15);
             this.picStanding.Name = "picStanding";
             this.picStanding.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picStanding.Properties.Appearance.Options.UseBackColor = true;
@@ -275,7 +274,7 @@
             // 
             this.picMatchResult.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picMatchResult.EditValue = ((object)(resources.GetObject("picMatchResult.EditValue")));
-            this.picMatchResult.Location = new System.Drawing.Point(684, 23);
+            this.picMatchResult.Location = new System.Drawing.Point(684, -15);
             this.picMatchResult.Name = "picMatchResult";
             this.picMatchResult.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picMatchResult.Properties.Appearance.Options.UseBackColor = true;
@@ -291,7 +290,7 @@
             // 
             this.picRefreze.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picRefreze.EditValue = ((object)(resources.GetObject("picRefreze.EditValue")));
-            this.picRefreze.Location = new System.Drawing.Point(110, 23);
+            this.picRefreze.Location = new System.Drawing.Point(110, -15);
             this.picRefreze.Name = "picRefreze";
             this.picRefreze.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picRefreze.Properties.Appearance.Options.UseBackColor = true;
@@ -307,7 +306,7 @@
             // 
             this.picTeam.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picTeam.EditValue = ((object)(resources.GetObject("picTeam.EditValue")));
-            this.picTeam.Location = new System.Drawing.Point(289, 23);
+            this.picTeam.Location = new System.Drawing.Point(289, -15);
             this.picTeam.Name = "picTeam";
             this.picTeam.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picTeam.Properties.Appearance.Options.UseBackColor = true;
@@ -323,7 +322,7 @@
             // 
             this.picPlayer.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picPlayer.EditValue = ((object)(resources.GetObject("picPlayer.EditValue")));
-            this.picPlayer.Location = new System.Drawing.Point(193, 23);
+            this.picPlayer.Location = new System.Drawing.Point(193, -15);
             this.picPlayer.Name = "picPlayer";
             this.picPlayer.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picPlayer.Properties.Appearance.Options.UseBackColor = true;
@@ -339,7 +338,7 @@
             // 
             this.picSeason.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picSeason.EditValue = ((object)(resources.GetObject("picSeason.EditValue")));
-            this.picSeason.Location = new System.Drawing.Point(493, 23);
+            this.picSeason.Location = new System.Drawing.Point(493, -15);
             this.picSeason.Name = "picSeason";
             this.picSeason.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picSeason.Properties.Appearance.Options.UseBackColor = true;
@@ -350,12 +349,13 @@
             this.picSeason.Properties.MouseLeave += new System.EventHandler(this.picHome_Properties_MouseLeave);
             this.picSeason.Size = new System.Drawing.Size(90, 88);
             this.picSeason.TabIndex = 0;
+            this.picSeason.Click += new System.EventHandler(this.picSeason_Click);
             // 
             // picFixture
             // 
             this.picFixture.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picFixture.EditValue = ((object)(resources.GetObject("picFixture.EditValue")));
-            this.picFixture.Location = new System.Drawing.Point(780, 23);
+            this.picFixture.Location = new System.Drawing.Point(780, -15);
             this.picFixture.MenuManager = this.barManager;
             this.picFixture.Name = "picFixture";
             this.picFixture.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
@@ -410,8 +410,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pnlRight)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHome)).EndInit();
             this.pnlHome.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
-            this.xtraTabControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pnlDetail)).EndInit();
+            this.pnlDetail.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picBG.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlBottom)).EndInit();
             this.pnlBottom.ResumeLayout(false);
@@ -452,8 +452,7 @@
         private DevExpress.XtraEditors.PictureEdit picMatchResult;
         private DevExpress.XtraEditors.PictureEdit picTeam;
         private DevExpress.XtraEditors.PictureEdit picRefreze;
-        private DevExpress.XtraTab.XtraTabControl xtraTabControl1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage1;
-        private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
+        private DevExpress.XtraEditors.DropDownButton drBtnTool;
+        private DevExpress.XtraEditors.PanelControl pnlDetail;
     }
 }

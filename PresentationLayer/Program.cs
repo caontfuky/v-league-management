@@ -20,9 +20,9 @@ namespace PresentationLayer
             //int count = cardtype.updateData(new DataTransferObject.DTOCardType("C0001", "The xanh"));
 
             DevExpress.UserSkins.BonusSkins.Register();
-            //DevExpress.Skins.SkinManager.Default.RegisterAssembly(typeof(DevExpress.UserSkins.OfficeSkins).Assembly);
+            DevExpress.Skins.SkinManager.Default.RegisterAssembly(typeof(DevExpress.UserSkins.OfficeSkins).Assembly);
             DevExpress.Skins.SkinManager.EnableFormSkins();
-            //DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "DarkSide";
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SkinName = "Darkroom";
             //DevExpress.Utils.AppearanceObject.DefaultFont = new Font("Lucida Calligraphy", 10);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

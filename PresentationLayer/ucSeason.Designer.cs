@@ -34,52 +34,52 @@
             this.cbxSeason = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label1 = new System.Windows.Forms.Label();
             this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
+            this.bntUpdate = new DevExpress.XtraEditors.SimpleButton();
+            this.bntDel = new DevExpress.XtraEditors.SimpleButton();
             this.bntAdd = new DevExpress.XtraEditors.SimpleButton();
-            this.txtID = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.txtExpenditure = new DevExpress.XtraEditors.SpinEdit();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.txtID = new DevExpress.XtraEditors.TextEdit();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.txtStartDate = new DevExpress.XtraEditors.DateEdit();
             this.txtEndDate = new DevExpress.XtraEditors.DateEdit();
             this.txtSponsor = new DevExpress.XtraEditors.MemoEdit();
-            this.txtExpenditure = new DevExpress.XtraEditors.SpinEdit();
-            this.bntDel = new DevExpress.XtraEditors.SimpleButton();
-            this.bntUpdate = new DevExpress.XtraEditors.SimpleButton();
-            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
             this.panelControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbxSeason.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
+            this.panelControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtExpenditure.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndDate.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndDate.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSponsor.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtExpenditure.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
-            this.panelControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelControl1
             // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl1.ContentImageAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.panelControl1.Controls.Add(this.labelSeason);
             this.panelControl1.Controls.Add(this.labelTitle);
@@ -110,8 +110,8 @@
             // 
             // cbxSeason
             // 
-            this.cbxSeason.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxSeason.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxSeason.EditValue = "";
             this.cbxSeason.Location = new System.Drawing.Point(902, 13);
             this.cbxSeason.Name = "cbxSeason";
@@ -123,8 +123,8 @@
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(803, 16);
             this.label1.Name = "label1";
@@ -142,6 +142,16 @@
             this.panelControl2.TabIndex = 2;
             this.panelControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.panelControl2_Paint);
             // 
+            // panelControl4
+            // 
+            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl4.Controls.Add(this.groupControl1);
+            this.panelControl4.Location = new System.Drawing.Point(1, 381);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(1035, 237);
+            this.panelControl4.TabIndex = 6;
+            // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.bntUpdate);
@@ -154,6 +164,24 @@
             this.groupControl1.TabIndex = 3;
             this.groupControl1.Text = "TÁC VỤ";
             // 
+            // bntUpdate
+            // 
+            this.bntUpdate.Location = new System.Drawing.Point(401, 98);
+            this.bntUpdate.Name = "bntUpdate";
+            this.bntUpdate.Size = new System.Drawing.Size(127, 44);
+            this.bntUpdate.TabIndex = 4;
+            this.bntUpdate.Text = "Sửa TT Mùa Giải";
+            this.bntUpdate.Click += new System.EventHandler(this.bntUpdate_Click);
+            // 
+            // bntDel
+            // 
+            this.bntDel.Location = new System.Drawing.Point(211, 98);
+            this.bntDel.Name = "bntDel";
+            this.bntDel.Size = new System.Drawing.Size(127, 44);
+            this.bntDel.TabIndex = 3;
+            this.bntDel.Text = "Xóa Mùa Giải";
+            this.bntDel.Click += new System.EventHandler(this.bntDel_Click);
+            // 
             // bntAdd
             // 
             this.bntAdd.Location = new System.Drawing.Point(30, 98);
@@ -163,20 +191,16 @@
             this.bntAdd.Text = "Thêm Mùa Giải";
             this.bntAdd.Click += new System.EventHandler(this.bntAdd_Click);
             // 
-            // txtID
+            // panelControl3
             // 
-            this.txtID.Location = new System.Drawing.Point(126, 43);
-            this.txtID.Name = "txtID";
-            this.txtID.Size = new System.Drawing.Size(100, 20);
-            this.txtID.TabIndex = 1;
-            // 
-            // labelControl1
-            // 
-            this.labelControl1.Location = new System.Drawing.Point(29, 46);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(64, 13);
-            this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "ID Mùa Giải : ";
+            this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelControl3.Controls.Add(this.groupControl2);
+            this.panelControl3.Location = new System.Drawing.Point(1, 0);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(1034, 384);
+            this.panelControl3.TabIndex = 5;
             // 
             // groupControl2
             // 
@@ -199,6 +223,52 @@
             this.groupControl2.TabIndex = 4;
             this.groupControl2.Text = "THÔNG TIN MÙA GIẢI";
             // 
+            // txtExpenditure
+            // 
+            this.txtExpenditure.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.txtExpenditure.Location = new System.Drawing.Point(126, 335);
+            this.txtExpenditure.Name = "txtExpenditure";
+            this.txtExpenditure.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.txtExpenditure.Size = new System.Drawing.Size(189, 20);
+            this.txtExpenditure.TabIndex = 52;
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(29, 338);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(82, 13);
+            this.labelControl6.TabIndex = 10;
+            this.labelControl6.Text = "Chi Phí Mùa Giải :";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(29, 247);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(62, 13);
+            this.labelControl5.TabIndex = 8;
+            this.labelControl5.Text = "Nhà Tài Trợ :";
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(29, 194);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(77, 13);
+            this.labelControl4.TabIndex = 6;
+            this.labelControl4.Text = "Ngày Kết Thúc :";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(29, 144);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(74, 13);
+            this.labelControl3.TabIndex = 4;
+            this.labelControl3.Text = "Ngày Bắt Đầu :";
+            // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(126, 94);
@@ -214,37 +284,20 @@
             this.labelControl2.TabIndex = 2;
             this.labelControl2.Text = "Tên Mùa Giải :";
             // 
-            // labelControl3
+            // txtID
             // 
-            this.labelControl3.Location = new System.Drawing.Point(29, 144);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(74, 13);
-            this.labelControl3.TabIndex = 4;
-            this.labelControl3.Text = "Ngày Bắt Đầu :";
+            this.txtID.Location = new System.Drawing.Point(126, 43);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(100, 20);
+            this.txtID.TabIndex = 1;
             // 
-            // labelControl4
+            // labelControl1
             // 
-            this.labelControl4.Location = new System.Drawing.Point(29, 194);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(77, 13);
-            this.labelControl4.TabIndex = 6;
-            this.labelControl4.Text = "Ngày Kết Thúc :";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Location = new System.Drawing.Point(29, 247);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(62, 13);
-            this.labelControl5.TabIndex = 8;
-            this.labelControl5.Text = "Nhà Tài Trợ :";
-            // 
-            // labelControl6
-            // 
-            this.labelControl6.Location = new System.Drawing.Point(29, 338);
-            this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(82, 13);
-            this.labelControl6.TabIndex = 10;
-            this.labelControl6.Text = "Chi Phí Mùa Giải :";
+            this.labelControl1.Location = new System.Drawing.Point(29, 46);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(64, 13);
+            this.labelControl1.TabIndex = 0;
+            this.labelControl1.Text = "ID Mùa Giải : ";
             // 
             // txtStartDate
             // 
@@ -282,59 +335,6 @@
             this.txtSponsor.TabIndex = 9;
             this.txtSponsor.UseOptimizedRendering = true;
             // 
-            // txtExpenditure
-            // 
-            this.txtExpenditure.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtExpenditure.Location = new System.Drawing.Point(126, 335);
-            this.txtExpenditure.Name = "txtExpenditure";
-            this.txtExpenditure.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtExpenditure.Size = new System.Drawing.Size(189, 20);
-            this.txtExpenditure.TabIndex = 52;
-            // 
-            // bntDel
-            // 
-            this.bntDel.Location = new System.Drawing.Point(211, 98);
-            this.bntDel.Name = "bntDel";
-            this.bntDel.Size = new System.Drawing.Size(127, 44);
-            this.bntDel.TabIndex = 3;
-            this.bntDel.Text = "Xóa Mùa Giải";
-            this.bntDel.Click += new System.EventHandler(this.bntDel_Click);
-            // 
-            // bntUpdate
-            // 
-            this.bntUpdate.Location = new System.Drawing.Point(401, 98);
-            this.bntUpdate.Name = "bntUpdate";
-            this.bntUpdate.Size = new System.Drawing.Size(127, 44);
-            this.bntUpdate.TabIndex = 4;
-            this.bntUpdate.Text = "Sửa TT Mùa Giải";
-            this.bntUpdate.Click += new System.EventHandler(this.bntUpdate_Click);
-            // 
-            // panelControl3
-            // 
-            this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl3.Controls.Add(this.groupControl2);
-            this.panelControl3.Location = new System.Drawing.Point(1, 0);
-            this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1034, 384);
-            this.panelControl3.TabIndex = 5;
-            // 
-            // panelControl4
-            // 
-            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl4.Controls.Add(this.groupControl1);
-            this.panelControl4.Location = new System.Drawing.Point(1, 381);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1035, 237);
-            this.panelControl4.TabIndex = 6;
-            // 
             // ucSeason
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -349,23 +349,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.cbxSeason.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
+            this.panelControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.groupControl2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtExpenditure.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtID.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtStartDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndDate.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEndDate.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSponsor.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtExpenditure.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
-            this.panelControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
