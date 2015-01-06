@@ -10,13 +10,13 @@ namespace DataTransferObject
     {
         public string coachID;
         public string coachName;
-        public string birthDay;
+        public int birthDay;
         public string address;
         public int phoneNumber;
 
         public DTOCoach() { }
 
-        public DTOCoach(string _coachID, string _coachName, string _birthDay, string _address, int _phoneNumber)
+        public DTOCoach(string _coachID, string _coachName, int _birthDay, string _address, int _phoneNumber)
         {
             this.coachID = _coachID;
             this.coachName = _coachName;

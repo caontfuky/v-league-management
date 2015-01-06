@@ -17,10 +17,15 @@ namespace PresentationLayer
         DTOCoach _dtoCoach = new DTOCoach();
         BUSCoach _busCoach = new BUSCoach();
         DataTable dtCoach;
+        bool isNewRow = false;
+        bool isUpdate = false;
+        bool isMessage = false;
+        int rowUpdate = -1;
 
         public ucCoach()
         {
             InitializeComponent();
+            this.Load += ucCoach_Load;
         }
 
         private void ucCoach_Load(object sender, EventArgs e)
@@ -28,113 +33,213 @@ namespace PresentationLayer
             LoadCoach();
         }
 
+
+
         public void LoadCoach()
         {
             dtCoach = _busCoach.getAllData();
             coachGrid.DataSource = dtCoach;
         }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void InsertUpdate(DataRow row)
         {
-            txtID.Text = gridView1.GetRowCellValue(e.RowHandle, "CoachID").ToString();
-            txtName.Text = gridView1.GetRowCellValue(e.RowHandle, "CoachName").ToString();
-            txtAddresss.Text = gridView1.GetRowCellValue(e.RowHandle, "Address").ToString();
-            txtBirthDay.Text = gridView1.GetRowCellValue(e.RowHandle, "BirthDay").ToString();
-            txtTel.Text = gridView1.GetRowCellValue(e.RowHandle, "PhoneNumber").ToString();
+            try
+            {
+                if (row["CoachName"].ToString().Equals(""))
+                {
+                    isMessage = true;
+                    gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                    isMessage = false;
+                    MessageBox.Show("Chua dien du thong tin!");
+                    return;
+                }
+                else
+                {
+                    _dtoCoach.coachID = "CH0";
+                    _dtoCoach.coachName = row["CoachName"].ToString().Trim();
+                    if (!row["PhoneNumber"].ToString().Equals(""))
+                    {
+                        try
+                        {
+                            _dtoCoach.phoneNumber = Convert.ToInt32(row["PhoneNumber"].ToString().Trim());                       
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("So dien thoai phai la so");
+                            return;
+                        }
+                    }
+                    if (!row["BirthDay"].ToString().Equals(""))
+                    {
+                        try
+                        {
+                            int birthDay = Convert.ToInt32(row["BirthDay"].ToString().Trim());
+                            if ((DateTime.Now.Year - birthDay) < 28)
+                            {
+                                MessageBox.Show("Tuoi cau thu khong phu hop voi quy dinh!");
+                                return;
+                            }
+                            _dtoCoach.birthDay = birthDay;
+                        }
+                        catch (Exception)
+                        {
+                            
+                        }
+                    }
+                    _dtoCoach.address = row["Address"].ToString().Trim();
+                    try
+                    {
+                        if (isNewRow)
+                        {
+
+
+                            if (_busCoach.insertData(_dtoCoach) != 0)
+                            {
+                                MessageBox.Show("Them thanh cong!");
+                                isNewRow = false;
+                                isMessage = false;
+                                LoadCoach();
+                                gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Them khong thanh cong!");
+                                isMessage = true;
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            _dtoCoach.coachID = row["CoachID"].ToString().Trim();
+                            if (_busCoach.updateData(_dtoCoach) != 0)
+                            {
+                                MessageBox.Show("Sua thanh cong!");
+                                isUpdate = false;
+                                LoadCoach();
+                                gridView1.FocusedRowHandle = rowUpdate;
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sua khong thanh cong!");
+                                return;
+                            }
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Co loi xay ra!");
+                        return;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                isMessage = true;
+                gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                isMessage = false;
+                MessageBox.Show("Chua dien du thong tin!");
+                return;
+            }
         }
 
-        private void bntAdd_Click(object sender, EventArgs e)
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (txtID.Text.Equals("") || txtName.Text.Equals("") || txtBirthDay.Text.Equals(""))
+            if (e.KeyCode == Keys.Enter)
             {
-                MessageBox.Show("Thieu thong tin");
+                System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+
+                //kiem tra 
+                if (isNewRow || isUpdate) // neu dang them hang moi
+                {
+                    InsertUpdate(row);
+                }
+                else
+                {
+                    gridView1.AddNewRow();
+                    isNewRow = true;
+                }
+            }
+        }
+
+        private void bnt_InsertUpdate_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            if (isUpdate || isNewRow)
+            {
+                System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                InsertUpdate(row);
+            }
+        }
+
+        private void bnt_Del_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            int rowFocus = gridView1.FocusedRowHandle;
+            System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            if (isNewRow)
+            {
+                isNewRow = false;
+                gridView1.DeleteSelectedRows();
             }
             else
             {
-                _dtoCoach.coachID = txtID.Text.Trim();
-                _dtoCoach.coachName = txtName.Text.Trim();
-                _dtoCoach.birthDay = txtBirthDay.Text.Trim();
-                _dtoCoach.phoneNumber = Convert.ToInt32(txtTel.Text.Trim());
-                _dtoCoach.address = txtAddresss.Text.Trim();
-
-                try
+                if (MessageBox.Show("Ban co muon xoa Huan Luyen Vien nay?", "MessageBox", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    if (_busCoach.insertData(_dtoCoach) != 0)
+                    if (row["CoachID"].ToString().Equals(""))
                     {
-                        MessageBox.Show("Them thanh cong!");
-                        LoadCoach();
+                        return;
                     }
                     else
                     {
-                        MessageBox.Show("Co loi xay ra!");
+                        try
+                        {
+                            if (_busCoach.deleteData(row["CoachID"].ToString().Trim()) != 0)
+                            {
+                                MessageBox.Show("Xoa thanh cong!");
+                                LoadCoach();
+                                gridView1.FocusedRowHandle = rowFocus - 1;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Xoa khong thanh cong!");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Xoa khong thanh cong!");
+                        }
                     }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Co loi xay ra!");                    
                 }
             }
         }
 
-        private void bntDel_Click(object sender, EventArgs e)
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
-            if (txtID.Text.Equals(""))
+            if (!isNewRow)
             {
-                MessageBox.Show("Thieu thong tin");
+                isUpdate = true;
+                rowUpdate = e.RowHandle;
+            }
+        }
+
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            System.Data.DataRow row = gridView1.GetDataRow(gridView1.RowCount - 1);
+            if (row == null)
+                return;
+            if (isNewRow && !isMessage)   //new da them hang moi
+            {
+                InsertUpdate(row);
             }
             else
             {
-                try
+                if (isUpdate)
                 {
-                    if (_busCoach.deleteData(txtID.Text.Trim()) != 0)
-                    {
-                        MessageBox.Show("Xoa thanh cong!");
-                        LoadCoach();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Co loi xay ra!");
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Co loi xay ra!");
+                    DataRow r = gridView1.GetDataRow(rowUpdate);
+                    InsertUpdate(r);
                 }
             }
         }
 
-        private void bntUpdate_Click(object sender, EventArgs e)
-        {
-            if (txtID.Text.Equals("") || txtName.Text.Equals("") || txtBirthDay.Text.Equals(""))
-            {
-                MessageBox.Show("Thieu thong tin");
-            }
-            else
-            {
-                _dtoCoach.coachID = txtID.Text.Trim();
-                _dtoCoach.coachName = txtName.Text.Trim();
-                _dtoCoach.birthDay = txtBirthDay.Text.Trim();
-                _dtoCoach.address = txtAddresss.Text.Trim();
-
-                try
-                {
-                    _dtoCoach.phoneNumber = Convert.ToInt32(txtTel.Text.Trim());
-
-                    if (_busCoach.updateData(_dtoCoach) != 0)
-                    {
-                        MessageBox.Show("Sua thanh cong!");
-                        LoadCoach();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Co loi xay ra!");
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Co loi xay ra!");
-                }
-            }
-        }
     }
 }

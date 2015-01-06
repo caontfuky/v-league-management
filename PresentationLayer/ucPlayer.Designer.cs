@@ -28,20 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.Label playerIDLabel;
-            System.Windows.Forms.Label fullNameLabel;
-            System.Windows.Forms.Label birthDayLabel;
-            System.Windows.Forms.Label positionIDLabel;
-            System.Windows.Forms.Label nationalIDLabel;
-            System.Windows.Forms.Label heightLabel;
-            System.Windows.Forms.Label weightLabel;
-            System.Windows.Forms.Label label2;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucPlayer));
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            this.panelControl1 = new DevExpress.XtraEditors.PanelControl();
-            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
-            this.labelTitle = new DevExpress.XtraEditors.LabelControl();
             this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
             this.pLAYERGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -62,34 +51,7 @@
             this.bnt_InsertUpdate = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.colBntDel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.bnt_Del = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
-            this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.btnSave = new DevExpress.XtraEditors.SimpleButton();
-            this.txtNumber = new DevExpress.XtraEditors.SpinEdit();
-            this.bntUpdatePlayerInfo = new DevExpress.XtraEditors.SimpleButton();
-            this.bntDelPlayer = new DevExpress.XtraEditors.SimpleButton();
-            this.bntAddPlayerInfo = new DevExpress.XtraEditors.SimpleButton();
-            this.picturePlayer = new DevExpress.XtraEditors.PictureEdit();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtPlayerID = new DevExpress.XtraEditors.TextEdit();
-            this.txtPlayerName = new DevExpress.XtraEditors.TextEdit();
-            this.txtPlayerBirthdate = new DevExpress.XtraEditors.DateEdit();
-            this.txtPlayerHeight = new DevExpress.XtraEditors.SpinEdit();
-            this.txtPlayerWeight = new DevExpress.XtraEditors.SpinEdit();
-            this.cbxPlayerLocate = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.cbxPlayerNational = new DevExpress.XtraEditors.ComboBoxEdit();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            playerIDLabel = new System.Windows.Forms.Label();
-            fullNameLabel = new System.Windows.Forms.Label();
-            birthDayLabel = new System.Windows.Forms.Label();
-            positionIDLabel = new System.Windows.Forms.Label();
-            nationalIDLabel = new System.Windows.Forms.Label();
-            heightLabel = new System.Windows.Forms.Label();
-            weightLabel = new System.Windows.Forms.Label();
-            label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).BeginInit();
-            this.panelControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
             this.panelControl3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pLAYERGridControl)).BeginInit();
@@ -99,133 +61,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.Player_Image)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_InsertUpdate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_Del)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
-            this.panelControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
-            this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePlayer.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerID.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerName.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerBirthdate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerBirthdate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerHeight.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerWeight.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxPlayerLocate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxPlayerNational.Properties)).BeginInit();
             this.SuspendLayout();
-            // 
-            // playerIDLabel
-            // 
-            playerIDLabel.AutoSize = true;
-            playerIDLabel.Location = new System.Drawing.Point(5, 40);
-            playerIDLabel.Name = "playerIDLabel";
-            playerIDLabel.Size = new System.Drawing.Size(65, 13);
-            playerIDLabel.TabIndex = 40;
-            playerIDLabel.Text = "ID Cầu Thủ:";
-            // 
-            // fullNameLabel
-            // 
-            fullNameLabel.AutoSize = true;
-            fullNameLabel.Location = new System.Drawing.Point(5, 71);
-            fullNameLabel.Name = "fullNameLabel";
-            fullNameLabel.Size = new System.Drawing.Size(29, 13);
-            fullNameLabel.TabIndex = 42;
-            fullNameLabel.Text = "Tên:";
-            // 
-            // birthDayLabel
-            // 
-            birthDayLabel.AutoSize = true;
-            birthDayLabel.Location = new System.Drawing.Point(5, 109);
-            birthDayLabel.Name = "birthDayLabel";
-            birthDayLabel.Size = new System.Drawing.Size(55, 13);
-            birthDayLabel.TabIndex = 44;
-            birthDayLabel.Text = "Năm Sinh:";
-            // 
-            // positionIDLabel
-            // 
-            positionIDLabel.AutoSize = true;
-            positionIDLabel.Location = new System.Drawing.Point(5, 148);
-            positionIDLabel.Name = "positionIDLabel";
-            positionIDLabel.Size = new System.Drawing.Size(34, 13);
-            positionIDLabel.TabIndex = 46;
-            positionIDLabel.Text = "Vị Trí:";
-            // 
-            // nationalIDLabel
-            // 
-            nationalIDLabel.AutoSize = true;
-            nationalIDLabel.Location = new System.Drawing.Point(5, 184);
-            nationalIDLabel.Name = "nationalIDLabel";
-            nationalIDLabel.Size = new System.Drawing.Size(54, 13);
-            nationalIDLabel.TabIndex = 47;
-            nationalIDLabel.Text = "Quốc Gia:";
-            // 
-            // heightLabel
-            // 
-            heightLabel.AutoSize = true;
-            heightLabel.Location = new System.Drawing.Point(5, 252);
-            heightLabel.Name = "heightLabel";
-            heightLabel.Size = new System.Drawing.Size(60, 13);
-            heightLabel.TabIndex = 50;
-            heightLabel.Text = "Chiều Cao:";
-            // 
-            // weightLabel
-            // 
-            weightLabel.AutoSize = true;
-            weightLabel.Location = new System.Drawing.Point(5, 219);
-            weightLabel.Name = "weightLabel";
-            weightLabel.Size = new System.Drawing.Size(58, 13);
-            weightLabel.TabIndex = 52;
-            weightLabel.Text = "Cân Nặng:";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(5, 287);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(39, 13);
-            label2.TabIndex = 61;
-            label2.Text = "Số Áo:";
-            // 
-            // panelControl1
-            // 
-            this.panelControl1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl1.Controls.Add(this.panelControl2);
-            this.panelControl1.Controls.Add(this.labelTitle);
-            this.panelControl1.Location = new System.Drawing.Point(0, 0);
-            this.panelControl1.Name = "panelControl1";
-            this.panelControl1.Size = new System.Drawing.Size(1166, 46);
-            this.panelControl1.TabIndex = 1;
-            // 
-            // panelControl2
-            // 
-            this.panelControl2.Location = new System.Drawing.Point(5, 52);
-            this.panelControl2.Name = "panelControl2";
-            this.panelControl2.Size = new System.Drawing.Size(200, 100);
-            this.panelControl2.TabIndex = 2;
-            // 
-            // labelTitle
-            // 
-            this.labelTitle.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelTitle.Appearance.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.labelTitle.Location = new System.Drawing.Point(334, 12);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(168, 17);
-            this.labelTitle.TabIndex = 5;
-            this.labelTitle.Text = "DANH SÁCH CÁC CẦU THỦ ";
             // 
             // panelControl3
             // 
-            this.panelControl3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.panelControl3.Controls.Add(this.pLAYERGridControl);
-            this.panelControl3.Location = new System.Drawing.Point(3, 47);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl3.Location = new System.Drawing.Point(0, 0);
             this.panelControl3.Name = "panelControl3";
-            this.panelControl3.Size = new System.Drawing.Size(1163, 397);
+            this.panelControl3.Size = new System.Drawing.Size(1166, 666);
             this.panelControl3.TabIndex = 3;
             // 
             // pLAYERGridControl
@@ -242,7 +86,7 @@
             this.Player_Image,
             this.bnt_InsertUpdate,
             this.bnt_Del});
-            this.pLAYERGridControl.Size = new System.Drawing.Size(1159, 393);
+            this.pLAYERGridControl.Size = new System.Drawing.Size(1162, 662);
             this.pLAYERGridControl.TabIndex = 1;
             this.pLAYERGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -274,16 +118,18 @@
             this.colSTT.Name = "colSTT";
             this.colSTT.Visible = true;
             this.colSTT.VisibleIndex = 0;
-            this.colSTT.Width = 31;
+            this.colSTT.Width = 35;
             // 
             // colPlayerID
             // 
             this.colPlayerID.Caption = "ID Cầu Thủ";
             this.colPlayerID.FieldName = "PlayerID";
             this.colPlayerID.Name = "colPlayerID";
+            this.colPlayerID.OptionsColumn.AllowEdit = false;
+            this.colPlayerID.OptionsColumn.AllowFocus = false;
             this.colPlayerID.Visible = true;
             this.colPlayerID.VisibleIndex = 1;
-            this.colPlayerID.Width = 51;
+            this.colPlayerID.Width = 57;
             // 
             // colNumber
             // 
@@ -292,7 +138,7 @@
             this.colNumber.Name = "colNumber";
             this.colNumber.Visible = true;
             this.colNumber.VisibleIndex = 2;
-            this.colNumber.Width = 45;
+            this.colNumber.Width = 50;
             // 
             // colFullName
             // 
@@ -301,7 +147,7 @@
             this.colFullName.Name = "colFullName";
             this.colFullName.Visible = true;
             this.colFullName.VisibleIndex = 3;
-            this.colFullName.Width = 171;
+            this.colFullName.Width = 193;
             // 
             // colBirthDay
             // 
@@ -310,7 +156,7 @@
             this.colBirthDay.Name = "colBirthDay";
             this.colBirthDay.Visible = true;
             this.colBirthDay.VisibleIndex = 4;
-            this.colBirthDay.Width = 70;
+            this.colBirthDay.Width = 79;
             // 
             // colPositionName
             // 
@@ -320,7 +166,7 @@
             this.colPositionName.Name = "colPositionName";
             this.colPositionName.Visible = true;
             this.colPositionName.VisibleIndex = 7;
-            this.colPositionName.Width = 132;
+            this.colPositionName.Width = 149;
             // 
             // repositoryItemComboBox1
             // 
@@ -337,7 +183,7 @@
             this.colNationalName.Name = "colNationalName";
             this.colNationalName.Visible = true;
             this.colNationalName.VisibleIndex = 8;
-            this.colNationalName.Width = 130;
+            this.colNationalName.Width = 147;
             // 
             // repositoryItemComboBox2
             // 
@@ -353,7 +199,7 @@
             this.colHeight.Name = "colHeight";
             this.colHeight.Visible = true;
             this.colHeight.VisibleIndex = 5;
-            this.colHeight.Width = 78;
+            this.colHeight.Width = 88;
             // 
             // colWeight
             // 
@@ -362,7 +208,7 @@
             this.colWeight.Name = "colWeight";
             this.colWeight.Visible = true;
             this.colWeight.VisibleIndex = 6;
-            this.colWeight.Width = 74;
+            this.colWeight.Width = 83;
             // 
             // colImage
             // 
@@ -372,6 +218,7 @@
             this.colImage.Name = "colImage";
             this.colImage.Visible = true;
             this.colImage.VisibleIndex = 9;
+            this.colImage.Width = 130;
             // 
             // Player_Image
             // 
@@ -379,6 +226,8 @@
             this.Player_Image.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.Player_Image.Name = "Player_Image";
+            this.Player_Image.PopupBorderStyle = DevExpress.XtraEditors.Controls.PopupBorderStyles.NoBorder;
+            this.Player_Image.ShowPopupShadow = false;
             this.Player_Image.DoubleClick += new System.EventHandler(this.Player_Image_DoubleClick);
             // 
             // colBntInsert_Update
@@ -387,6 +236,7 @@
             this.colBntInsert_Update.Name = "colBntInsert_Update";
             this.colBntInsert_Update.Visible = true;
             this.colBntInsert_Update.VisibleIndex = 10;
+            this.colBntInsert_Update.Width = 71;
             // 
             // bnt_InsertUpdate
             // 
@@ -403,6 +253,7 @@
             this.colBntDel.Name = "colBntDel";
             this.colBntDel.Visible = true;
             this.colBntDel.VisibleIndex = 11;
+            this.colBntDel.Width = 59;
             // 
             // bnt_Del
             // 
@@ -413,186 +264,6 @@
             this.bnt_Del.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.bnt_Del.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.bnt_Del_ButtonClick);
             // 
-            // panelControl4
-            // 
-            this.panelControl4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelControl4.Controls.Add(this.groupControl1);
-            this.panelControl4.Location = new System.Drawing.Point(41, 500);
-            this.panelControl4.Name = "panelControl4";
-            this.panelControl4.Size = new System.Drawing.Size(1089, 103);
-            this.panelControl4.TabIndex = 4;
-            // 
-            // groupControl1
-            // 
-            this.groupControl1.Controls.Add(this.btnSave);
-            this.groupControl1.Controls.Add(label2);
-            this.groupControl1.Controls.Add(this.txtNumber);
-            this.groupControl1.Controls.Add(this.bntUpdatePlayerInfo);
-            this.groupControl1.Controls.Add(this.bntDelPlayer);
-            this.groupControl1.Controls.Add(this.bntAddPlayerInfo);
-            this.groupControl1.Controls.Add(this.picturePlayer);
-            this.groupControl1.Controls.Add(this.label3);
-            this.groupControl1.Controls.Add(playerIDLabel);
-            this.groupControl1.Controls.Add(this.txtPlayerID);
-            this.groupControl1.Controls.Add(fullNameLabel);
-            this.groupControl1.Controls.Add(this.txtPlayerName);
-            this.groupControl1.Controls.Add(birthDayLabel);
-            this.groupControl1.Controls.Add(this.txtPlayerBirthdate);
-            this.groupControl1.Controls.Add(positionIDLabel);
-            this.groupControl1.Controls.Add(nationalIDLabel);
-            this.groupControl1.Controls.Add(heightLabel);
-            this.groupControl1.Controls.Add(this.txtPlayerHeight);
-            this.groupControl1.Controls.Add(weightLabel);
-            this.groupControl1.Controls.Add(this.txtPlayerWeight);
-            this.groupControl1.Controls.Add(this.cbxPlayerLocate);
-            this.groupControl1.Controls.Add(this.cbxPlayerNational);
-            this.groupControl1.Location = new System.Drawing.Point(28, 17);
-            this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(307, 71);
-            this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "TÁC VỤ";
-            // 
-            // btnSave
-            // 
-            this.btnSave.Location = new System.Drawing.Point(240, 328);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(108, 41);
-            this.btnSave.TabIndex = 63;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // txtNumber
-            // 
-            this.txtNumber.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtNumber.Location = new System.Drawing.Point(76, 284);
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtNumber.TabIndex = 62;
-            // 
-            // bntUpdatePlayerInfo
-            // 
-            this.bntUpdatePlayerInfo.Location = new System.Drawing.Point(123, 492);
-            this.bntUpdatePlayerInfo.Name = "bntUpdatePlayerInfo";
-            this.bntUpdatePlayerInfo.Size = new System.Drawing.Size(108, 40);
-            this.bntUpdatePlayerInfo.TabIndex = 60;
-            this.bntUpdatePlayerInfo.Text = "Sửa TT Cầu Thủ";
-            this.bntUpdatePlayerInfo.Click += new System.EventHandler(this.bntUpdatePlayerInfo_Click);
-            // 
-            // bntDelPlayer
-            // 
-            this.bntDelPlayer.Location = new System.Drawing.Point(123, 409);
-            this.bntDelPlayer.Name = "bntDelPlayer";
-            this.bntDelPlayer.Size = new System.Drawing.Size(108, 39);
-            this.bntDelPlayer.TabIndex = 59;
-            this.bntDelPlayer.Text = "Xóa Cầu Thủ";
-            this.bntDelPlayer.Click += new System.EventHandler(this.bntDelPlayer_Click);
-            // 
-            // bntAddPlayerInfo
-            // 
-            this.bntAddPlayerInfo.Location = new System.Drawing.Point(123, 328);
-            this.bntAddPlayerInfo.Name = "bntAddPlayerInfo";
-            this.bntAddPlayerInfo.Size = new System.Drawing.Size(108, 41);
-            this.bntAddPlayerInfo.TabIndex = 58;
-            this.bntAddPlayerInfo.Text = "Thêm Hàng";
-            this.bntAddPlayerInfo.Click += new System.EventHandler(this.bntAddPlayerInfo_Click);
-            // 
-            // picturePlayer
-            // 
-            this.picturePlayer.Location = new System.Drawing.Point(234, 105);
-            this.picturePlayer.Name = "picturePlayer";
-            this.picturePlayer.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
-            this.picturePlayer.Size = new System.Drawing.Size(100, 96);
-            this.picturePlayer.TabIndex = 57;
-            this.picturePlayer.Click += new System.EventHandler(this.picturePlayer_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(190, 109);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(33, 13);
-            this.label3.TabIndex = 56;
-            this.label3.Text = "Ảnh :";
-            // 
-            // txtPlayerID
-            // 
-            this.txtPlayerID.Location = new System.Drawing.Point(76, 37);
-            this.txtPlayerID.Name = "txtPlayerID";
-            this.txtPlayerID.Size = new System.Drawing.Size(100, 20);
-            this.txtPlayerID.TabIndex = 41;
-            // 
-            // txtPlayerName
-            // 
-            this.txtPlayerName.Location = new System.Drawing.Point(76, 68);
-            this.txtPlayerName.Name = "txtPlayerName";
-            this.txtPlayerName.Size = new System.Drawing.Size(258, 20);
-            this.txtPlayerName.TabIndex = 43;
-            // 
-            // txtPlayerBirthdate
-            // 
-            this.txtPlayerBirthdate.EditValue = null;
-            this.txtPlayerBirthdate.Location = new System.Drawing.Point(76, 106);
-            this.txtPlayerBirthdate.Name = "txtPlayerBirthdate";
-            this.txtPlayerBirthdate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtPlayerBirthdate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtPlayerBirthdate.Size = new System.Drawing.Size(100, 20);
-            this.txtPlayerBirthdate.TabIndex = 45;
-            // 
-            // txtPlayerHeight
-            // 
-            this.txtPlayerHeight.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtPlayerHeight.Location = new System.Drawing.Point(76, 249);
-            this.txtPlayerHeight.Name = "txtPlayerHeight";
-            this.txtPlayerHeight.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtPlayerHeight.Size = new System.Drawing.Size(100, 20);
-            this.txtPlayerHeight.TabIndex = 51;
-            // 
-            // txtPlayerWeight
-            // 
-            this.txtPlayerWeight.EditValue = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.txtPlayerWeight.Location = new System.Drawing.Point(76, 216);
-            this.txtPlayerWeight.Name = "txtPlayerWeight";
-            this.txtPlayerWeight.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.txtPlayerWeight.Size = new System.Drawing.Size(100, 20);
-            this.txtPlayerWeight.TabIndex = 53;
-            // 
-            // cbxPlayerLocate
-            // 
-            this.cbxPlayerLocate.Location = new System.Drawing.Point(76, 141);
-            this.cbxPlayerLocate.Name = "cbxPlayerLocate";
-            this.cbxPlayerLocate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxPlayerLocate.Size = new System.Drawing.Size(100, 20);
-            this.cbxPlayerLocate.TabIndex = 54;
-            // 
-            // cbxPlayerNational
-            // 
-            this.cbxPlayerNational.Location = new System.Drawing.Point(76, 181);
-            this.cbxPlayerNational.Name = "cbxPlayerNational";
-            this.cbxPlayerNational.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbxPlayerNational.Size = new System.Drawing.Size(100, 20);
-            this.cbxPlayerNational.TabIndex = 55;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -601,16 +272,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panelControl4);
             this.Controls.Add(this.panelControl3);
-            this.Controls.Add(this.panelControl1);
             this.Name = "ucPlayer";
             this.Size = new System.Drawing.Size(1166, 666);
             this.Load += new System.EventHandler(this.ucPlayer_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
-            this.panelControl1.ResumeLayout(false);
-            this.panelControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
             this.panelControl3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pLAYERGridControl)).EndInit();
@@ -620,33 +285,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.Player_Image)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_InsertUpdate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bnt_Del)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
-            this.panelControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
-            this.groupControl1.ResumeLayout(false);
-            this.groupControl1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumber.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturePlayer.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerID.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerName.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerBirthdate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerBirthdate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerHeight.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtPlayerWeight.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxPlayerLocate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cbxPlayerNational.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraEditors.PanelControl panelControl1;
-        private DevExpress.XtraEditors.PanelControl panelControl2;
-        private DevExpress.XtraEditors.LabelControl labelTitle;
         private DevExpress.XtraEditors.PanelControl panelControl3;
-        private DevExpress.XtraEditors.PanelControl panelControl4;
-        private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.GridControl pLAYERGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colPlayerID;
@@ -657,24 +302,10 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox2;
         private DevExpress.XtraGrid.Columns.GridColumn colHeight;
         private DevExpress.XtraGrid.Columns.GridColumn colWeight;
-        private DevExpress.XtraEditors.PictureEdit picturePlayer;
-        private System.Windows.Forms.Label label3;
-        private DevExpress.XtraEditors.TextEdit txtPlayerID;
-        private DevExpress.XtraEditors.TextEdit txtPlayerName;
-        private DevExpress.XtraEditors.DateEdit txtPlayerBirthdate;
-        private DevExpress.XtraEditors.SpinEdit txtPlayerHeight;
-        private DevExpress.XtraEditors.SpinEdit txtPlayerWeight;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxPlayerLocate;
-        private DevExpress.XtraEditors.ComboBoxEdit cbxPlayerNational;
-        private DevExpress.XtraEditors.SimpleButton bntUpdatePlayerInfo;
-        private DevExpress.XtraEditors.SimpleButton bntDelPlayer;
-        private DevExpress.XtraEditors.SimpleButton bntAddPlayerInfo;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private DevExpress.XtraGrid.Columns.GridColumn colSTT;
         private DevExpress.XtraGrid.Columns.GridColumn colImage;
         private DevExpress.XtraGrid.Columns.GridColumn colNumber;
-        private DevExpress.XtraEditors.SpinEdit txtNumber;
-        private DevExpress.XtraEditors.SimpleButton btnSave;
         private DevExpress.XtraGrid.Columns.GridColumn colBirthDay;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit Player_Image;
         private DevExpress.XtraGrid.Columns.GridColumn colBntInsert_Update;

@@ -17,11 +17,50 @@ namespace PresentationLayer
         DTOPosition _dtoPosition = new DTOPosition();
         BUSPosition _busPosition = new BUSPosition();
         DataTable dtPosition;
+        bool isNewRow = false;
+        bool isUpdate = false;
+        bool isMessage = false;
+        int rowUpdate = -1;
 
         public ucPosition()
         {
             InitializeComponent();
+            this.Load += ucPosition_Load;
+        }
+
+        void ucPosition_Load(object sender, EventArgs e)
+        {
             LoadPosition();
+            gridView1.CellValueChanged += gridView1_CellValueChanged;
+            gridView1.FocusedRowChanged += gridView1_FocusedRowChanged;
+        }
+
+        void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            System.Data.DataRow row = gridView1.GetDataRow(gridView1.RowCount - 1);
+            if (row == null)
+                return;
+            if (isNewRow && !isMessage)   //new da them hang moi
+            {
+                InsertUpdate(row);
+            }
+            else
+            {
+                if (isUpdate)
+                {
+                    DataRow r = gridView1.GetDataRow(rowUpdate);
+                    InsertUpdate(r);
+                }
+            }
+        }
+
+        void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            if (!isNewRow)
+            {
+                isUpdate = true;
+                rowUpdate = e.RowHandle;
+            }
         }
 
         public void LoadPosition()
@@ -30,86 +69,148 @@ namespace PresentationLayer
             pOSITIONGridControl.DataSource = dtPosition;
         }
 
-        private void bntAdd_Click(object sender, EventArgs e)
+        private void InsertUpdate(DataRow row)
         {
-            if (txtPositionID.Text.Equals("") || txtPositionName.Text.Equals(""))
+            try
             {
-                MessageBox.Show("Chua dien thong tin");
-                return;
-            }
-            else
-            {
-                _dtoPosition.positionID = txtPositionID.Text.Trim();
-                _dtoPosition.positionName = txtPositionName.Text.Trim();
+                string positionID = row["PositionID"].ToString().Trim();
+                string positionName = row["PositionName"].ToString();
 
-                if (_busPosition.insertData(_dtoPosition) != 0)
+                if (positionName.Equals(""))
                 {
-                    MessageBox.Show("Them Thanh Cong!");
-                    LoadPosition();
+                    isMessage = true;
+                    gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                    isMessage = false;
+                    MessageBox.Show("Chua dien du thong tin!");
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Co loi xay ra!");
+                    _dtoPosition.positionID = "P0";
+                    _dtoPosition.positionName = positionName.Trim();
+                    try
+                    {
+                        if (isNewRow)
+                        {
+                            if (_busPosition.insertData(_dtoPosition) != 0)
+                            {
+                                MessageBox.Show("Them thanh cong!");
+                                isNewRow = false;
+                                isMessage = false;
+                                LoadPosition();
+                                gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Them khong thanh cong!");
+                                isMessage = true;
+                                return;
+                            }
+                        }
+                        else
+                        {
+                            _dtoPosition.positionID = positionID;
+                            if (_busPosition.updateData(_dtoPosition) != 0)
+                            {
+                                MessageBox.Show("Sua thanh cong!");
+                                isUpdate = false;
+                                LoadPosition();
+                                gridView1.FocusedRowHandle = rowUpdate;
+                                return;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Sua khong thanh cong!");
+                                return;
+                            }
+                        }
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Co loi xay ra!");
+                        return;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                isMessage = true;
+                gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                isMessage = false;
+                MessageBox.Show("Chua dien du thong tin!");
+                return;
+            }
+        }
 
+        private void gridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+
+                //kiem tra 
+                if (isNewRow || isUpdate) // neu dang them hang moi
+                {
+                    InsertUpdate(row);
+                }
+                else
+                {
+                    gridView1.AddNewRow();
+                    isNewRow = true;
                 }
             }
         }
 
-        private void bntDel_Click(object sender, EventArgs e)
+
+        private void bnt_Del_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            if (txtPositionID.Text.Equals("") || txtPositionName.Text.Equals(""))
+            int rowFocus = gridView1.FocusedRowHandle;
+            System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+            if (isNewRow)
             {
-                MessageBox.Show("Chua dien thong tin");
-                return;
+                isNewRow = false;
+                gridView1.DeleteSelectedRows();
             }
             else
             {
-                _dtoPosition.positionID = txtPositionID.Text.Trim();
-                _dtoPosition.positionName = txtPositionName.Text.Trim();
-
-                if (_busPosition.deleteData(_dtoPosition.positionID) != 0)
+                if (MessageBox.Show("Ban co muon xoa Vi Tri nay?", "MessageBox", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
-                    MessageBox.Show("Xoa Thanh Cong!");
-                    LoadPosition();
-                }
-                else
-                {
-                    MessageBox.Show("Co loi xay ra!");
-
-                }
-
-            }
-        }
-
-        private void bntUpdate_Click(object sender, EventArgs e)
-        {
-            if (txtPositionID.Text.Equals("") || txtPositionName.Text.Equals(""))
-            {
-                MessageBox.Show("Chua dien thong tin");
-                return;
-            }
-            else
-            {
-                _dtoPosition.positionID = txtPositionID.Text.Trim();
-                _dtoPosition.positionName = txtPositionName.Text.Trim();
-
-                if (_busPosition.updateData(_dtoPosition) != 0)
-                {
-                    MessageBox.Show("Sua Thanh Cong!");
-                    LoadPosition();
-                }
-                else
-                {
-                    MessageBox.Show("Co loi xay ra!");
-
+                    if (row["PositionID"].ToString().Equals(""))
+                    {
+                        return;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            if (_busPosition.deleteData(row["PositionID"].ToString().Trim()) != 0)
+                            {
+                                MessageBox.Show("Xoa thanh cong!");
+                                LoadPosition();
+                                gridView1.FocusedRowHandle = rowFocus - 1;
+                            }
+                            else
+                            {
+                                MessageBox.Show("Xoa khong thanh cong!");
+                            }
+                        }
+                        catch (Exception)
+                        {
+                            MessageBox.Show("Xoa khong thanh cong!");
+                        }
+                    }
                 }
             }
         }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        private void bnt_InsertUpdate_ButtonClick_1(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            txtPositionID.Text = gridView1.GetRowCellValue(e.RowHandle, "PositionID").ToString();
-            txtPositionName.Text = gridView1.GetRowCellValue(e.RowHandle, "PositionName").ToString();
+            if (isUpdate || isNewRow)
+            {
+                System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                InsertUpdate(row);
+            }
         }
     }
 }

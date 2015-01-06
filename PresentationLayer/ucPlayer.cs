@@ -24,12 +24,12 @@ namespace PresentationLayer
         BUSPlayer _busPlayer = new BUSPlayer();
         BUSPosition _busPosition = new BUSPosition();
         BUSNational _busNational = new BUSNational();
-        string seasonName = "";
         string seasonID = "";
         DataTable dtPlayer;
         DataTable dt;
         bool isNewRow = false;
         bool isUpdate = false;
+        bool isMessage = false;
         int rowUpdate = -1;
         int rowSelect = -1;
         public ucPlayer()
@@ -39,13 +39,8 @@ namespace PresentationLayer
 
         private void ucPlayer_Load(object sender, EventArgs e)
         {
-//            LoadSeason();
-            //LoadListPlayer(seasonName);
             LoadListPlayer();
-            LoadPosition(cbxPlayerLocate);
-            LoadNational(cbxPlayerNational);
             gridView1.CellValueChanged += gridView1_CellValueChanged;
-
         }
 
         void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -69,31 +64,13 @@ namespace PresentationLayer
             dtPlayer = _busPlayer.getAllData();
             pLAYERGridControl.DataSource = dtPlayer;
 
+            LoadPosition();
+            LoadNational();
+        }
+
+        public void LoadPosition()
+        {
             ComboBoxItemCollection coll = repositoryItemComboBox1.Items;
-
-            coll.BeginUpdate();
-            dt = _busPosition.getAllData();
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                coll.Add((dt.Rows[i]["PositionName"]).ToString());
-
-            }
-            coll.EndUpdate();
-            ComboBoxItemCollection coll1 = repositoryItemComboBox2.Items;
-
-            coll1.BeginUpdate();
-            dt = _busNational.getAllData();
-            for (int i = 0; i < dt.Rows.Count; i++)
-            {
-                coll1.Add((dt.Rows[i]["NationalName"]).ToString());
-
-            }
-            coll1.EndUpdate();            
-        }
-
-        public void LoadPosition(ComboBoxEdit cbx)
-        {
-            ComboBoxItemCollection coll = cbx.Properties.Items;
             coll.BeginUpdate();
             dt = _busPosition.getAllData();
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -104,9 +81,9 @@ namespace PresentationLayer
             coll.EndUpdate();
         }
 
-        public void LoadNational(ComboBoxEdit cbx)
+        public void LoadNational()
         {
-            ComboBoxItemCollection coll = cbx.Properties.Items;
+            ComboBoxItemCollection coll = repositoryItemComboBox2.Items;
             coll.BeginUpdate();
             dt = _busNational.getAllData();
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -131,161 +108,6 @@ namespace PresentationLayer
             dt = _busNational.getNationalIDByNationalName(nationalName);
             str = (dt.Rows[0]["NationalID"]).ToString().Trim();
             return str;
-        }
-
-        private void picturePlayer_Click(object sender, EventArgs e)
-        {
-            openFileDialog1.ShowDialog();
-            string url = openFileDialog1.FileName;
-            if (string.IsNullOrEmpty(url))
-                return;
-            Image ima;
-            try
-            {
-                ima = Image.FromFile(openFileDialog1.FileName);
-
-            }
-            catch (Exception)
-            {
-                return;
-            }
-            if (ima != null)
-            {
-                picturePlayer.Image = ima;
-            }
-        }
-
-        private void bntAddPlayerInfo_Click(object sender, EventArgs e)
-        {
-            gridView1.AddNewRow();
-            isNewRow = true;
-
-            seasonName = repositoryItemComboBox1.Items[1].ToString();
-            rowSelect = gridView1.RowCount - 1;
-            
-            //if (txtPlayerID.Text.Equals("") || txtPlayerName.Text.Equals("") || txtPlayerBirthdate.Text.Equals("") || txtPlayerHeight.Text.Equals("") ||
-            //    txtPlayerWeight.Text.Equals("") || cbxPlayerLocate.Text.Equals("") || cbxPlayerNational.Text.Equals("") || txtNumber.Text.Equals(""))
-            //{
-            //    MessageBox.Show("Chua dien du thong tin!");
-            //    return;  
-            //}
-            //else
-            //{
-            //    if ((DateTime.Now.Year - txtPlayerBirthdate.DateTime.Year) < 18)
-            //    {
-            //        MessageBox.Show("Tuoi cau thu khong phu hop voi quy dinh!");
-            //        return;
-            //    }
-            //    _dtoPlayer.playerID = txtPlayerID.Text.Trim();
-            //    _dtoPlayer.fullName = txtPlayerName.Text.Trim();
-            //    _dtoPlayer.birthday = txtPlayerBirthdate.Text.Trim();
-            //    _dtoPlayer.height = Convert.ToInt32(txtPlayerHeight.Text.Trim());
-            //    _dtoPlayer.weight = Convert.ToInt32(txtPlayerWeight.Text.Trim());
-            //    _dtoPlayer.numberOfCloth = Convert.ToInt32(txtNumber.Text.Trim());
-            //    if (picturePlayer.Image != null)
-            //    {
-            //        MemoryStream stream = new MemoryStream();
-            //        picturePlayer.Image.Save(stream, ImageFormat.Jpeg);
-            //        _dtoPlayer.image = stream.ToArray();
-            //    }
-
-            //    try
-            //    {
-            //        _dtoPlayer.positionID = getPositionID(cbxPlayerLocate.Text.Trim());
-            //        _dtoPlayer.nationalID = getNationalID(cbxPlayerNational.Text.Trim());
-
-            //        if (_busPlayer.insertData(_dtoPlayer) != 0)
-            //        {
-            //            MessageBox.Show("Them thanh cong!");
-            //            LoadListPlayer();
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("Co loi xay ra!");
-            //        }
-            //    }
-            //    catch (Exception)
-            //    {
-            //        MessageBox.Show("Co loi xay ra!");
-            //    }
-            //}
-        }
-
-        private void bntDelPlayer_Click(object sender, EventArgs e)
-        {
-            if (txtPlayerID.Text.Equals(""))
-            {
-                MessageBox.Show("Chua nhap thong tin");
-            }else{
-                try
-                {
-                    if (_busPlayer.deleteData(txtPlayerID.Text.Trim()) != 0)
-                    {
-                        MessageBox.Show("Xoa thanh cong!");
-                        LoadListPlayer();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Xoa khong thanh cong!");                    
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Xoa khong thanh cong!");                    
-                }
-            }
-        }
-
-        private void bntUpdatePlayerInfo_Click(object sender, EventArgs e)
-        {
-            if (txtPlayerID.Text.Equals("") || txtPlayerName.Text.Equals("") || txtPlayerBirthdate.Text.Equals("") || txtPlayerHeight.Text.Equals("") ||
-                txtPlayerWeight.Text.Equals("") || cbxPlayerLocate.Text.Equals("") || cbxPlayerNational.Text.Equals("") || txtNumber.Text.Equals(""))
-            {
-                MessageBox.Show("Chua dien du thong tin!");
-                return;
-            }
-            else
-            {
-
-                if ((DateTime.Now.Year - txtPlayerBirthdate.DateTime.Year) < 18)
-                {
-                    MessageBox.Show("Tuoi cau thu khong phu hop voi quy dinh!");
-                    return;
-                }
-
-                _dtoPlayer.playerID = txtPlayerID.Text.Trim();
-                _dtoPlayer.fullName = txtPlayerName.Text.Trim();
-                _dtoPlayer.birthday = txtPlayerBirthdate.Text.Trim();
-                _dtoPlayer.height = Convert.ToInt32(txtPlayerHeight.Text.Trim());
-                _dtoPlayer.weight = Convert.ToInt32(txtPlayerWeight.Text.Trim());
-                _dtoPlayer.numberOfCloth = Convert.ToInt32(txtNumber.Text.Trim());
-                if (picturePlayer.Image != null)
-                {
-                    MemoryStream stream = new MemoryStream();
-                    picturePlayer.Image.Save(stream, ImageFormat.Jpeg);
-                    _dtoPlayer.image = stream.ToArray();
-                }
-
-                try
-                {
-                    _dtoPlayer.positionID = getPositionID(cbxPlayerLocate.Text.Trim());
-                    _dtoPlayer.nationalID = getNationalID(cbxPlayerNational.Text.Trim());
-
-                    if (_busPlayer.updateData(_dtoPlayer) != 0)
-                    {
-                        MessageBox.Show("Sua thanh cong!");
-                        LoadListPlayer();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Co loi xay ra!");
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Co loi xay ra!");
-                }
-            }
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -359,10 +181,17 @@ namespace PresentationLayer
         {
             if (e.KeyCode == Keys.Enter)
             {
+                System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
                 //kiem tra 
-
-                gridView1.AddNewRow();
-                isNewRow = true;
+                if (isNewRow || isUpdate)
+                {
+                    InsertUpdate(row);
+                }
+                else
+                {
+                    gridView1.AddNewRow();
+                    isNewRow = true;
+                }
             }
         }
 
@@ -371,7 +200,7 @@ namespace PresentationLayer
             System.Data.DataRow row = gridView1.GetDataRow(gridView1.RowCount - 1);
             if (row == null)
                 return;
-            if (isNewRow)   //new da them hang moi
+            if (isNewRow && !isMessage)   //new da them hang moi
             {
                 InsertUpdate(row);
             }
@@ -412,15 +241,23 @@ namespace PresentationLayer
 
         private void bnt_InsertUpdate_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
-            System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-            InsertUpdate(row);
+            if (isUpdate || isNewRow)
+            {
+                System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
+                InsertUpdate(row);
+            }
         }
 
         private void bnt_Del_ButtonClick(object sender, ButtonPressedEventArgs e)
         {
-            
-            System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
-
+            int rowFocus = gridView1.FocusedRowHandle;
+            System.Data.DataRow row = gridView1.GetDataRow(rowFocus);
+            if (isNewRow)
+            {
+                isNewRow = false;
+                gridView1.DeleteSelectedRows();
+                return;
+            }
             if (MessageBox.Show("Ban co muon xoa cau thu nay?", "MessageBox", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (row["PlayerID"].ToString().Equals(""))
@@ -435,6 +272,7 @@ namespace PresentationLayer
                         {
                             MessageBox.Show("Xoa thanh cong!");
                             LoadListPlayer();
+                            gridView1.FocusedRowHandle = rowFocus - 1;
                         }
                         else
                         {
@@ -453,38 +291,41 @@ namespace PresentationLayer
         {
             try
             {
-                string playerID = row["PlayerID"].ToString();
-                string playerName = row["FullName"].ToString();
-                DateTime birthDay = (DateTime)row["BirthDay"];
-                string height = row["Height"].ToString();
-                string weight = row["Weight"].ToString();
-                string positionName = row["PositionName"].ToString();
-                string nationalName = row["NationalName"].ToString();
-                string number = row["NumberOfCloth"].ToString();
-                byte[] ima;
-                try
+                if (row["FullName"].ToString().Equals("") || row["BirthDay"].ToString().Equals("") || row["Height"].ToString().Equals("") ||
+                   row["Weight"].ToString().Equals("") || row["PositionName"].ToString().Equals("") ||
+                   row["NationalName"].ToString().Equals("") || row["NumberOfCloth"].ToString().Equals(""))
                 {
-                    ima = (byte[])row["Image"];
-                }
-                catch (Exception)
-                {
-                    ima = null;
-                }
-
-                if (playerID.Equals("") || playerName.Equals("") || birthDay.Equals("") || height.Equals("") || weight.Equals("") || positionName.Equals("") ||
-                   nationalName.Equals("") || number.Equals(""))
-                {
+                    isMessage = true;
+                    gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                    isMessage = false;
                     MessageBox.Show("Chua dien du thong tin!");
                     return false;
                 }
                 else
                 {
+                    string playerID = row["PlayerID"].ToString();
+                    string playerName = row["FullName"].ToString();
+                    DateTime birthDay = (DateTime)row["BirthDay"];
+                    string height = row["Height"].ToString();
+                    string weight = row["Weight"].ToString();
+                    string positionName = row["PositionName"].ToString();
+                    string nationalName = row["NationalName"].ToString();
+                    string number = row["NumberOfCloth"].ToString();
+                    byte[] ima;
+                    try
+                    {
+                        ima = (byte[])row["Image"];
+                    }
+                    catch (Exception)
+                    {
+                        ima = null;
+                    }
                     if ((DateTime.Now.Year - birthDay.Year) < 18)
                     {
                         MessageBox.Show("Tuoi cau thu khong phu hop voi quy dinh!");
                         return false;
                     }
-                    _dtoPlayer.playerID = playerID.Trim();
+                    _dtoPlayer.playerID = "PL0";
                     _dtoPlayer.fullName = playerName.Trim();
                     _dtoPlayer.birthday = birthDay.ToString().Trim();
                     _dtoPlayer.height = Convert.ToInt32(height.Trim());
@@ -501,6 +342,7 @@ namespace PresentationLayer
                             {
                                 MessageBox.Show("Them thanh cong!");
                                 isNewRow = false;
+                                isMessage = false;
                                 LoadListPlayer();
                                 gridView1.FocusedRowHandle = gridView1.RowCount - 1;
                                 return true;
@@ -508,11 +350,13 @@ namespace PresentationLayer
                             else
                             {
                                 MessageBox.Show("Them khong thanh cong!");
+                                isMessage = true;
                                 return false;
                             }
                         }
                         else
                         {
+                            _dtoPlayer.playerID = playerID.Trim();
                             if (_busPlayer.updateData(_dtoPlayer) != 0)
                             {
                                 MessageBox.Show("Sua thanh cong!");
@@ -537,6 +381,9 @@ namespace PresentationLayer
             }
             catch (Exception)
             {
+                isMessage = true;
+                gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                isMessage = false;
                 MessageBox.Show("Chua dien du thong tin!");
                 return false;
             }

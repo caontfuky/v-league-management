@@ -34,6 +34,7 @@ namespace PresentationLayer
             gridView1.FocusedRowChanged += gridView1_FocusedRowChanged;
             gridView1.KeyDown += gridView1_KeyDown;
             gridView1.CellValueChanged += gridView1_CellValueChanged;
+            
         }
 
         void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
@@ -71,7 +72,6 @@ namespace PresentationLayer
                 return;
             if (isNewRow && !isMessage)   //new da them hang moi
             {
-                
                 InsertUpdate(row);
             }
             else
@@ -88,10 +88,10 @@ namespace PresentationLayer
         {
             try
             {
-                string nationalID = row["NationalID"].ToString();
+                string nationalID = row["NationalID"].ToString().Trim();
                 string nationalName = row["NationalName"].ToString();
 
-                if (nationalID.Equals("") || nationalName.Equals(""))
+                if (nationalName.Equals(""))
                 {
                     isMessage = true;
                     gridView1.FocusedRowHandle = gridView1.RowCount - 1;
@@ -101,7 +101,7 @@ namespace PresentationLayer
                 }
                 else
                 {
-                    _dtoNational.nationalID = nationalID.Trim();
+                    _dtoNational.nationalID = "N0";
                     _dtoNational.nationalName = nationalName.Trim();
                     try
                     {
@@ -125,6 +125,7 @@ namespace PresentationLayer
                         }
                         else
                         {
+                            _dtoNational.nationalID = nationalID;
                             if (_busNational.updateData(_dtoNational) != 0)
                             {
                                 MessageBox.Show("Sua thanh cong!");
@@ -151,6 +152,7 @@ namespace PresentationLayer
             {
                 isMessage = true;
                 gridView1.FocusedRowHandle = gridView1.RowCount - 1;
+                isMessage = false;
                 MessageBox.Show("Chua dien du thong tin!");
                 return ;
             }
@@ -162,92 +164,9 @@ namespace PresentationLayer
             nATIONALGridControl.DataSource = dtNational;
         }
 
-        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-        {
-            txtNationalID.Text = gridView1.GetRowCellValue(e.RowHandle, "NationalID").ToString();
-            txtNationalName.Text = gridView1.GetRowCellValue(e.RowHandle, "NationalName").ToString();
-
-        }
-
-        private void bntAdd_Click(object sender, EventArgs e)
-        {
-            if (txtNationalID.Text.Equals("") || txtNationalName.Text.Equals(""))
-            {
-                MessageBox.Show("Chua dien thong tin");
-                return;
-            }
-            else
-            {
-                _dtoNational.nationalID = txtNationalID.Text.Trim();
-                _dtoNational.nationalName = txtNationalName.Text.Trim();
-
-                if (_busNational.insertData(_dtoNational) != 0)
-                {
-                    MessageBox.Show("Them Thanh Cong!");
-                    LoadNational();
-                }
-                else
-                {
-                    MessageBox.Show("Co loi xay ra!");
-
-                }
-            }
-        }
-
-        private void bntDel_Click(object sender, EventArgs e)
-        {
-            if (txtNationalID.Text.Equals("") || txtNationalName.Text.Equals(""))
-            {
-                MessageBox.Show("Chua dien thong tin");
-                return;
-            }
-            else
-            {
-                _dtoNational.nationalID = txtNationalID.Text.Trim();
-                _dtoNational.nationalName = txtNationalName.Text.Trim();
-
-                if (_busNational.deleteData(_dtoNational.nationalID) != 0)
-                {
-                    MessageBox.Show("Xoa Thanh Cong!");
-                    LoadNational();
-                }
-                else
-                {
-                    MessageBox.Show("Co loi xay ra!");
-
-                }
-
-            }
-        }
-
-        private void bntUpdate_Click(object sender, EventArgs e)
-        {
-            if (txtNationalID.Text.Equals("") || txtNationalName.Text.Equals(""))
-            {
-                MessageBox.Show("Chua dien thong tin");
-                return;
-            }
-            else
-            {
-                _dtoNational.nationalID = txtNationalID.Text.Trim();
-                _dtoNational.nationalName = txtNationalName.Text.Trim();
-
-                if (_busNational.updateData(_dtoNational) != 0)
-                {
-                    MessageBox.Show("Sua Thanh Cong!");
-                    LoadNational();
-                }
-                else
-                {
-                    MessageBox.Show("Co loi xay ra!");
-
-                }
-            }
-        }
-
         private void bnt_InsertUpdate_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-            if (isUpdate)
+            if (isUpdate || isNewRow)
             {
                 System.Data.DataRow row = gridView1.GetDataRow(gridView1.FocusedRowHandle);
                 InsertUpdate(row);
