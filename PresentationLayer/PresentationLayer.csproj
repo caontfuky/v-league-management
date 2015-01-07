@@ -152,6 +152,8 @@
     <Compile Include="frmWaiting.Designer.cs">
       <DependentUpon>frmWaiting.cs</DependentUpon>
     </Compile>
+    <Compile Include="Global\FixtureAutoCreates.cs" />
+    <Compile Include="Global\ucFixtureCreatesClass.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
@@ -173,6 +175,12 @@
     <Compile Include="ucCoach.Designer.cs">
       <DependentUpon>ucCoach.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucFixtureCreates.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucFixtureCreates.Designer.cs">
+      <DependentUpon>ucFixtureCreates.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucFixtures.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -190,6 +198,12 @@
     </Compile>
     <Compile Include="ucListTeamDemo.Designer.cs">
       <DependentUpon>ucListTeamDemo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucMatchResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucMatchResult.Designer.cs">
+      <DependentUpon>ucMatchResult.cs</DependentUpon>
     </Compile>
     <Compile Include="ucNational.cs">
       <SubType>UserControl</SubType>
@@ -288,6 +302,9 @@
     <EmbeddedResource Include="ucCoach.resx">
       <DependentUpon>ucCoach.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucFixtureCreates.resx">
+      <DependentUpon>ucFixtureCreates.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucFixtures.resx">
       <DependentUpon>ucFixtures.cs</DependentUpon>
     </EmbeddedResource>
@@ -296,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucListTeamDemo.resx">
       <DependentUpon>ucListTeamDemo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucMatchResult.resx">
+      <DependentUpon>ucMatchResult.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucNational.resx">
       <DependentUpon>ucNational.cs</DependentUpon>

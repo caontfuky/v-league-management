@@ -73,13 +73,13 @@ namespace PresentationLayer
                     {
                         try
                         {
-                            int birthDay = Convert.ToInt32(row["BirthDay"].ToString().Trim());
-                            if ((DateTime.Now.Year - birthDay) < 28)
-                            {
-                                MessageBox.Show("Tuoi cau thu khong phu hop voi quy dinh!");
-                                return;
-                            }
-                            _dtoCoach.birthDay = birthDay;
+                            //int birthDays = int.Parse(row["BirthDay"].ToString().Trim());
+                            //if ((DateTime.Now.Year - birthDays) < 28)
+                            //{
+                            //    MessageBox.Show("Tuoi cau thu khong phu hop voi quy dinh!");
+                            //    return;
+                            //}
+                            //_dtoCoach.birthDay = birthDays;
                         }
                         catch (Exception)
                         {

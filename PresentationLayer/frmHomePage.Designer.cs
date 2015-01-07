@@ -230,6 +230,7 @@
             this.picBG.Location = new System.Drawing.Point(246, 113);
             this.picBG.MenuManager = this.barManager;
             this.picBG.Name = "picBG";
+            this.picBG.Properties.AllowFocused = false;
             this.picBG.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picBG.Properties.Appearance.Options.UseBackColor = true;
             this.picBG.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -260,6 +261,7 @@
             this.picStanding.EditValue = ((object)(resources.GetObject("picStanding.EditValue")));
             this.picStanding.Location = new System.Drawing.Point(876, -15);
             this.picStanding.Name = "picStanding";
+            this.picStanding.Properties.AllowFocused = false;
             this.picStanding.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picStanding.Properties.Appearance.Options.UseBackColor = true;
             this.picStanding.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -276,6 +278,7 @@
             this.picMatchResult.EditValue = ((object)(resources.GetObject("picMatchResult.EditValue")));
             this.picMatchResult.Location = new System.Drawing.Point(684, -15);
             this.picMatchResult.Name = "picMatchResult";
+            this.picMatchResult.Properties.AllowFocused = false;
             this.picMatchResult.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picMatchResult.Properties.Appearance.Options.UseBackColor = true;
             this.picMatchResult.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -292,6 +295,7 @@
             this.picRefreze.EditValue = ((object)(resources.GetObject("picRefreze.EditValue")));
             this.picRefreze.Location = new System.Drawing.Point(110, -15);
             this.picRefreze.Name = "picRefreze";
+            this.picRefreze.Properties.AllowFocused = false;
             this.picRefreze.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picRefreze.Properties.Appearance.Options.UseBackColor = true;
             this.picRefreze.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -308,6 +312,7 @@
             this.picTeam.EditValue = ((object)(resources.GetObject("picTeam.EditValue")));
             this.picTeam.Location = new System.Drawing.Point(289, -15);
             this.picTeam.Name = "picTeam";
+            this.picTeam.Properties.AllowFocused = false;
             this.picTeam.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picTeam.Properties.Appearance.Options.UseBackColor = true;
             this.picTeam.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -324,6 +329,7 @@
             this.picPlayer.EditValue = ((object)(resources.GetObject("picPlayer.EditValue")));
             this.picPlayer.Location = new System.Drawing.Point(193, -15);
             this.picPlayer.Name = "picPlayer";
+            this.picPlayer.Properties.AllowFocused = false;
             this.picPlayer.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picPlayer.Properties.Appearance.Options.UseBackColor = true;
             this.picPlayer.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -340,6 +346,7 @@
             this.picSeason.EditValue = ((object)(resources.GetObject("picSeason.EditValue")));
             this.picSeason.Location = new System.Drawing.Point(493, -15);
             this.picSeason.Name = "picSeason";
+            this.picSeason.Properties.AllowFocused = false;
             this.picSeason.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picSeason.Properties.Appearance.Options.UseBackColor = true;
             this.picSeason.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
@@ -358,6 +365,7 @@
             this.picFixture.Location = new System.Drawing.Point(780, -15);
             this.picFixture.MenuManager = this.barManager;
             this.picFixture.Name = "picFixture";
+            this.picFixture.Properties.AllowFocused = false;
             this.picFixture.Properties.Appearance.BackColor = System.Drawing.Color.Transparent;
             this.picFixture.Properties.Appearance.Options.UseBackColor = true;
             this.picFixture.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;

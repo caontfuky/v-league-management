@@ -11,8 +11,6 @@ using DataTransferObject;
 using BusinnessLogicLayer;
 using System.IO;
 using System.Drawing.Imaging;
-using DataTransferObject;
-using BusinnessLogicLayer;
 
 namespace PresentationLayer
 {

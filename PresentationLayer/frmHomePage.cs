@@ -50,14 +50,16 @@ namespace PresentationLayer
         }
 
         ucSeasonInfo seasonInfo = new ucSeasonInfo();
+        ucFixtureCreates fixtureCreates = new ucFixtureCreates();
+        ucMatchResult matchResult = new ucMatchResult();
         private void picSeason_Click(object sender, EventArgs e)
         {
             SplashScreenManager.ShowForm(typeof(frmWaiting));
             //pnlDetail.Controls.Clear();
-            seasonInfo.Dock = DockStyle.Fill;
+            matchResult.Dock = DockStyle.Fill;
             picBG.Visible = false;
-            if(!pnlDetail.Controls.Contains(seasonInfo))
-                pnlDetail.Controls.Add(seasonInfo);
+            if (!pnlDetail.Controls.Contains(matchResult))
+                pnlDetail.Controls.Add(matchResult);
             SplashScreenManager.CloseForm();
         }
     }

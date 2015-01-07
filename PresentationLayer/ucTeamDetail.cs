@@ -323,25 +323,25 @@ namespace PresentationLayer
 
         private void pictureLogoTeam_Click(object sender, EventArgs e)
         {
-            openFileDialog1.ShowDialog();
-            string url = openFileDialog1.FileName;
-            if (string.IsNullOrEmpty(url))
-                return;
-            Image ima;
-            try
-            {
-                ima = Image.FromFile(openFileDialog1.FileName);
+            //openFileDialog1.ShowDialog();
+            //string url = openFileDialog1.FileName;
+            //if (string.IsNullOrEmpty(url))
+            //    return;
+            //Image ima;
+            //try
+            //{
+            //    ima = Image.FromFile(openFileDialog1.FileName);
 
-            }
-            catch (Exception)
-            {
-                return;
-            }
-            MemoryStream stream = new MemoryStream();
-            if (ima != null)
-            {
-                pictureLogoTeam.Image = ima;
-            }
+            //}
+            //catch (Exception)
+            //{
+            //    return;
+            //}
+            //MemoryStream stream = new MemoryStream();
+            //if (ima != null)
+            //{
+            //    pictureLogoTeam.Image = ima;
+            //}
         }
 
         private void ucTeamDetail_Load(object sender, EventArgs e)
