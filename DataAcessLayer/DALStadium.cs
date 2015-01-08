@@ -25,6 +25,12 @@ namespace DataAcessLayer
             return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
         }
 
+        public DataTable getStadiumByStadiumID(string stadiumID)
+        {
+            DataExecute.Instance.createSqlCmd("GetStadiumByStadiumID", new object[1] { stadiumID });
+            return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
+        }
+
         public int updateData(DTOStadium _dtoStadium)
         {
             if (_dtoStadium != null)

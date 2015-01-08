@@ -19,6 +19,13 @@ namespace DataAcessLayer
             return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
         }
 
+        public DataTable getDataBySeasonIDAndRoundName(string seasonID, string roundName)
+        {
+            DataExecute.Instance.createSqlCmd("GetRoundBySeasonIDAndRoundName", new object[2] { seasonID , roundName});
+
+            return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
+        }
+
         public int updateData(DTORound _dtoRound)
         {
             if (_dtoRound != null)

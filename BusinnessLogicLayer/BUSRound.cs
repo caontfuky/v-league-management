@@ -12,9 +12,19 @@ namespace BusinnessLogicLayer
     {
         public DALRound m_dalRound;
 
+        public BUSRound()
+        {
+            m_dalRound = new DALRound();
+        }
+
         public DataTable getDataBySeasonID(string seasonID)
         {
             return m_dalRound.getDataBySeasonID(seasonID);
+        }
+
+        public DataTable getDataBySeasonIDAndRoundName(string seasonID, string roundName)
+        {
+            return m_dalRound.getDataBySeasonIDAndRoundName(seasonID, roundName);
         }
 
         public int updateData(DTORound _dtoRound)
@@ -29,7 +39,7 @@ namespace BusinnessLogicLayer
 
         public int insertData(DTORound _dtoRound)
         {
-            return insertData(_dtoRound);
+            return m_dalRound.insertData(_dtoRound);
         }
 
     }

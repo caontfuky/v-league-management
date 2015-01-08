@@ -10,15 +10,17 @@ namespace DataTransferObject
     public class DTORound
     {
         public string roundID;
-        public string fixtureID;
+        public string seasonID;
+        public string roundName;
         public int matchCount;
 
         public DTORound() { }
 
-        public DTORound(string _roundID, string _fixtureID, int _matchCount)
+        public DTORound(string _roundID, string _seasonID, string _roundName,int _matchCount)
         {
             this.roundID = _roundID;
-            this.fixtureID = _fixtureID;
+            this.seasonID = _seasonID;
+            this.roundName = _roundName;
             this.matchCount = _matchCount;
         }
     }

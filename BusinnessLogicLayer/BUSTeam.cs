@@ -28,6 +28,11 @@ namespace BusinnessLogicLayer
             return m_dalTeam.getTeamByTeamID(teamID);
         }
 
+        public DataTable getTeamBySeasonID(string seasonID)
+        {
+            return m_dalTeam.getTeamBySeasonID(seasonID);
+        }
+
         public DataTable getTeamNotInSeasonID(string seasonID)
         {
             return m_dalTeam.getTeamNotInSeasonID(seasonID);
