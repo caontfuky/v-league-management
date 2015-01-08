@@ -15,10 +15,13 @@ namespace DataTransferObject
         public string startDate;
         public string refereeID;
         public string roundID;
+        public string startHour;
+        public string score;
+
 
         public DTOMatch() { }
 
-        public DTOMatch(string _matchID, string _homeTeam, string _visitingTeam, string _stadiumID, string _startDate, string _refereeID, string _roundID)
+        public DTOMatch(string _matchID, string _homeTeam, string _visitingTeam, string _stadiumID, string _startDate, string _refereeID, string _roundID, string _startHour, string _score)
         {
             this.matchID = _matchID;
             this.homeTeam = _homeTeam;
@@ -27,6 +30,8 @@ namespace DataTransferObject
             this.startDate = _startDate;
             this.refereeID = _refereeID;
             this.roundID = _roundID;
+            this.startHour = _startHour;
+            this.score = _score;
         }
 
     }
