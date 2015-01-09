@@ -291,7 +291,7 @@ namespace PresentationLayer
                 if (seasonID != null)
                 {
                     DataRowView teamRowFocused = grdvListTeam.GetFocusedRow() as DataRowView;
-                    if (rowFocused != null)
+                    if (teamRowFocused != null)
                     {
                         string teamID = teamRowFocused["TeamID"].ToString();
                         SplashScreenManager.ShowForm(typeof(frmWaiting));

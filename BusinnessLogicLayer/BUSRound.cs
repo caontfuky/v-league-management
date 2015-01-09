@@ -22,6 +22,16 @@ namespace BusinnessLogicLayer
             return m_round.getAllData();
         }
 
+        public string getMaxRoundIDBySeasonID()
+        {
+            return m_round.getMaxRoundIDBySeasonID();
+        }
+
+        public DataTable getAllRoundValueBySeasonID(string seasonID)
+        {
+            return m_round.getAllRoundValueBySeasonID(seasonID);
+        }
+
         public DataTable getIDRoundByName(string roundName)
         {
             return m_round.getIDRoundByName(roundName);

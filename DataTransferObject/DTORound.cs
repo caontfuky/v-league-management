@@ -10,8 +10,8 @@ namespace DataTransferObject
     public class DTORound
     {
         public string roundID;
-        public string roundName;
         public string seasonID;
+        public string roundName;
 
         public DTORound() { }
 

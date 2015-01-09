@@ -57,10 +57,10 @@ namespace PresentationLayer
         {
             SplashScreenManager.ShowForm(typeof(frmWaiting));
             //pnlDetail.Controls.Clear();
-            seasonInfo.Dock = DockStyle.Fill;
+            fixtureCreates.Dock = DockStyle.Fill;
             picBG.Visible = false;
-            if (!pnlDetail.Controls.Contains(seasonInfo))
-                pnlDetail.Controls.Add(seasonInfo);
+            if (!pnlDetail.Controls.Contains(fixtureCreates))
+                pnlDetail.Controls.Add(fixtureCreates);
             SplashScreenManager.CloseForm();
         }
     }

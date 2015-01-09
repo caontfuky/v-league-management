@@ -119,34 +119,41 @@ namespace PresentationLayer.Global
             {
                 //Tao vong dau
                 DTORound dtoRound = new DTORound();
-                dtoRound.roundID = this.getID(round.Key.ToString(), "R");
+                dtoRound.roundID = "RD0000";
                 dtoRound.roundName = "Vòng " + round.Key;
                 dtoRound.seasonID = seasonID;
                 //Add round to database
-                (new BusinnessLogicLayer.BUSRound()).insertData(dtoRound);
-                foreach (KeyValuePair<int, Dictionary<int, int>> matchs in round.Value)
+                if ((new BusinnessLogicLayer.BUSRound()).insertData(dtoRound) > 0)
                 {
-                    foreach (KeyValuePair<int, int> match in matchs.Value)
+                    foreach (KeyValuePair<int, Dictionary<int, int>> matchs in round.Value)
                     {
-                        TeamInfo homeTeam = listTeam[match.Key];
-                        TeamInfo visitingTeam = listTeam[match.Value];
-                        // add tran dau
-                        DTOMatch dtoMatch = new DTOMatch();
-                        if (homeTeam != null)
+                        foreach (KeyValuePair<int, int> match in matchs.Value)
                         {
-                            dtoMatch.matchID = "M0000";
-                            dtoMatch.homeTeam = homeTeam.teamID;
-                            dtoMatch.stadiumID = homeTeam.stadiumID;
-                            dtoMatch.startDate = DateTime.Now.ToShortDateString();
-                            dtoMatch.startTime = DateTime.Now.ToShortTimeString();
-                            dtoMatch.refereeID = "";
-                            dtoMatch.roundID = dtoRound.roundID;
-                            dtoMatch.score = "-:-";
-                            //
-                        }
-                        if (visitingTeam != null)
-                        {
-                            dtoMatch.visitingTeam = visitingTeam.teamID;
+                            TeamInfo homeTeam = listTeam[match.Key];
+                            TeamInfo visitingTeam = listTeam[match.Value];
+                            // add tran dau
+                            DTOMatch dtoMatch = new DTOMatch();
+                            if (homeTeam != null)
+                            {
+                                dtoMatch.matchID = "MT0001";
+                                dtoMatch.homeTeam = homeTeam.teamID;
+                                dtoMatch.stadiumID = homeTeam.stadiumID;
+                                dtoMatch.startDate = DateTime.Now.ToShortDateString();
+                                dtoMatch.startTime = DateTime.Now.ToShortTimeString();
+                                dtoMatch.refereeID = "";
+                                dtoMatch.roundID = new BusinnessLogicLayer.BUSRound().getMaxRoundIDBySeasonID();
+                                dtoMatch.score = "-:-";
+                                //
+                            }
+                            if (visitingTeam != null)
+                            {
+                                dtoMatch.visitingTeam = visitingTeam.teamID;
+                            }
+                            if (new BusinnessLogicLayer.BUSMatch().insertData(dtoMatch) <= 0)
+                            {
+                               ///Loi
+                                int count = 0;
+                            }
                         }
                     }
                 }

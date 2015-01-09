@@ -149,7 +149,7 @@ namespace DataTransferObject.Global
                     this.m_dataResult.AcceptChanges();
                     this.m_sqlTransaction.Commit();
                 }
-                catch (SqlException)
+                catch (SqlException ex)
                 {
                     //DevExpress.XtraEditors.XtraMessageBox.Show(ex.ToString());
                     if (this.m_sqlTransaction != null)

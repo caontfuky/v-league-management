@@ -26,6 +26,7 @@ namespace DataAcessLayer
             return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
         }
 
+
         public DataTable getIDSeasonByName(string seasonName)
         {
             DataExecute.Instance.createSqlCmd("GetIDSeasonByName", new object[1] { seasonName });

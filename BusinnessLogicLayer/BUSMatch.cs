@@ -17,6 +17,11 @@ namespace BusinnessLogicLayer
             m_dalMatch = new DALMatch();
         }
 
+        public DataTable getAllDataValue(string seasonID, string roundID)
+        {
+            return m_dalMatch.getAllDataValue(seasonID, roundID);
+        }
+
         public DataTable getDataByRoundID(string roundID)
         {
             return m_dalMatch.getDataByRoundID(roundID);

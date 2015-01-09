@@ -12,6 +12,14 @@ namespace DataAcessLayer
     {
         public DALMatch() { }
 
+        public DataTable getAllDataValue(string seasonID, string roundID)
+        {
+            DataExecute.Instance.createSqlCmd("GetAllMatchValue", new object[2] {seasonID, roundID });
+
+            return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
+        }
+
+
         public DataTable getDataByRoundID(string roundID)
         {
             DataExecute.Instance.createSqlCmd("GetMatchByRoundID", new object[1] { roundID });

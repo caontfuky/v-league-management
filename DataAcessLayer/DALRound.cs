@@ -19,6 +19,19 @@ namespace DataAcessLayer
             return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
         }
 
+        public DataTable getAllRoundValueBySeasonID(string seasonID)
+        {
+            DataExecute.Instance.createSqlCmd("GetAllRoundValueBySeasonID", new object[1] {seasonID});
+            return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
+        }
+
+        public string getMaxRoundIDBySeasonID()
+        {
+            DataExecute.Instance.createSqlCmd("GetMaxRoundIDBySeasonID");
+
+            return DataExecute.Instance.getMaxId(DataConnection.Instance.m_cmd);
+        }
+
         public DataTable getAllRoundName()
         {
             DataExecute.Instance.createSqlCmd("GetAllRoundNameValue");

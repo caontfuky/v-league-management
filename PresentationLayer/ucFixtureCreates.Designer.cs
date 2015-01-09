@@ -37,15 +37,16 @@
             this.colVisitingTeam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStadium = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.colStartTime = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tedtTimeStart = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
             this.colReferee = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.lkReferee = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.colvs = new DevExpress.XtraGrid.Columns.GridColumn();
             this.grdFixture = new DevExpress.XtraGrid.GridControl();
             this.grdvRound = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colRoundName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dateStart = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
+            this.lkReferee = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.tabPageFixture = new DevExpress.XtraTab.XtraTabPage();
             this.grpFixture = new DevExpress.XtraEditors.GroupControl();
             this.tabContent = new DevExpress.XtraTab.XtraTabControl();
@@ -54,13 +55,15 @@
             this.grpMatchOfRound = new DevExpress.XtraEditors.GroupControl();
             this.grdListMatch = new DevExpress.XtraGrid.GridControl();
             this.grdvListMatch = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartDate1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStartTime1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.rpTime = new DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit();
+            this.colHomeTeam1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colScore1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colVisitingTeam1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colStadium1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colReferee1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.lkReferee1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.barManagerOfTeam = new DevExpress.XtraBars.BarManager(this.components);
             this.barTool = new DevExpress.XtraBars.Bar();
             this.bbtnAutoCreate = new DevExpress.XtraBars.BarButtonItem();
@@ -74,6 +77,10 @@
             this.grdvListTeam = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTeamID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTeamName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.grpRound = new DevExpress.XtraEditors.GroupControl();
             this.grdListRound = new DevExpress.XtraGrid.GridControl();
             this.grdvListRound = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -83,13 +90,19 @@
             this.labSeason = new DevExpress.XtraEditors.LabelControl();
             this.lkSeason = new DevExpress.XtraEditors.LookUpEdit();
             this.tabHome = new DevExpress.XtraTab.XtraTabControl();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar1 = new DevExpress.XtraBars.Bar();
+            this.bbtnSaveMatchInfo = new DevExpress.XtraBars.BarButtonItem();
+            this.bbtnCancel = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.grdvMatch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tedtTimeStart)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkReferee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdFixture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvRound)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateStart)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateStart.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkReferee)).BeginInit();
             this.tabPageFixture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpFixture)).BeginInit();
             this.grpFixture.SuspendLayout();
@@ -101,6 +114,8 @@
             this.grpMatchOfRound.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grdListMatch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvListMatch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkReferee1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerOfTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpListTeam)).BeginInit();
             this.grpListTeam.SuspendLayout();
@@ -115,6 +130,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lkSeason.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabHome)).BeginInit();
             this.tabHome.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // grdvMatch
@@ -170,17 +186,30 @@
             // colStartDate
             // 
             this.colStartDate.Caption = "Ngày bắt đầu";
+            this.colStartDate.ColumnEdit = this.repositoryItemDateEdit1;
+            this.colStartDate.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.colStartDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colStartDate.FieldName = "StartDate";
             this.colStartDate.Name = "colStartDate";
             this.colStartDate.Visible = true;
             this.colStartDate.VisibleIndex = 1;
             // 
+            // repositoryItemDateEdit1
+            // 
+            this.repositoryItemDateEdit1.AutoHeight = false;
+            this.repositoryItemDateEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemDateEdit1.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.repositoryItemDateEdit1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
+            // 
             // colStartTime
             // 
             this.colStartTime.Caption = "Giờ";
             this.colStartTime.ColumnEdit = this.tedtTimeStart;
-            this.colStartTime.DisplayFormat.FormatString = "H:mm:ss";
-            this.colStartTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colStartTime.DisplayFormat.FormatString = "HH:mm";
             this.colStartTime.FieldName = "StartTime";
             this.colStartTime.Name = "colStartTime";
             this.colStartTime.Visible = true;
@@ -191,6 +220,10 @@
             this.tedtTimeStart.AutoHeight = false;
             this.tedtTimeStart.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.tedtTimeStart.DisplayFormat.FormatString = "HH:mm";
+            this.tedtTimeStart.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.tedtTimeStart.EditFormat.FormatString = "HH:mm";
+            this.tedtTimeStart.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.tedtTimeStart.Name = "tedtTimeStart";
             this.tedtTimeStart.NullText = "[Chọn thời gian]";
             this.tedtTimeStart.EditValueChanged += new System.EventHandler(this.tedtTimeStart_EditValueChanged);
@@ -198,29 +231,17 @@
             // colReferee
             // 
             this.colReferee.Caption = "Trọng tài";
-            this.colReferee.ColumnEdit = this.lkReferee;
             this.colReferee.FieldName = "Referee";
             this.colReferee.Name = "colReferee";
             this.colReferee.Visible = true;
             this.colReferee.VisibleIndex = 7;
-            // 
-            // lkReferee
-            // 
-            this.lkReferee.AutoHeight = false;
-            this.lkReferee.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.lkReferee.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RefereeName", "Trọng tài")});
-            this.lkReferee.DisplayMember = "RefereeName";
-            this.lkReferee.Name = "lkReferee";
-            this.lkReferee.NullText = "[Chọn trọng tài]";
-            this.lkReferee.ValueMember = "RefereeName";
             // 
             // colvs
             // 
             this.colvs.AppearanceHeader.Options.UseTextOptions = true;
             this.colvs.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.colvs.Caption = "VS";
+            this.colvs.FieldName = "Score";
             this.colvs.Name = "colvs";
             this.colvs.Visible = true;
             this.colvs.VisibleIndex = 4;
@@ -239,7 +260,8 @@
             this.grdFixture.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.dateStart,
             this.tedtTimeStart,
-            this.lkReferee});
+            this.lkReferee,
+            this.repositoryItemDateEdit1});
             this.grdFixture.Size = new System.Drawing.Size(601, 335);
             this.grdFixture.TabIndex = 3;
             this.grdFixture.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -278,6 +300,18 @@
             this.dateStart.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateStart.Name = "dateStart";
+            // 
+            // lkReferee
+            // 
+            this.lkReferee.AutoHeight = false;
+            this.lkReferee.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkReferee.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RefereeName", "Trọng tài")});
+            this.lkReferee.DisplayMember = "RefereeName";
+            this.lkReferee.Name = "lkReferee";
+            this.lkReferee.NullText = "[Chọn trọng tài]";
+            this.lkReferee.ValueMember = "RefereeName";
             // 
             // tabPageFixture
             // 
@@ -332,6 +366,10 @@
             this.grpMatchOfRound.AppearanceCaption.Options.UseTextOptions = true;
             this.grpMatchOfRound.AppearanceCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.grpMatchOfRound.Controls.Add(this.grdListMatch);
+            this.grpMatchOfRound.Controls.Add(this.barDockControl3);
+            this.grpMatchOfRound.Controls.Add(this.barDockControl4);
+            this.grpMatchOfRound.Controls.Add(this.barDockControl2);
+            this.grpMatchOfRound.Controls.Add(this.barDockControl1);
             this.grpMatchOfRound.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpMatchOfRound.Location = new System.Drawing.Point(200, 0);
             this.grpMatchOfRound.Name = "grpMatchOfRound";
@@ -347,7 +385,10 @@
             this.grdListMatch.MainView = this.grdvListMatch;
             this.grdListMatch.MenuManager = this.barManagerOfTeam;
             this.grdListMatch.Name = "grdListMatch";
-            this.grdListMatch.Size = new System.Drawing.Size(397, 312);
+            this.grdListMatch.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.rpTime,
+            this.lkReferee1});
+            this.grdListMatch.Size = new System.Drawing.Size(397, 265);
             this.grdListMatch.TabIndex = 0;
             this.grdListMatch.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdvListMatch});
@@ -355,65 +396,105 @@
             // grdvListMatch
             // 
             this.grdvListMatch.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
-            this.gridColumn2,
-            this.gridColumn3,
-            this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6,
-            this.gridColumn7});
+            this.colStartDate1,
+            this.colStartTime1,
+            this.colHomeTeam1,
+            this.colScore1,
+            this.colVisitingTeam1,
+            this.colStadium1,
+            this.colReferee1});
             this.grdvListMatch.GridControl = this.grdListMatch;
             this.grdvListMatch.Name = "grdvListMatch";
             this.grdvListMatch.OptionsView.ShowGroupPanel = false;
+            this.grdvListMatch.HiddenEditor += new System.EventHandler(this.grdvListMatch_HiddenEditor);
+            this.grdvListMatch.ShownEditor += new System.EventHandler(this.grdvListMatch_ShownEditor);
             // 
-            // gridColumn1
+            // colStartDate1
             // 
-            this.gridColumn1.Caption = "Ngày";
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
+            this.colStartDate1.Caption = "Ngày";
+            this.colStartDate1.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.colStartDate1.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colStartDate1.FieldName = "StartDate";
+            this.colStartDate1.Name = "colStartDate1";
+            this.colStartDate1.Visible = true;
+            this.colStartDate1.VisibleIndex = 0;
             // 
-            // gridColumn2
+            // colStartTime1
             // 
-            this.gridColumn2.Caption = "Giờ";
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 1;
+            this.colStartTime1.Caption = "Giờ";
+            this.colStartTime1.ColumnEdit = this.rpTime;
+            this.colStartTime1.FieldName = "StartTime";
+            this.colStartTime1.Name = "colStartTime1";
+            this.colStartTime1.Visible = true;
+            this.colStartTime1.VisibleIndex = 1;
             // 
-            // gridColumn3
+            // rpTime
             // 
-            this.gridColumn3.Caption = "Đội nhà";
-            this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 2;
+            this.rpTime.AutoHeight = false;
+            this.rpTime.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.rpTime.DisplayFormat.FormatString = "HH:mm";
+            this.rpTime.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.rpTime.EditFormat.FormatString = "HH:mm";
+            this.rpTime.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.rpTime.Name = "rpTime";
             // 
-            // gridColumn4
+            // colHomeTeam1
             // 
-            this.gridColumn4.Caption = "VS";
-            this.gridColumn4.Name = "gridColumn4";
-            this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
+            this.colHomeTeam1.Caption = "Đội nhà";
+            this.colHomeTeam1.FieldName = "HomeTeamName";
+            this.colHomeTeam1.Name = "colHomeTeam1";
+            this.colHomeTeam1.Visible = true;
+            this.colHomeTeam1.VisibleIndex = 2;
             // 
-            // gridColumn5
+            // colScore1
             // 
-            this.gridColumn5.Caption = "Đội khách";
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 4;
+            this.colScore1.AppearanceCell.Options.UseTextOptions = true;
+            this.colScore1.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colScore1.AppearanceHeader.Options.UseTextOptions = true;
+            this.colScore1.AppearanceHeader.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.colScore1.Caption = "VS";
+            this.colScore1.FieldName = "Score";
+            this.colScore1.Name = "colScore1";
+            this.colScore1.Visible = true;
+            this.colScore1.VisibleIndex = 3;
             // 
-            // gridColumn6
+            // colVisitingTeam1
             // 
-            this.gridColumn6.Caption = "Sân bóng";
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 5;
+            this.colVisitingTeam1.Caption = "Đội khách";
+            this.colVisitingTeam1.FieldName = "VisitingTeamName";
+            this.colVisitingTeam1.Name = "colVisitingTeam1";
+            this.colVisitingTeam1.Visible = true;
+            this.colVisitingTeam1.VisibleIndex = 4;
             // 
-            // gridColumn7
+            // colStadium1
             // 
-            this.gridColumn7.Caption = "Trọng tài";
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 6;
+            this.colStadium1.Caption = "Sân bóng";
+            this.colStadium1.FieldName = "StadiumName";
+            this.colStadium1.Name = "colStadium1";
+            this.colStadium1.Visible = true;
+            this.colStadium1.VisibleIndex = 5;
+            // 
+            // colReferee1
+            // 
+            this.colReferee1.Caption = "Trọng tài";
+            this.colReferee1.ColumnEdit = this.lkReferee1;
+            this.colReferee1.FieldName = "RefereeName";
+            this.colReferee1.Name = "colReferee1";
+            this.colReferee1.Visible = true;
+            this.colReferee1.VisibleIndex = 6;
+            // 
+            // lkReferee1
+            // 
+            this.lkReferee1.AutoHeight = false;
+            this.lkReferee1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lkReferee1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("RefereeName", "Trọng tài")});
+            this.lkReferee1.DisplayMember = "RefereeName";
+            this.lkReferee1.Name = "lkReferee1";
+            this.lkReferee1.ValueMember = "RefereeID";
+            this.lkReferee1.EditValueChanged += new System.EventHandler(this.lkReferee1_EditValueChanged);
             // 
             // barManagerOfTeam
             // 
@@ -537,6 +618,34 @@
             this.colTeamName.Visible = true;
             this.colTeamName.VisibleIndex = 1;
             // 
+            // barDockControl3
+            // 
+            this.barDockControl3.CausesValidation = false;
+            this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControl3.Location = new System.Drawing.Point(2, 21);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 265);
+            // 
+            // barDockControl4
+            // 
+            this.barDockControl4.CausesValidation = false;
+            this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControl4.Location = new System.Drawing.Point(399, 21);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 265);
+            // 
+            // barDockControl2
+            // 
+            this.barDockControl2.CausesValidation = false;
+            this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControl2.Location = new System.Drawing.Point(2, 286);
+            this.barDockControl2.Size = new System.Drawing.Size(397, 47);
+            // 
+            // barDockControl1
+            // 
+            this.barDockControl1.CausesValidation = false;
+            this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControl1.Location = new System.Drawing.Point(2, 21);
+            this.barDockControl1.Size = new System.Drawing.Size(397, 0);
+            // 
             // grpRound
             // 
             this.grpRound.AppearanceCaption.Options.UseTextOptions = true;
@@ -570,10 +679,12 @@
             this.grdvListRound.GridControl = this.grdListRound;
             this.grdvListRound.Name = "grdvListRound";
             this.grdvListRound.OptionsView.ShowGroupPanel = false;
+            this.grdvListRound.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvListRound_FocusedRowChanged);
             // 
             // colRoundID1
             // 
             this.colRoundID1.Caption = "Mã vòng đấu";
+            this.colRoundID1.FieldName = "RoundID";
             this.colRoundID1.Name = "colRoundID1";
             this.colRoundID1.Visible = true;
             this.colRoundID1.VisibleIndex = 0;
@@ -581,6 +692,7 @@
             // colRoundName1
             // 
             this.colRoundName1.Caption = "Tên vòng đấu";
+            this.colRoundName1.FieldName = "RoundName";
             this.colRoundName1.Name = "colRoundName1";
             this.colRoundName1.Visible = true;
             this.colRoundName1.VisibleIndex = 1;
@@ -614,8 +726,10 @@
             new DevExpress.XtraEditors.Controls.LookUpColumnInfo("SeasonName", "Tên")});
             this.lkSeason.Properties.DisplayMember = "SeasonName";
             this.lkSeason.Properties.NullText = "[Chưa chọn mùa giải]";
+            this.lkSeason.Properties.ValueMember = "SeasonID";
             this.lkSeason.Size = new System.Drawing.Size(188, 20);
             this.lkSeason.TabIndex = 0;
+            this.lkSeason.EditValueChanged += new System.EventHandler(this.lkSeason_EditValueChanged);
             // 
             // tabHome
             // 
@@ -628,6 +742,48 @@
             this.tabHome.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.tabPageFixture});
             // 
+            // barManager1
+            // 
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar1});
+            this.barManager1.DockControls.Add(this.barDockControl1);
+            this.barManager1.DockControls.Add(this.barDockControl2);
+            this.barManager1.DockControls.Add(this.barDockControl3);
+            this.barManager1.DockControls.Add(this.barDockControl4);
+            this.barManager1.Form = this.grpMatchOfRound;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.bbtnSaveMatchInfo,
+            this.bbtnCancel});
+            this.barManager1.MaxItemId = 2;
+            // 
+            // bar1
+            // 
+            this.bar1.BarName = "Tools";
+            this.bar1.DockCol = 0;
+            this.bar1.DockRow = 0;
+            this.bar1.DockStyle = DevExpress.XtraBars.BarDockStyle.Bottom;
+            this.bar1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbtnSaveMatchInfo),
+            new DevExpress.XtraBars.LinkPersistInfo(this.bbtnCancel)});
+            this.bar1.OptionsBar.AllowRename = true;
+            this.bar1.OptionsBar.UseWholeRow = true;
+            this.bar1.Text = "Tools";
+            // 
+            // bbtnSaveMatchInfo
+            // 
+            this.bbtnSaveMatchInfo.Caption = "Lưu thông tin của trận đấu";
+            this.bbtnSaveMatchInfo.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnSaveMatchInfo.Glyph")));
+            this.bbtnSaveMatchInfo.Id = 0;
+            this.bbtnSaveMatchInfo.Name = "bbtnSaveMatchInfo";
+            this.bbtnSaveMatchInfo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnSaveMatchInfo_ItemClick);
+            // 
+            // bbtnCancel
+            // 
+            this.bbtnCancel.Caption = "Hủy bỏ thao tác";
+            this.bbtnCancel.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnCancel.Glyph")));
+            this.bbtnCancel.Id = 1;
+            this.bbtnCancel.Name = "bbtnCancel";
+            // 
             // ucFixtureCreates
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -636,12 +792,14 @@
             this.Name = "ucFixtureCreates";
             this.Size = new System.Drawing.Size(889, 469);
             ((System.ComponentModel.ISupportInitialize)(this.grdvMatch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemDateEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tedtTimeStart)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lkReferee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdFixture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvRound)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateStart.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkReferee)).EndInit();
             this.tabPageFixture.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpFixture)).EndInit();
             this.grpFixture.ResumeLayout(false);
@@ -653,6 +811,8 @@
             this.grpMatchOfRound.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grdListMatch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdvListMatch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rpTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lkReferee1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManagerOfTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpListTeam)).EndInit();
             this.grpListTeam.ResumeLayout(false);
@@ -668,6 +828,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.lkSeason.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabHome)).EndInit();
             this.tabHome.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -714,17 +875,28 @@
         private DevExpress.XtraEditors.GroupControl grpMatchOfRound;
         private DevExpress.XtraGrid.GridControl grdListMatch;
         private DevExpress.XtraGrid.Views.Grid.GridView grdvListMatch;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartDate1;
+        private DevExpress.XtraGrid.Columns.GridColumn colStartTime1;
+        private DevExpress.XtraGrid.Columns.GridColumn colHomeTeam1;
+        private DevExpress.XtraGrid.Columns.GridColumn colScore1;
+        private DevExpress.XtraGrid.Columns.GridColumn colVisitingTeam1;
+        private DevExpress.XtraGrid.Columns.GridColumn colStadium1;
         private DevExpress.XtraEditors.GroupControl grpRound;
         private DevExpress.XtraGrid.GridControl grdListRound;
         private DevExpress.XtraGrid.Views.Grid.GridView grdvListRound;
         private DevExpress.XtraGrid.Columns.GridColumn colRoundID1;
         private DevExpress.XtraGrid.Columns.GridColumn colRoundName1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn colReferee1;
+        private DevExpress.XtraBars.BarDockControl barDockControl3;
+        private DevExpress.XtraBars.BarDockControl barDockControl4;
+        private DevExpress.XtraBars.BarDockControl barDockControl2;
+        private DevExpress.XtraBars.BarDockControl barDockControl1;
+        private DevExpress.XtraBars.BarManager barManager1;
+        private DevExpress.XtraBars.Bar bar1;
+        private DevExpress.XtraBars.BarButtonItem bbtnSaveMatchInfo;
+        private DevExpress.XtraBars.BarButtonItem bbtnCancel;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit rpTime;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit lkReferee1;
+        private DevExpress.XtraEditors.Repository.RepositoryItemDateEdit repositoryItemDateEdit1;
     }
 }

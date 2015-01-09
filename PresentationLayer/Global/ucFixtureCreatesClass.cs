@@ -159,6 +159,14 @@ namespace PresentationLayer.Global
             set { roundID = value; }
         }
 
+        private string score;
+
+        public string Score
+        {
+            get { return score; }
+            set { score = value; }
+        }
+
         public ChildRecordMatch() { }
 
         public ChildRecordMatch(string _matchID, string _homeTeam, string _visitingTeam, string _stadium, string _startDate, string _referee)

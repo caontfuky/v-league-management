@@ -80,7 +80,7 @@
             // 
             // defaultLookAndFeel1
             // 
-            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Coffee";
+            this.defaultLookAndFeel1.LookAndFeel.SkinName = "Summer 2008";
             // 
             // pnlHead
             // 
@@ -160,7 +160,7 @@
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 780);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 772);
             this.barDockControlBottom.Size = new System.Drawing.Size(1342, 0);
             // 
             // barDockControlLeft
@@ -168,14 +168,14 @@
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 0);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 780);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 772);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1342, 0);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 780);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 772);
             // 
             // pnlLeft
             // 
@@ -185,7 +185,7 @@
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(0, 69);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(124, 711);
+            this.pnlLeft.Size = new System.Drawing.Size(124, 703);
             this.pnlLeft.TabIndex = 0;
             // 
             // pnlRight
@@ -196,7 +196,7 @@
             this.pnlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlRight.Location = new System.Drawing.Point(1205, 69);
             this.pnlRight.Name = "pnlRight";
-            this.pnlRight.Size = new System.Drawing.Size(137, 711);
+            this.pnlRight.Size = new System.Drawing.Size(137, 703);
             this.pnlRight.TabIndex = 0;
             // 
             // pnlHome
@@ -210,24 +210,26 @@
             this.pnlHome.Location = new System.Drawing.Point(124, 69);
             this.pnlHome.LookAndFeel.TouchScaleFactor = 5F;
             this.pnlHome.Name = "pnlHome";
-            this.pnlHome.Size = new System.Drawing.Size(1081, 711);
+            this.pnlHome.Size = new System.Drawing.Size(1081, 703);
             this.pnlHome.TabIndex = 1;
             // 
             // pnlDetail
             // 
+            this.pnlDetail.Appearance.BackColor = System.Drawing.Color.Transparent;
+            this.pnlDetail.Appearance.Options.UseBackColor = true;
             this.pnlDetail.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pnlDetail.Controls.Add(this.picBG);
             this.pnlDetail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlDetail.Location = new System.Drawing.Point(0, 0);
             this.pnlDetail.Name = "pnlDetail";
-            this.pnlDetail.Size = new System.Drawing.Size(1081, 631);
+            this.pnlDetail.Size = new System.Drawing.Size(1081, 623);
             this.pnlDetail.TabIndex = 3;
             // 
             // picBG
             // 
             this.picBG.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picBG.EditValue = ((object)(resources.GetObject("picBG.EditValue")));
-            this.picBG.Location = new System.Drawing.Point(246, 113);
+            this.picBG.Location = new System.Drawing.Point(246, 109);
             this.picBG.MenuManager = this.barManager;
             this.picBG.Name = "picBG";
             this.picBG.Properties.AllowFocused = false;
@@ -250,7 +252,7 @@
             this.pnlBottom.Controls.Add(this.picSeason);
             this.pnlBottom.Controls.Add(this.picFixture);
             this.pnlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlBottom.Location = new System.Drawing.Point(0, 631);
+            this.pnlBottom.Location = new System.Drawing.Point(0, 623);
             this.pnlBottom.Name = "pnlBottom";
             this.pnlBottom.Size = new System.Drawing.Size(1081, 80);
             this.pnlBottom.TabIndex = 1;
@@ -395,7 +397,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Stretch;
             this.BackgroundImageStore = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImageStore")));
-            this.ClientSize = new System.Drawing.Size(1342, 780);
+            this.ClientSize = new System.Drawing.Size(1342, 772);
             this.Controls.Add(this.pnlHome);
             this.Controls.Add(this.pnlRight);
             this.Controls.Add(this.pnlLeft);
