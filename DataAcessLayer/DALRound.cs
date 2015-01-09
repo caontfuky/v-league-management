@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DataTransferObject;
-using DataTransferObject.Global;
 using System.Data;
+using DataTransferObject.Global;
+using DataTransferObject;
 
 namespace DataAcessLayer
 {
@@ -12,20 +12,26 @@ namespace DataAcessLayer
     {
         public DALRound() { }
 
-        public DataTable getDataBySeasonID(string seasonID)
+        public DataTable getAllData()
         {
-            DataExecute.Instance.createSqlCmd("GetRoundBySeasonID", new object[1] { seasonID });
+            DataExecute.Instance.createSqlCmd("GetAllRoundValue");
 
             return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
         }
 
-        public DataTable getDataBySeasonIDAndRoundName(string seasonID, string roundName)
+        public DataTable getAllRoundName()
         {
-            DataExecute.Instance.createSqlCmd("GetRoundBySeasonIDAndRoundName", new object[2] { seasonID , roundName});
+            DataExecute.Instance.createSqlCmd("GetAllRoundNameValue");
 
             return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
         }
 
+        public DataTable getIDRoundByName(string RoundName)
+        {
+            DataExecute.Instance.createSqlCmd("GetIDRoundByName", new object[1] { RoundName });
+            return DataExecute.Instance.getData(DataConnection.Instance.m_cmd);
+        }
+        
         public int updateData(DTORound _dtoRound)
         {
             if (_dtoRound != null)
@@ -36,11 +42,11 @@ namespace DataAcessLayer
             return 0;
         }
 
-        public int deleteData(string roundID)
+        public int deleteData(string RoundID)
         {
-            if (roundID != null)
+            if (RoundID != null)
             {
-                DataExecute.Instance.createSqlCmd("DeleteRoundValue", new object[1] { roundID });
+                DataExecute.Instance.createSqlCmd("DeleteRoundValue", new object[1] { RoundID });
                 return DataExecute.Instance.updateData(DataConnection.Instance.m_cmd);
             }
             return 0;

@@ -32,8 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucSeasonInfo));
             this.pnlLeft = new DevExpress.XtraEditors.PanelControl();
             this.grpSeasonInfo = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grdListSeason = new DevExpress.XtraGrid.GridControl();
+            this.grdvListSeason = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSeasonID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSeasonName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barTeamManager = new DevExpress.XtraBars.BarManager(this.components);
@@ -45,8 +45,8 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.grpTeamInfo = new DevExpress.XtraEditors.GroupControl();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.grdListTeam = new DevExpress.XtraGrid.GridControl();
+            this.grdvListTeam = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colTeamID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTeamName = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTeamDetail = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,18 +58,18 @@
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
             this.sCtrSearch = new DevExpress.XtraEditors.SearchControl();
             this.labSearch = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
-            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.labExpenditure = new DevExpress.XtraEditors.LabelControl();
+            this.dateEndDate = new DevExpress.XtraEditors.DateEdit();
+            this.dateStartDate = new DevExpress.XtraEditors.DateEdit();
+            this.labEndDate = new DevExpress.XtraEditors.LabelControl();
+            this.labStartDate = new DevExpress.XtraEditors.LabelControl();
+            this.labSeasonName = new DevExpress.XtraEditors.LabelControl();
+            this.txtSeasonName = new DevExpress.XtraEditors.TextEdit();
             this.pnlHome = new DevExpress.XtraEditors.PanelControl();
             this.grpSeansonInfoDeatail = new DevExpress.XtraEditors.GroupControl();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.txtSponsor = new DevExpress.XtraEditors.TextEdit();
+            this.labSponsor = new DevExpress.XtraEditors.LabelControl();
+            this.spinExpenditure = new DevExpress.XtraEditors.SpinEdit();
             this.tabHome = new DevExpress.XtraTab.XtraTabControl();
             this.tabSeasonInfo = new DevExpress.XtraTab.XtraTabPage();
             this.barSeasonManager = new DevExpress.XtraBars.BarManager(this.components);
@@ -84,27 +84,27 @@
             this.pnlLeft.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpSeasonInfo)).BeginInit();
             this.grpSeasonInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListSeason)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvListSeason)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barTeamManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpTeamInfo)).BeginInit();
             this.grpTeamInfo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListTeam)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvListTeam)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemLinkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sCtrSearch.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEndDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEndDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateStartDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateStartDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeasonName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHome)).BeginInit();
             this.pnlHome.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpSeansonInfoDeatail)).BeginInit();
             this.grpSeansonInfoDeatail.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSponsor.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinExpenditure.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabHome)).BeginInit();
             this.tabHome.SuspendLayout();
             this.tabSeasonInfo.SuspendLayout();
@@ -121,44 +121,45 @@
             this.pnlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlLeft.Location = new System.Drawing.Point(2, 2);
             this.pnlLeft.Name = "pnlLeft";
-            this.pnlLeft.Size = new System.Drawing.Size(371, 517);
+            this.pnlLeft.Size = new System.Drawing.Size(371, 513);
             this.pnlLeft.TabIndex = 0;
             // 
             // grpSeasonInfo
             // 
             this.grpSeasonInfo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.grpSeasonInfo.Controls.Add(this.gridControl2);
+            this.grpSeasonInfo.Controls.Add(this.grdListSeason);
             this.grpSeasonInfo.Controls.Add(this.barDockControl3);
             this.grpSeasonInfo.Controls.Add(this.barDockControl4);
             this.grpSeasonInfo.Controls.Add(this.barDockControl2);
             this.grpSeasonInfo.Controls.Add(this.barDockControl1);
-            this.grpSeasonInfo.Location = new System.Drawing.Point(26, 270);
+            this.grpSeasonInfo.Location = new System.Drawing.Point(26, 268);
             this.grpSeasonInfo.Name = "grpSeasonInfo";
             this.grpSeasonInfo.Size = new System.Drawing.Size(317, 229);
             this.grpSeasonInfo.TabIndex = 8;
             this.grpSeasonInfo.Text = "Mùa giải";
             // 
-            // gridControl2
+            // grdListSeason
             // 
-            this.gridControl2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(2, 20);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.MenuManager = this.barTeamManager;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(313, 163);
-            this.gridControl2.TabIndex = 7;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.grdListSeason.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdListSeason.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdListSeason.Location = new System.Drawing.Point(2, 21);
+            this.grdListSeason.MainView = this.grdvListSeason;
+            this.grdListSeason.MenuManager = this.barTeamManager;
+            this.grdListSeason.Name = "grdListSeason";
+            this.grdListSeason.Size = new System.Drawing.Size(313, 159);
+            this.grdListSeason.TabIndex = 7;
+            this.grdListSeason.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdvListSeason});
             // 
-            // gridView2
+            // grdvListSeason
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grdvListSeason.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colSeasonID,
             this.colSeasonName});
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.grdvListSeason.GridControl = this.grdListSeason;
+            this.grdvListSeason.Name = "grdvListSeason";
+            this.grdvListSeason.OptionsView.ShowGroupPanel = false;
+            this.grdvListSeason.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.grdvListSeason_FocusedRowChanged);
             // 
             // colSeasonID
             // 
@@ -209,6 +210,7 @@
             this.bbtnAddTeam.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnAddTeam.Glyph")));
             this.bbtnAddTeam.Id = 6;
             this.bbtnAddTeam.Name = "bbtnAddTeam";
+            this.bbtnAddTeam.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnAddTeam_ItemClick);
             // 
             // bbtnDeletaTeam
             // 
@@ -216,38 +218,39 @@
             this.bbtnDeletaTeam.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnDeletaTeam.Glyph")));
             this.bbtnDeletaTeam.Id = 7;
             this.bbtnDeletaTeam.Name = "bbtnDeletaTeam";
+            this.bbtnDeletaTeam.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnDeletaTeam_ItemClick);
             // 
             // barDockControlTop
             // 
             this.barDockControlTop.CausesValidation = false;
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(2, 20);
-            this.barDockControlTop.Size = new System.Drawing.Size(476, 0);
+            this.barDockControlTop.Location = new System.Drawing.Point(2, 21);
+            this.barDockControlTop.Size = new System.Drawing.Size(474, 0);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(2, 241);
-            this.barDockControlBottom.Size = new System.Drawing.Size(476, 44);
+            this.barDockControlBottom.Location = new System.Drawing.Point(2, 234);
+            this.barDockControlBottom.Size = new System.Drawing.Size(474, 47);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(2, 20);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 221);
+            this.barDockControlLeft.Location = new System.Drawing.Point(2, 21);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 213);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(478, 20);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 221);
+            this.barDockControlRight.Location = new System.Drawing.Point(476, 21);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 213);
             // 
             // grpTeamInfo
             // 
-            this.grpTeamInfo.Controls.Add(this.gridControl1);
+            this.grpTeamInfo.Controls.Add(this.grdListTeam);
             this.grpTeamInfo.Controls.Add(this.barDockControlLeft);
             this.grpTeamInfo.Controls.Add(this.barDockControlRight);
             this.grpTeamInfo.Controls.Add(this.barDockControlBottom);
@@ -255,33 +258,33 @@
             this.grpTeamInfo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.grpTeamInfo.Location = new System.Drawing.Point(373, 232);
             this.grpTeamInfo.Name = "grpTeamInfo";
-            this.grpTeamInfo.Size = new System.Drawing.Size(480, 287);
+            this.grpTeamInfo.Size = new System.Drawing.Size(478, 283);
             this.grpTeamInfo.TabIndex = 2;
             this.grpTeamInfo.Text = "Danh sách đội bóng tham dự";
             // 
-            // gridControl1
+            // grdListTeam
             // 
-            this.gridControl1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 20);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.grdListTeam.Cursor = System.Windows.Forms.Cursors.Default;
+            this.grdListTeam.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grdListTeam.Location = new System.Drawing.Point(2, 21);
+            this.grdListTeam.MainView = this.grdvListTeam;
+            this.grdListTeam.Name = "grdListTeam";
+            this.grdListTeam.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.itemLinkEdit});
-            this.gridControl1.Size = new System.Drawing.Size(476, 221);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.grdListTeam.Size = new System.Drawing.Size(474, 213);
+            this.grdListTeam.TabIndex = 0;
+            this.grdListTeam.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grdvListTeam});
             // 
-            // gridView1
+            // grdvListTeam
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.grdvListTeam.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colTeamID,
             this.colTeamName,
             this.colTeamDetail});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.grdvListTeam.GridControl = this.grdListTeam;
+            this.grdvListTeam.Name = "grdvListTeam";
+            this.grdvListTeam.OptionsView.ShowGroupPanel = false;
             // 
             // colTeamID
             // 
@@ -316,28 +319,28 @@
             // 
             this.barDockControl3.CausesValidation = false;
             this.barDockControl3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControl3.Location = new System.Drawing.Point(2, 20);
-            this.barDockControl3.Size = new System.Drawing.Size(0, 163);
+            this.barDockControl3.Location = new System.Drawing.Point(2, 21);
+            this.barDockControl3.Size = new System.Drawing.Size(0, 159);
             // 
             // barDockControl4
             // 
             this.barDockControl4.CausesValidation = false;
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControl4.Location = new System.Drawing.Point(315, 20);
-            this.barDockControl4.Size = new System.Drawing.Size(0, 163);
+            this.barDockControl4.Location = new System.Drawing.Point(315, 21);
+            this.barDockControl4.Size = new System.Drawing.Size(0, 159);
             // 
             // barDockControl2
             // 
             this.barDockControl2.CausesValidation = false;
             this.barDockControl2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControl2.Location = new System.Drawing.Point(2, 183);
-            this.barDockControl2.Size = new System.Drawing.Size(313, 44);
+            this.barDockControl2.Location = new System.Drawing.Point(2, 180);
+            this.barDockControl2.Size = new System.Drawing.Size(313, 47);
             // 
             // barDockControl1
             // 
             this.barDockControl1.CausesValidation = false;
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControl1.Location = new System.Drawing.Point(2, 20);
+            this.barDockControl1.Location = new System.Drawing.Point(2, 21);
             this.barDockControl1.Size = new System.Drawing.Size(313, 0);
             // 
             // pictureEdit1
@@ -367,75 +370,74 @@
             this.labSearch.TabIndex = 1;
             this.labSearch.Text = "Tìm kiếm";
             // 
-            // textEdit2
+            // labExpenditure
             // 
-            this.textEdit2.Location = new System.Drawing.Point(131, 189);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(251, 20);
-            this.textEdit2.TabIndex = 5;
+            this.labExpenditure.Location = new System.Drawing.Point(38, 196);
+            this.labExpenditure.Name = "labExpenditure";
+            this.labExpenditure.Size = new System.Drawing.Size(74, 13);
+            this.labExpenditure.TabIndex = 4;
+            this.labExpenditure.Text = "Chi phí mùa giải";
             // 
-            // labelControl4
+            // dateEndDate
             // 
-            this.labelControl4.Location = new System.Drawing.Point(38, 196);
-            this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(74, 13);
-            this.labelControl4.TabIndex = 4;
-            this.labelControl4.Text = "Chi phí mùa giải";
-            // 
-            // dateEdit2
-            // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(131, 116);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEndDate.EditValue = null;
+            this.dateEndDate.Location = new System.Drawing.Point(131, 116);
+            this.dateEndDate.Name = "dateEndDate";
+            this.dateEndDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateEndDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Size = new System.Drawing.Size(251, 20);
-            this.dateEdit2.TabIndex = 2;
+            this.dateEndDate.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateEndDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEndDate.Size = new System.Drawing.Size(251, 20);
+            this.dateEndDate.TabIndex = 2;
             // 
-            // dateEdit1
+            // dateStartDate
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(131, 74);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateStartDate.EditValue = null;
+            this.dateStartDate.Location = new System.Drawing.Point(131, 74);
+            this.dateStartDate.Name = "dateStartDate";
+            this.dateStartDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.dateStartDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Size = new System.Drawing.Size(251, 20);
-            this.dateEdit1.TabIndex = 2;
+            this.dateStartDate.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateStartDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateStartDate.Properties.EditFormat.FormatString = "dd/MM/yyyy";
+            this.dateStartDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateStartDate.Size = new System.Drawing.Size(251, 20);
+            this.dateStartDate.TabIndex = 2;
             // 
-            // labelControl3
+            // labEndDate
             // 
-            this.labelControl3.Location = new System.Drawing.Point(38, 119);
-            this.labelControl3.Name = "labelControl3";
-            this.labelControl3.Size = new System.Drawing.Size(67, 13);
-            this.labelControl3.TabIndex = 1;
-            this.labelControl3.Text = "Ngày kết thúc";
+            this.labEndDate.Location = new System.Drawing.Point(38, 119);
+            this.labEndDate.Name = "labEndDate";
+            this.labEndDate.Size = new System.Drawing.Size(67, 13);
+            this.labEndDate.TabIndex = 1;
+            this.labEndDate.Text = "Ngày kết thúc";
             // 
-            // labelControl2
+            // labStartDate
             // 
-            this.labelControl2.Location = new System.Drawing.Point(38, 77);
-            this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(65, 13);
-            this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Ngày bắt đầu";
+            this.labStartDate.Location = new System.Drawing.Point(38, 77);
+            this.labStartDate.Name = "labStartDate";
+            this.labStartDate.Size = new System.Drawing.Size(65, 13);
+            this.labStartDate.TabIndex = 1;
+            this.labStartDate.Text = "Ngày bắt đầu";
             // 
-            // labelControl1
+            // labSeasonName
             // 
-            this.labelControl1.Location = new System.Drawing.Point(38, 39);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(60, 13);
-            this.labelControl1.TabIndex = 1;
-            this.labelControl1.Text = "Tên mùa giải";
+            this.labSeasonName.Location = new System.Drawing.Point(38, 39);
+            this.labSeasonName.Name = "labSeasonName";
+            this.labSeasonName.Size = new System.Drawing.Size(60, 13);
+            this.labSeasonName.TabIndex = 1;
+            this.labSeasonName.Text = "Tên mùa giải";
             // 
-            // textEdit1
+            // txtSeasonName
             // 
-            this.textEdit1.Location = new System.Drawing.Point(131, 36);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(251, 20);
-            this.textEdit1.TabIndex = 0;
+            this.txtSeasonName.Location = new System.Drawing.Point(131, 36);
+            this.txtSeasonName.Name = "txtSeasonName";
+            this.txtSeasonName.Size = new System.Drawing.Size(251, 20);
+            this.txtSeasonName.TabIndex = 0;
             // 
             // pnlHome
             // 
@@ -445,42 +447,65 @@
             this.pnlHome.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlHome.Location = new System.Drawing.Point(0, 0);
             this.pnlHome.Name = "pnlHome";
-            this.pnlHome.Size = new System.Drawing.Size(855, 521);
+            this.pnlHome.Size = new System.Drawing.Size(853, 517);
             this.pnlHome.TabIndex = 0;
             // 
             // grpSeansonInfoDeatail
             // 
-            this.grpSeansonInfoDeatail.Controls.Add(this.labelControl1);
-            this.grpSeansonInfoDeatail.Controls.Add(this.textEdit3);
-            this.grpSeansonInfoDeatail.Controls.Add(this.textEdit2);
-            this.grpSeansonInfoDeatail.Controls.Add(this.labelControl5);
-            this.grpSeansonInfoDeatail.Controls.Add(this.textEdit1);
-            this.grpSeansonInfoDeatail.Controls.Add(this.labelControl4);
-            this.grpSeansonInfoDeatail.Controls.Add(this.labelControl2);
-            this.grpSeansonInfoDeatail.Controls.Add(this.labelControl3);
-            this.grpSeansonInfoDeatail.Controls.Add(this.dateEdit2);
-            this.grpSeansonInfoDeatail.Controls.Add(this.dateEdit1);
+            this.grpSeansonInfoDeatail.Controls.Add(this.labSeasonName);
+            this.grpSeansonInfoDeatail.Controls.Add(this.txtSponsor);
+            this.grpSeansonInfoDeatail.Controls.Add(this.labSponsor);
+            this.grpSeansonInfoDeatail.Controls.Add(this.txtSeasonName);
+            this.grpSeansonInfoDeatail.Controls.Add(this.labExpenditure);
+            this.grpSeansonInfoDeatail.Controls.Add(this.labStartDate);
+            this.grpSeansonInfoDeatail.Controls.Add(this.labEndDate);
+            this.grpSeansonInfoDeatail.Controls.Add(this.dateEndDate);
+            this.grpSeansonInfoDeatail.Controls.Add(this.dateStartDate);
+            this.grpSeansonInfoDeatail.Controls.Add(this.spinExpenditure);
             this.grpSeansonInfoDeatail.Dock = System.Windows.Forms.DockStyle.Top;
             this.grpSeansonInfoDeatail.Location = new System.Drawing.Point(373, 2);
             this.grpSeansonInfoDeatail.Name = "grpSeansonInfoDeatail";
-            this.grpSeansonInfoDeatail.Size = new System.Drawing.Size(480, 230);
+            this.grpSeansonInfoDeatail.Size = new System.Drawing.Size(478, 230);
             this.grpSeansonInfoDeatail.TabIndex = 3;
             this.grpSeansonInfoDeatail.Text = "Thông tin chi tiết";
             // 
-            // textEdit3
+            // txtSponsor
             // 
-            this.textEdit3.Location = new System.Drawing.Point(131, 152);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(251, 20);
-            this.textEdit3.TabIndex = 5;
+            this.txtSponsor.Location = new System.Drawing.Point(131, 152);
+            this.txtSponsor.Name = "txtSponsor";
+            this.txtSponsor.Size = new System.Drawing.Size(251, 20);
+            this.txtSponsor.TabIndex = 5;
             // 
-            // labelControl5
+            // labSponsor
             // 
-            this.labelControl5.Location = new System.Drawing.Point(38, 159);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(51, 13);
-            this.labelControl5.TabIndex = 4;
-            this.labelControl5.Text = "Nhà tài trợ";
+            this.labSponsor.Location = new System.Drawing.Point(38, 159);
+            this.labSponsor.Name = "labSponsor";
+            this.labSponsor.Size = new System.Drawing.Size(51, 13);
+            this.labSponsor.TabIndex = 4;
+            this.labSponsor.Text = "Nhà tài trợ";
+            // 
+            // spinExpenditure
+            // 
+            this.spinExpenditure.EditValue = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.spinExpenditure.Location = new System.Drawing.Point(131, 189);
+            this.spinExpenditure.Name = "spinExpenditure";
+            this.spinExpenditure.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.spinExpenditure.Properties.EditValueChangedFiringMode = DevExpress.XtraEditors.Controls.EditValueChangedFiringMode.Default;
+            this.spinExpenditure.Properties.IsFloatValue = false;
+            this.spinExpenditure.Properties.Mask.EditMask = "n0";
+            this.spinExpenditure.Properties.MaxValue = new decimal(new int[] {
+            1316134911,
+            2328,
+            0,
+            0});
+            this.spinExpenditure.Properties.SpinStyle = DevExpress.XtraEditors.Controls.SpinStyles.Horizontal;
+            this.spinExpenditure.Size = new System.Drawing.Size(251, 20);
+            this.spinExpenditure.TabIndex = 5;
             // 
             // tabHome
             // 
@@ -497,7 +522,7 @@
             // 
             this.tabSeasonInfo.Controls.Add(this.pnlHome);
             this.tabSeasonInfo.Name = "tabSeasonInfo";
-            this.tabSeasonInfo.Size = new System.Drawing.Size(855, 521);
+            this.tabSeasonInfo.Size = new System.Drawing.Size(853, 517);
             this.tabSeasonInfo.Text = "Thông tin mùa giải";
             // 
             // barSeasonManager
@@ -530,8 +555,8 @@
             new DevExpress.XtraBars.LinkPersistInfo(this.bbtnUpdateSeason),
             new DevExpress.XtraBars.LinkPersistInfo(this.bbtnSaveSeason),
             new DevExpress.XtraBars.LinkPersistInfo(this.bbtnCancelSeason)});
-            this.bar2.Offset = 1;
             this.bar2.OptionsBar.AllowRename = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "TeamStatus";
             // 
             // bbtnAddSeason
@@ -540,6 +565,7 @@
             this.bbtnAddSeason.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnAddSeason.Glyph")));
             this.bbtnAddSeason.Id = 0;
             this.bbtnAddSeason.Name = "bbtnAddSeason";
+            this.bbtnAddSeason.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnAddSeason_ItemClick);
             // 
             // bbtnDeleteSeason
             // 
@@ -547,6 +573,7 @@
             this.bbtnDeleteSeason.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnDeleteSeason.Glyph")));
             this.bbtnDeleteSeason.Id = 1;
             this.bbtnDeleteSeason.Name = "bbtnDeleteSeason";
+            this.bbtnDeleteSeason.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnDeleteSeason_ItemClick);
             // 
             // bbtnUpdateSeason
             // 
@@ -554,6 +581,7 @@
             this.bbtnUpdateSeason.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnUpdateSeason.Glyph")));
             this.bbtnUpdateSeason.Id = 2;
             this.bbtnUpdateSeason.Name = "bbtnUpdateSeason";
+            this.bbtnUpdateSeason.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnUpdateSeason_ItemClick);
             // 
             // bbtnSaveSeason
             // 
@@ -561,6 +589,7 @@
             this.bbtnSaveSeason.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnSaveSeason.Glyph")));
             this.bbtnSaveSeason.Id = 3;
             this.bbtnSaveSeason.Name = "bbtnSaveSeason";
+            this.bbtnSaveSeason.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnSaveSeason_ItemClick);
             // 
             // bbtnCancelSeason
             // 
@@ -568,6 +597,7 @@
             this.bbtnCancelSeason.Glyph = ((System.Drawing.Image)(resources.GetObject("bbtnCancelSeason.Glyph")));
             this.bbtnCancelSeason.Id = 4;
             this.bbtnCancelSeason.Name = "bbtnCancelSeason";
+            this.bbtnCancelSeason.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.bbtnCancelSeason_ItemClick);
             // 
             // barAndDockingController1
             // 
@@ -589,28 +619,28 @@
             this.pnlLeft.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grpSeasonInfo)).EndInit();
             this.grpSeasonInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListSeason)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvListSeason)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barTeamManager)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grpTeamInfo)).EndInit();
             this.grpTeamInfo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdListTeam)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdvListTeam)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itemLinkEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sCtrSearch.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEndDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEndDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateStartDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateStartDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSeasonName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlHome)).EndInit();
             this.pnlHome.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grpSeansonInfoDeatail)).EndInit();
             this.grpSeansonInfoDeatail.ResumeLayout(false);
             this.grpSeansonInfoDeatail.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSponsor.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spinExpenditure.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabHome)).EndInit();
             this.tabHome.ResumeLayout(false);
             this.tabSeasonInfo.ResumeLayout(false);
@@ -625,17 +655,16 @@
         private DevExpress.XtraEditors.PanelControl pnlLeft;
         private DevExpress.XtraEditors.PanelControl pnlHome;
         private DevExpress.XtraEditors.GroupControl grpTeamInfo;
-        private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
-        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraGrid.GridControl grdListTeam;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvListTeam;
+        private DevExpress.XtraEditors.LabelControl labExpenditure;
         private DevExpress.XtraEditors.SearchControl sCtrSearch;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraEditors.LabelControl labelControl3;
-        private DevExpress.XtraEditors.LabelControl labelControl2;
-        private DevExpress.XtraEditors.LabelControl labelControl1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.DateEdit dateEndDate;
+        private DevExpress.XtraEditors.DateEdit dateStartDate;
+        private DevExpress.XtraEditors.LabelControl labEndDate;
+        private DevExpress.XtraEditors.LabelControl labStartDate;
+        private DevExpress.XtraEditors.LabelControl labSeasonName;
+        private DevExpress.XtraEditors.TextEdit txtSeasonName;
         private DevExpress.XtraEditors.PictureEdit pictureEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn colTeamID;
         private DevExpress.XtraGrid.Columns.GridColumn colTeamName;
@@ -653,8 +682,8 @@
         private DevExpress.XtraTab.XtraTabPage tabSeasonInfo;
         private DevExpress.XtraEditors.LabelControl labSearch;
         private DevExpress.XtraEditors.GroupControl grpSeasonInfo;
-        private DevExpress.XtraGrid.GridControl gridControl2;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.GridControl grdListSeason;
+        private DevExpress.XtraGrid.Views.Grid.GridView grdvListSeason;
         private DevExpress.XtraGrid.Columns.GridColumn colSeasonID;
         private DevExpress.XtraGrid.Columns.GridColumn colSeasonName;
         private DevExpress.XtraEditors.GroupControl grpSeansonInfoDeatail;
@@ -670,7 +699,8 @@
         private DevExpress.XtraBars.BarButtonItem bbtnSaveSeason;
         private DevExpress.XtraBars.BarButtonItem bbtnCancelSeason;
         private DevExpress.XtraBars.BarAndDockingController barAndDockingController1;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.TextEdit txtSponsor;
+        private DevExpress.XtraEditors.LabelControl labSponsor;
+        private DevExpress.XtraEditors.SpinEdit spinExpenditure;
     }
 }

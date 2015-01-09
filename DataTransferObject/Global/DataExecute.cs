@@ -250,7 +250,7 @@ namespace DataTransferObject.Global
                     throw (e);
                 }
             }
-        }
+        }   
 
         /// <summary>
         /// Phuong thuc nay dung de tao mot command

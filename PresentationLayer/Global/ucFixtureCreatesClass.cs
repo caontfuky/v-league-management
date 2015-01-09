@@ -19,6 +19,7 @@ namespace PresentationLayer.Global
     }
     public class RoundRecord
     {
+        private string fID;
         private string fName;
         ArrayList fChildList = null;
 
@@ -31,6 +32,12 @@ namespace PresentationLayer.Global
         {
             this.fName = name;
             this.fChildList = childList;
+        }
+
+        public string ID
+        {
+            get { return fID; }
+            set { fID = value; }
         }
 
         public string Name
@@ -72,6 +79,23 @@ namespace PresentationLayer.Global
             get { return homeTeam; }
             set { homeTeam = value; }
         }
+
+        private string homeTeamID;
+
+        public string HomeTeamID
+        {
+            get { return homeTeamID; }
+            set { homeTeamID = value; }
+        }
+
+        private string visitingTeamID;
+
+        public string VisitingTeamID
+        {
+            get { return visitingTeamID; }
+            set { visitingTeamID = value; }
+        }
+
         private string visitingTeam;
 
         public string VisitingTeam
@@ -86,6 +110,15 @@ namespace PresentationLayer.Global
             get { return stadium; }
             set { stadium = value; }
         }
+
+        private string stadiumID;
+
+        public string StadiumID
+        {
+            get { return stadiumID; }
+            set { stadiumID = value; }
+        }
+
         private string startDate;
 
         public string StartDate
@@ -93,12 +126,37 @@ namespace PresentationLayer.Global
             get { return startDate; }
             set { startDate = value; }
         }
+
+        private string startTime;
+
+        public string StartTime
+        {
+            get { return startTime; }
+            set { startTime = value; }
+        }
+
         private string referee;
 
         public string Referee
         {
             get { return referee; }
             set { referee = value; }
+        }
+
+        private string refereeID;
+
+        public string RefereeID
+        {
+            get { return refereeID; }
+            set { refereeID = value; }
+        }
+
+        private string roundID;
+
+        public string RoundID
+        {
+            get { return roundID; }
+            set { roundID = value; }
         }
 
         public ChildRecordMatch() { }
@@ -109,8 +167,20 @@ namespace PresentationLayer.Global
             this.homeTeam = _homeTeam;
             this.visitingTeam = _visitingTeam;
             this.stadium = _stadium;
-            this.startDate = _startDate;
+            //this.startDate = _startDate;
             this.referee = _referee;
+        }
+    }
+
+    public class TeamInfo
+    {
+        public string teamID;
+        public string teamName;
+        public string stadiumID;
+        public string stadiumName;
+
+        public TeamInfo()
+        {
         }
     }
 

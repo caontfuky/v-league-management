@@ -95,8 +95,8 @@ namespace PresentationLayer
                     return;
                 }
 
-                _dtoSeason.startDate = txtStartDate.Text.Trim();
-                _dtoSeason.endDate = txtEndDate.Text.Trim();
+                //_dtoSeason.startDate = txtStartDate.Text.Trim();
+                //_dtoSeason.endDate = txtEndDate.Text.Trim();
                 _dtoSeason.seasonID = txtID.Text.Trim();
                 _dtoSeason.seasonName = txtName.Text.Trim();
                 _dtoSeason.sponsor = txtSponsor.Text.Trim();
@@ -157,8 +157,8 @@ namespace PresentationLayer
                     return;
                 }
 
-                _dtoSeason.startDate = txtStartDate.Text.Trim();
-                _dtoSeason.endDate = txtEndDate.Text.Trim();
+               // _dtoSeason.startDate = txtStartDate.Text.Trim();
+               // _dtoSeason.endDate = txtEndDate.Text.Trim();
                 _dtoSeason.seasonID = txtID.Text.Trim();
                 _dtoSeason.seasonName = txtName.Text.Trim();
                 _dtoSeason.sponsor = txtSponsor.Text.Trim();

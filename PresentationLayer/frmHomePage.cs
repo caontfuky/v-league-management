@@ -52,14 +52,15 @@ namespace PresentationLayer
         ucSeasonInfo seasonInfo = new ucSeasonInfo();
         ucFixtureCreates fixtureCreates = new ucFixtureCreates();
         ucMatchResult matchResult = new ucMatchResult();
+        ucPlayer player = new ucPlayer();
         private void picSeason_Click(object sender, EventArgs e)
         {
             SplashScreenManager.ShowForm(typeof(frmWaiting));
             //pnlDetail.Controls.Clear();
-            matchResult.Dock = DockStyle.Fill;
+            seasonInfo.Dock = DockStyle.Fill;
             picBG.Visible = false;
-            if (!pnlDetail.Controls.Contains(matchResult))
-                pnlDetail.Controls.Add(matchResult);
+            if (!pnlDetail.Controls.Contains(seasonInfo))
+                pnlDetail.Controls.Add(seasonInfo);
             SplashScreenManager.CloseForm();
         }
     }

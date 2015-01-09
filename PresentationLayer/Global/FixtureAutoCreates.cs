@@ -53,7 +53,20 @@ namespace PresentationLayer.Global
             }
         }
 
-        public ArrayList GetValue(List<DTOTeam> listTeam)
+        private string getID(string oldID, string beginCharater)
+        {
+            string newID = beginCharater;
+            int count = 4 - oldID.Length;
+            while (count > 0)
+            {
+                newID += "0";
+                count--;
+            }
+            newID += oldID;
+            return newID;
+        }
+
+        public ArrayList GetValue(List<TeamInfo> listTeam, string seasonID)
         {
             this.AutoCreateFixture(listTeam.Count);
             NestedRecords fixture = new NestedRecords();
@@ -61,20 +74,35 @@ namespace PresentationLayer.Global
             {
                 RoundRecord roundRecord = new RoundRecord();
                 RoundValueRecord roundValue = new RoundValueRecord();
-                roundRecord.Name = "Vòng" + round.Key;
+                roundRecord.Name = "Vòng " + round.Key;
                 foreach (KeyValuePair<int, Dictionary<int, int>> matchs in round.Value)
                 {
                     foreach (KeyValuePair<int, int> match in matchs.Value)
                     {
                         ChildRecordMatch matchValue = new ChildRecordMatch();
-                        DTOTeam homeTeam = listTeam[match.Key];
-                        DTOTeam visitingTeam = listTeam[match.Value];
+                        TeamInfo homeTeam = listTeam[match.Key];
+                        TeamInfo visitingTeam = listTeam[match.Value];
+                        // add tran dau
+                        DTOMatch dtoMatch = new DTOMatch();
                         if (homeTeam != null)
                         {
-                            matchValue.HomeTeam = listTeam[match.Key].name;
+                            matchValue.MatchID = this.getID(matchs.Key.ToString(), "M");
+                            matchValue.HomeTeam = homeTeam.teamName;
+                            matchValue.StartTime = DateTime.Now.ToShortTimeString();
+                            matchValue.StartDate = DateTime.Today.ToShortDateString();
+                            matchValue.Stadium = homeTeam.stadiumName;
+                            matchValue.StadiumID = homeTeam.stadiumID;
+                            matchValue.HomeTeamID = homeTeam.teamID;
+                            matchValue.Referee = "";
+                            
+
                         }
                         if (visitingTeam != null)
-                            matchValue.VisitingTeam = listTeam[match.Value].name;
+                        {
+                            dtoMatch.visitingTeam = visitingTeam.teamID;
+                            matchValue.VisitingTeam = visitingTeam.teamName;
+                        }
+                        
                         roundValue.Add(matchValue);
                     }
                 }
@@ -82,6 +110,47 @@ namespace PresentationLayer.Global
                 fixture.Add(roundRecord);
             }
             return fixture;
+        }
+
+        public void AddFixtureToDatabase(List<TeamInfo> listTeam, string seasonID)
+        {
+            this.AutoCreateFixture(listTeam.Count);
+            foreach (KeyValuePair<int, Dictionary<int, Dictionary<int, int>>> round in this._rounds)
+            {
+                //Tao vong dau
+                DTORound dtoRound = new DTORound();
+                dtoRound.roundID = this.getID(round.Key.ToString(), "R");
+                dtoRound.roundName = "Vòng " + round.Key;
+                dtoRound.seasonID = seasonID;
+                //Add round to database
+                (new BusinnessLogicLayer.BUSRound()).insertData(dtoRound);
+                foreach (KeyValuePair<int, Dictionary<int, int>> matchs in round.Value)
+                {
+                    foreach (KeyValuePair<int, int> match in matchs.Value)
+                    {
+                        TeamInfo homeTeam = listTeam[match.Key];
+                        TeamInfo visitingTeam = listTeam[match.Value];
+                        // add tran dau
+                        DTOMatch dtoMatch = new DTOMatch();
+                        if (homeTeam != null)
+                        {
+                            dtoMatch.matchID = "M0000";
+                            dtoMatch.homeTeam = homeTeam.teamID;
+                            dtoMatch.stadiumID = homeTeam.stadiumID;
+                            dtoMatch.startDate = DateTime.Now.ToShortDateString();
+                            dtoMatch.startTime = DateTime.Now.ToShortTimeString();
+                            dtoMatch.refereeID = "";
+                            dtoMatch.roundID = dtoRound.roundID;
+                            dtoMatch.score = "-:-";
+                            //
+                        }
+                        if (visitingTeam != null)
+                        {
+                            dtoMatch.visitingTeam = visitingTeam.teamID;
+                        }
+                    }
+                }
+            }
         }
 
         void gfixture(int teams)

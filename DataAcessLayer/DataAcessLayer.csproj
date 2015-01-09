@@ -43,13 +43,16 @@
   <ItemGroup>
     <Compile Include="DALCardType.cs" />
     <Compile Include="DALCoach.cs" />
+    <Compile Include="DALMatch.cs" />
     <Compile Include="DALNational.cs" />
     <Compile Include="DALPlayer.cs" />
     <Compile Include="DALPlayerTeamSeason.cs" />
     <Compile Include="DALPosition.cs" />
     <Compile Include="DALReferee.cs" />
+    <Compile Include="DALRound.cs" />
     <Compile Include="DALSeason.cs" />
     <Compile Include="DALStadium.cs" />
+    <Compile Include="DALStanding.cs" />
     <Compile Include="DALTeam.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

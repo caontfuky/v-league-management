@@ -45,6 +45,8 @@
             this.colHomeTeam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colVisitingTeam = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colStartDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colScore = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colState = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.tabListMatchOfRound)).BeginInit();
             this.tabListMatchOfRound.SuspendLayout();
             this.xtraTabPage1.SuspendLayout();
@@ -121,7 +123,9 @@
             this.colMatchID,
             this.colHomeTeam,
             this.colVisitingTeam,
-            this.colStartDate});
+            this.colStartDate,
+            this.colScore,
+            this.colState});
             this.grdvListMatchOfRound.GridControl = this.grdListMatchOfRound;
             this.grdvListMatchOfRound.Name = "grdvListMatchOfRound";
             this.grdvListMatchOfRound.OptionsView.ShowGroupPanel = false;
@@ -212,9 +216,24 @@
             // 
             // colStartDate
             // 
+            this.colStartDate.Caption = "Ngày thi đấu";
             this.colStartDate.Name = "colStartDate";
             this.colStartDate.Visible = true;
             this.colStartDate.VisibleIndex = 3;
+            // 
+            // colScore
+            // 
+            this.colScore.Caption = "Tỷ số";
+            this.colScore.Name = "colScore";
+            this.colScore.Visible = true;
+            this.colScore.VisibleIndex = 4;
+            // 
+            // colState
+            // 
+            this.colState.Caption = "Trạng thái";
+            this.colState.Name = "colState";
+            this.colState.Visible = true;
+            this.colState.VisibleIndex = 5;
             // 
             // ucMatchResult
             // 
@@ -263,6 +282,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colHomeTeam;
         private DevExpress.XtraGrid.Columns.GridColumn colVisitingTeam;
         private DevExpress.XtraGrid.Columns.GridColumn colStartDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colScore;
+        private DevExpress.XtraGrid.Columns.GridColumn colState;
 
     }
 }

@@ -1,46 +1,45 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using DataTransferObject;
+using System.Text;
 using DataAcessLayer;
 using System.Data;
-using System.Text;
+using DataTransferObject;
 
 namespace BusinnessLogicLayer
 {
     public class BUSRound
     {
-        public DALRound m_dalRound;
+        DALRound m_round;
 
         public BUSRound()
         {
-            m_dalRound = new DALRound();
+            this.m_round = new DALRound();
         }
 
-        public DataTable getDataBySeasonID(string seasonID)
+        public DataTable getAllData()
         {
-            return m_dalRound.getDataBySeasonID(seasonID);
+            return m_round.getAllData();
         }
 
-        public DataTable getDataBySeasonIDAndRoundName(string seasonID, string roundName)
+        public DataTable getIDRoundByName(string roundName)
         {
-            return m_dalRound.getDataBySeasonIDAndRoundName(seasonID, roundName);
+            return m_round.getIDRoundByName(roundName);
         }
 
         public int updateData(DTORound _dtoRound)
         {
-            return m_dalRound.updateData(_dtoRound);
+            return m_round.updateData(_dtoRound);
         }
 
         public int deleteData(string roundID)
         {
-            return m_dalRound.deleteData(roundID);
+            return m_round.deleteData(roundID);
         }
 
         public int insertData(DTORound _dtoRound)
         {
-            return m_dalRound.insertData(_dtoRound);
+            return m_round.insertData(_dtoRound);
         }
-
     }
 }

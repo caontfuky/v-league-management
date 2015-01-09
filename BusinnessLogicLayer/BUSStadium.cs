@@ -27,14 +27,14 @@ namespace BusinnessLogicLayer
             return m_dalStadium.getStadiumIDByStadiumName(stadiumName);
         }
 
-        public DataTable getStadiumByStadiumID(string stadiumID)
-        {
-            return m_dalStadium.getStadiumByStadiumID(stadiumID);
-        }
-
         public int updateData(DTOStadium _dtoStadium)
         {
             return m_dalStadium.updateData(_dtoStadium);
+        }
+
+		public string getStadiumNameByID(string stadiumID)
+        {
+            return m_dalStadium.getStadiumNameByID(stadiumID);
         }
 
         public int deleteData(string stadiumID)
